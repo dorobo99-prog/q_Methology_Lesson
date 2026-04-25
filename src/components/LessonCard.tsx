@@ -56,25 +56,24 @@ export default function LessonCard({
           borderTop: "1px solid rgba(0,0,0,0.05)",
         }}
       >
-        <div className="flex flex-col md:flex-row gap-6 items-start">
+        <div className="flex flex-col gap-6">
           <div
-            className="w-full md:w-[576px] shrink-0 overflow-hidden"
+            className="w-full overflow-hidden"
             style={{
               borderRadius: "16px",
               border: "1px solid rgba(0,0,0,0.05)",
-              maxWidth: "100%",
+              maxWidth: "960px",
             }}
           >
             <Image
               src={imageSrc}
               alt={imageAlt}
-              width={600}
-              height={400}
+              width={960}
+              height={720}
               className="w-full h-auto block"
-              style={{ maxWidth: "100%" }}
             />
           </div>
-          <ul className="space-y-3 flex-1 pt-1">
+          <ul className="space-y-3">
             {points.map((point, i) => (
               <li key={i} className="flex items-start gap-3 text-sm" style={{ color: "var(--gray-700)" }}>
                 <span
@@ -97,7 +96,7 @@ export default function LessonCard({
       {/* 강의 원고 */}
       <div className="px-8 py-8" style={{ borderTop: "1px solid rgba(0,0,0,0.05)" }}>
         <div
-          className="space-y-4 text-sm leading-relaxed"
+          className="space-y-4 text-base leading-relaxed"
           style={{ color: "var(--gray-700)" }}
         >
           {children}

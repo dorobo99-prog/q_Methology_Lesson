@@ -171,7 +171,7 @@ export default function Lesson11Page() {
             "결과는 평균이 아니라 관점 유형으로 나타난다.",
             "핵심은 의견의 많고 적음보다 생각의 구조다.",
           ]}
-          imageSrc="/images/card-1.png"
+          imageSrc="/images/1-1-card-01-definition.webp"
           imageAlt="사람들이 진술문을 정렬하고 배열 패턴 비교를 통해 관점 유형이 도출되는 Q방법론 개념도"
         >
           <p>
@@ -202,7 +202,7 @@ export default function Lesson11Page() {
             "각 유형이 무엇을 중요하게 보는지 드러난다.",
             "유형 간 차이를 통해 판단 논리를 해석할 수 있다.",
           ]}
-          imageSrc="/images/card-2.png"
+          imageSrc="/images/1-1-card-02-perspective-types.webp"
           imageAlt="비슷한 배열끼리 묶이는 관점 유형 도출 과정"
         >
           <p>
@@ -236,7 +236,7 @@ export default function Lesson11Page() {
             "위험인식과 안전 판단의 차이를 볼 때",
             "조직 내 해석 차이를 분석할 때",
           ]}
-          imageSrc="/images/card-3.png"
+          imageSrc="/images/1-1-card-03-good-fit.webp"
           imageAlt="Q방법론이 잘 맞는 연구문제 유형 — 정책, 위험, 조직문화, 교육"
         >
           <p>
@@ -270,7 +270,7 @@ export default function Lesson11Page() {
             "인과효과 검증이 주목적인 연구와는 다르다.",
             "대표성보다 다양한 관점의 포착이 중요하다.",
           ]}
-          imageSrc="/images/card-4.png"
+          imageSrc="/images/1-1-card-04-limited-fit.webp"
           imageAlt="설문조사와 Q방법론 비교 — 비율 추정 vs 관점 유형 탐색"
         >
           <p>
