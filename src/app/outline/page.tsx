@@ -38,7 +38,7 @@ const CURRICULUM: Part[] = [
         lessons: [
           { id: "1-1", title: "Q방법론의 정의와 연구문제", status: "open", href: "/lessons/1-1" },
           { id: "1-2", title: "Q방법론의 핵심 개념과 필요한 이유", status: "open", href: "/lessons/1-2" },
-          { id: "1-3", title: "Q방법론에 대한 흔한 오해와 한계", status: "locked" },
+          { id: "1-3", title: "Q방법론에 대한 흔한 오해와 한계", status: "open", href: "/lessons/1-3" },
         ],
       },
     ],

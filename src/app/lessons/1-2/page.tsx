@@ -508,13 +508,13 @@ export default function Lesson12Page() {
         >
           ← 1-1. Q방법론의 정의와 연구문제
         </Link>
-        <div className="text-sm text-right" style={{ color: "var(--gray-400)" }}>
-          <span>다음 강의</span>
-          <br />
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "12px" }}>
-            1-3. Q방법론에 대한 오해와 한계 (준비 중)
-          </span>
-        </div>
+        <Link
+          href="/lessons/1-3"
+          className="text-sm text-right"
+          style={{ color: "var(--brand-deep)" }}
+        >
+          1-3. Q방법론에 대한 흔한 오해와 한계 →
+        </Link>
       </div>
     </div>
   );
