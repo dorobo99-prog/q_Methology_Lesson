@@ -454,41 +454,6 @@ export default function Lesson12Page() {
         </p>
       </section>
 
-      {/* 다음 강의 예고 */}
-      <section
-        className="px-6 py-5 mb-10"
-        style={{
-          background: "var(--gray-50)",
-          border: "1px solid rgba(0,0,0,0.05)",
-          borderRadius: "16px",
-        }}
-      >
-        <h2
-          className="font-semibold mb-3"
-          style={{ fontSize: "16px", color: "var(--black)" }}
-        >
-          다음 강의 예고: 1-3. Q방법론에 대한 오해와 한계
-        </h2>
-        <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--gray-500)" }}>
-          1-2강에서 Q방법론의 핵심 개념을 익혔다면, 이제는 이 개념들이 잘못 이해될 때 생기는 대표적인 오해를
-          정리할 차례다. 특히 다음 질문들을 살펴본다.
-        </p>
-        <ul className="space-y-1.5">
-          {[
-            "Q방법론은 표본 수가 작아서 약한 연구인가?",
-            "Q방법론은 단순히 설문조사의 행과 열을 뒤집은 것인가?",
-            "Q방법론으로 모집단 비율을 말할 수 있는가?",
-            "Q방법론은 질적 연구인가, 양적 연구인가?",
-            "Q방법론 결과는 어떻게 일반화할 수 있는가?",
-          ].map((item) => (
-            <li key={item} className="flex items-start gap-2 text-sm" style={{ color: "var(--gray-700)" }}>
-              <span style={{ color: "var(--brand)" }} className="mt-0.5">→</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
       {/* 참고문헌 */}
       <section className="mb-10">
         <h2
