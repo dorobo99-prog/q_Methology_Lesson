@@ -7,6 +7,7 @@ interface LessonCardProps {
   points: string[];
   imageSrc: string;
   imageAlt: string;
+  imageMaxWidth?: string;
   children: React.ReactNode;
 }
 
@@ -17,6 +18,7 @@ export default function LessonCard({
   points,
   imageSrc,
   imageAlt,
+  imageMaxWidth = "960px",
   children,
 }: LessonCardProps) {
   return (
@@ -62,7 +64,7 @@ export default function LessonCard({
             style={{
               borderRadius: "16px",
               border: "1px solid rgba(0,0,0,0.05)",
-              maxWidth: "960px",
+              maxWidth: imageMaxWidth,
             }}
           >
             <Image
