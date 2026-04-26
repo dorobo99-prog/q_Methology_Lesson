@@ -157,6 +157,7 @@ export default function Lesson12Page() {
             "Q방법론은 외부 기준보다 참여자의 내부 관점을 중시한다.",
           ]}
           imageMaxWidth="500px"
+          imageSide
           imageSrc="/images/1-2-card-01-subjectivity.webp"
           imageAlt="개인의 관점이 진술문 배열로 드러나는 장면"
         >
@@ -190,6 +191,7 @@ export default function Lesson12Page() {
             "점수의 의미는 참여자의 전체 배열 속에서 사후적으로 해석된다.",
           ]}
           imageMaxWidth="500px"
+          imageSide
           imageSrc="/images/1-2-card-02-operant-subjectivity.webp"
           imageAlt="조작적 주관성이 Q-sort로 나타나는 과정"
         >
@@ -221,6 +223,7 @@ export default function Lesson12Page() {
             "Q-set 개발 과정은 투명하게 보고되어야 한다.",
           ]}
           imageMaxWidth="500px"
+          imageSide
           imageSrc="/images/1-2-card-03-concourse-qset.webp"
           imageAlt="넓은 Concourse에서 Q-set을 추출하는 장면"
         >
@@ -255,6 +258,7 @@ export default function Lesson12Page() {
             "같은 진술문이라도 사람마다 배열 논리가 다르다.",
           ]}
           imageMaxWidth="500px"
+          imageSide
           imageSrc="/images/1-2-card-04-pset-qsort.webp"
           imageAlt="P-set 참여자가 Q-sort를 수행하는 장면"
         >
@@ -290,6 +294,7 @@ export default function Lesson12Page() {
             "Factor array는 각 요인을 대표하는 이상적 Q-sort다.",
           ]}
           imageMaxWidth="500px"
+          imageSide
           imageSrc="/images/1-2-card-05-factor-analysis-array.webp"
           imageAlt="Q-sort 간 상관에서 관점 유형이 나오는 장면"
         >
@@ -323,6 +328,7 @@ export default function Lesson12Page() {
             "정책 갈등의 쟁점과 합의 가능성을 함께 보고 싶을 때",
           ]}
           imageMaxWidth="500px"
+          imageSide
           imageSrc="/images/1-2-card-06-why-q-methodology.webp"
           imageAlt="평균 뒤에 숨어 있던 관점들이 드러나는 장면"
         >

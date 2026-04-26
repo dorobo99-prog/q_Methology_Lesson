@@ -8,6 +8,7 @@ interface LessonCardProps {
   imageSrc: string;
   imageAlt: string;
   imageMaxWidth?: string;
+  imageSide?: boolean;
   children: React.ReactNode;
 }
 
@@ -19,6 +20,7 @@ export default function LessonCard({
   imageSrc,
   imageAlt,
   imageMaxWidth = "960px",
+  imageSide = false,
   children,
 }: LessonCardProps) {
   return (
@@ -58,9 +60,9 @@ export default function LessonCard({
           borderTop: "1px solid rgba(0,0,0,0.05)",
         }}
       >
-        <div className="flex flex-col gap-6">
+        <div className={`flex gap-6 ${imageSide ? "flex-col md:flex-row md:items-start" : "flex-col"}`}>
           <div
-            className="w-full overflow-hidden"
+            className="shrink-0 w-full overflow-hidden"
             style={{
               borderRadius: "16px",
               border: "1px solid rgba(0,0,0,0.05)",
@@ -75,7 +77,7 @@ export default function LessonCard({
               className="w-full h-auto block"
             />
           </div>
-          <ul className="space-y-3">
+          <ul className={`space-y-3 ${imageSide ? "flex-1" : ""}`}>
             {points.map((point, i) => (
               <li key={i} className="flex items-start gap-3 text-sm" style={{ color: "var(--gray-700)" }}>
                 <span
