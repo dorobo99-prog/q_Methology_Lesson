@@ -29,7 +29,8 @@ const references = [
   },
   {
     key: "RamloNewman2011",
-    text: "Ramlo, S. E., & Newman, I. (2011). Q methodology and its position in the mixed-methods continuum. Operant Subjectivity, 34(3), 173–192.",
+    text: "Ramlo, S. E., & Newman, I. (2011). Q Methodology and Its Position in the Mixed-Methods Continuum. Operant Subjectivity, 34(3), 172–191.",
+    doi: "https://doi.org/10.22488/okstate.11.100594",
   },
   {
     key: "Stenner2011",
