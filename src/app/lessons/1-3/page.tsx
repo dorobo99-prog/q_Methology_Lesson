@@ -34,7 +34,8 @@ const references = [
   },
   {
     key: "Stenner2011",
-    text: "Stenner, P. (2011). Q methodology as qualiquantology. Operant Subjectivity, 34(3), 192–208.",
+    text: "Stenner, P. (2011). Q Methodology as Qualiquantology. Operant Subjectivity, 34(3), 192–203.",
+    doi: "https://doi.org/10.22488/okstate.11.100593",
   },
   {
     key: "Watts2012",
