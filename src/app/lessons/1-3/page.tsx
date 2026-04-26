@@ -11,10 +11,6 @@ export const metadata: Metadata = {
 
 const references = [
   {
-    key: "Stephenson1953",
-    text: "Stephenson, W. (1953). The study of behavior: Q-technique and its methodology. University of Chicago Press.",
-  },
-  {
     key: "Brown1980",
     text: "Brown, S. R. (1980). Political subjectivity: Applications of Q methodology in political science. Yale University Press.",
   },
@@ -22,50 +18,6 @@ const references = [
     key: "Brown1996",
     text: "Brown, S. R. (1996). Q methodology and qualitative research. Qualitative Health Research, 6(4), 561–567.",
     doi: "https://doi.org/10.1177/104973239600600408",
-  },
-  {
-    key: "StennerRogers2004",
-    text: "Stenner, P., & Stainton Rogers, R. (2004). Q methodology and qualiquantology: The example of discriminating between emotions. In Z. Todd, B. Nerlich, S. McKeown, & D. D. Clarke (Eds.), Mixing methods in psychology: The integration of qualitative and quantitative methods in theory and practice (pp. 101–120). Psychology Press.",
-  },
-  {
-    key: "RamloNewman2011",
-    text: "Ramlo, S. E., & Newman, I. (2011). Q Methodology and Its Position in the Mixed-Methods Continuum. Operant Subjectivity, 34(3), 172–191.",
-    doi: "https://doi.org/10.22488/okstate.11.100594",
-  },
-  {
-    key: "Stenner2011",
-    text: "Stenner, P. (2011). Q Methodology as Qualiquantology. Operant Subjectivity, 34(3), 192–203.",
-    doi: "https://doi.org/10.22488/okstate.11.100593",
-  },
-  {
-    key: "Watts2012",
-    text: "Watts, S., & Stenner, P. (2012). Doing Q methodological research: Theory, method and interpretation. SAGE.",
-    doi: "https://doi.org/10.4135/9781446251911",
-  },
-  {
-    key: "Zabala2018",
-    text: "Zabala, A., Sandbrook, C., & Mukherjee, N. (2018). When and how to use Q methodology to understand perspectives in conservation research. Conservation Biology, 32(5), 1185–1194.",
-    doi: "https://doi.org/10.1111/cobi.13123",
-  },
-  {
-    key: "Kirschbaum2019",
-    text: "Kirschbaum, M., Barnett, T., & Cross, M. (2019). Q sample construction: A novel approach incorporating a Delphi technique to explore opinions about codeine dependence. BMC Medical Research Methodology, 19, 101.",
-    doi: "https://doi.org/10.1186/s12874-019-0741-9",
-  },
-  {
-    key: "Grimsrud2020",
-    text: "Grimsrud, K., Graesse, M., & Lindhjem, H. (2020). Using the generalised Q method in ecological economics: A better way to capture representative values and perspectives in ecosystem service management. Ecological Economics, 170, 106588.",
-    doi: "https://doi.org/10.1016/j.ecolecon.2019.106588",
-  },
-  {
-    key: "Molenveld2020",
-    text: "Molenveld, A. (2020). Using Q methodology in comparative policy analysis. In Handbook of Research Methods and Applications in Comparative Policy Analysis. Edward Elgar.",
-    doi: "https://doi.org/10.4337/9781788111195.00028",
-  },
-  {
-    key: "NederhandMolenveld2020",
-    text: "Nederhand, J., & Molenveld, A. (2020). Q Methodology in Public Administration: State of the Art. In J. Nederhand & A. Molenveld, Oxford Research Encyclopedia of Politics. Oxford University Press.",
-    doi: "https://doi.org/10.1093/acrefore/9780190228637.013.1448",
   },
   {
     key: "Churruca2021",
@@ -78,9 +30,57 @@ const references = [
     doi: "https://doi.org/10.1016/j.ssaho.2023.100404",
   },
   {
+    key: "Grimsrud2020",
+    text: "Grimsrud, K., Graesse, M., & Lindhjem, H. (2020). Using the generalised Q method in ecological economics: A better way to capture representative values and perspectives in ecosystem service management. Ecological Economics, 170, 106588.",
+    doi: "https://doi.org/10.1016/j.ecolecon.2019.106588",
+  },
+  {
+    key: "Kirschbaum2019",
+    text: "Kirschbaum, M., Barnett, T., & Cross, M. (2019). Q sample construction: A novel approach incorporating a Delphi technique to explore opinions about codeine dependence. BMC Medical Research Methodology, 19, 101.",
+    doi: "https://doi.org/10.1186/s12874-019-0741-9",
+  },
+  {
+    key: "Molenveld2020",
+    text: "Molenveld, A. (2020). Using Q methodology in comparative policy analysis. In Handbook of Research Methods and Applications in Comparative Policy Analysis. Edward Elgar.",
+    doi: "https://doi.org/10.4337/9781788111195.00028",
+  },
+  {
     key: "MoreaGhanbar2024",
     text: "Morea, N., & Ghanbar, H. (2024). Q methodology in applied linguistics: A systematic research synthesis. System, 120, Article 103194.",
     doi: "https://doi.org/10.1016/j.system.2023.103194",
+  },
+  {
+    key: "NederhandMolenveld2020",
+    text: "Nederhand, J., & Molenveld, A. (2020). Q Methodology in Public Administration: State of the Art. In J. Nederhand & A. Molenveld, Oxford Research Encyclopedia of Politics. Oxford University Press.",
+    doi: "https://doi.org/10.1093/acrefore/9780190228637.013.1448",
+  },
+  {
+    key: "RamloNewman2011",
+    text: "Ramlo, S. E., & Newman, I. (2011). Q Methodology and Its Position in the Mixed-Methods Continuum. Operant Subjectivity, 34(3), 172–191.",
+    doi: "https://doi.org/10.22488/okstate.11.100594",
+  },
+  {
+    key: "Stenner2011",
+    text: "Stenner, P. (2011). Q Methodology as Qualiquantology. Operant Subjectivity, 34(3), 192–203.",
+    doi: "https://doi.org/10.22488/okstate.11.100593",
+  },
+  {
+    key: "StennerRogers2004",
+    text: "Stenner, P., & Stainton Rogers, R. (2004). Q methodology and qualiquantology: The example of discriminating between emotions. In Z. Todd, B. Nerlich, S. McKeown, & D. D. Clarke (Eds.), Mixing methods in psychology: The integration of qualitative and quantitative methods in theory and practice (pp. 101–120). Psychology Press.",
+  },
+  {
+    key: "Stephenson1953",
+    text: "Stephenson, W. (1953). The study of behavior: Q-technique and its methodology. University of Chicago Press.",
+  },
+  {
+    key: "Watts2012",
+    text: "Watts, S., & Stenner, P. (2012). Doing Q methodological research: Theory, method and interpretation. SAGE.",
+    doi: "https://doi.org/10.4135/9781446251911",
+  },
+  {
+    key: "Zabala2018",
+    text: "Zabala, A., Sandbrook, C., & Mukherjee, N. (2018). When and how to use Q methodology to understand perspectives in conservation research. Conservation Biology, 32(5), 1185–1194.",
+    doi: "https://doi.org/10.1111/cobi.13123",
   },
 ];
 
