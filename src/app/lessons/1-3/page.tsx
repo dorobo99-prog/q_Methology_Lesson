@@ -64,7 +64,7 @@ const references = [
   },
   {
     key: "NederhandMolenveld2020",
-    text: "Nederhand, J., & Molenveld, A. (2020). Q methodology in public administration: State of the art. Oxford Research Encyclopedia of Politics.",
+    text: "Nederhand, J., & Molenveld, A. (2020). Q Methodology in Public Administration: State of the Art. In J. Nederhand & A. Molenveld, Oxford Research Encyclopedia of Politics. Oxford University Press.",
     doi: "https://doi.org/10.1093/acrefore/9780190228637.013.1448",
   },
   {
