@@ -149,13 +149,14 @@ export default function Lesson13Page() {
         <p style={{ fontSize: "18px", lineHeight: 1.5, color: "var(--gray-500)" }}>
           Q방법론을 둘러싼 다섯 가지 흔한 오해를 정리하고, 진짜 강점과 한계가 어디에 있는지 분명히 한다.
         </p>
-        <div className="mt-8 rounded-2xl overflow-hidden" style={{ background: "var(--gray-50)" }}>
+        <div className="mt-8">
           <Image
             src="/images/1-3-hero-misunderstanding-and-limitations.webp"
             alt="평균값 막대 뒤에 숨은 다양한 관점이 안개 속 오해를 거쳐 정정된 이해로 펼쳐지는 흐름도"
-            width={900}
-            height={500}
-            className="w-full h-auto"
+            width={500}
+            height={280}
+            className="h-auto rounded-xl"
+            style={{ maxWidth: "500px", width: "100%" }}
             priority
           />
         </div>
@@ -443,13 +444,14 @@ export default function Lesson13Page() {
               관행이 반복된다고 지적한다. 보고 체크리스트를 따라 한 단계씩 정당화하는 작업이 필요하다.
             </li>
           </ul>
-          <div className="mt-4 rounded-xl overflow-hidden">
+          <div className="mt-4">
             <Image
               src="/images/1-3-card-06-limitations-checklist.webp"
               alt="Q방법론 한계 체크리스트 — 연구자 해석 의존성, Q-set 주관성, 횡단적 스냅샷, 인과추론 불가, 보고 투명성"
-              width={860}
-              height={480}
-              className="w-full h-auto"
+              width={500}
+              height={280}
+              className="h-auto rounded-xl"
+              style={{ maxWidth: "500px", width: "100%" }}
             />
           </div>
           <p>
