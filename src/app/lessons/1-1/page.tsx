@@ -451,13 +451,17 @@ export default function Lesson11Page() {
         style={{ borderTop: "1px solid rgba(0,0,0,0.05)" }}
       >
         <div className="text-sm" style={{ color: "var(--gray-400)" }}>← 이전 강의 없음</div>
-        <div className="text-sm text-right" style={{ color: "var(--gray-400)" }}>
+        <Link
+          href="/lessons/1-2"
+          className="text-sm text-right"
+          style={{ color: "var(--gray-400)" }}
+        >
           <span>다음 강의</span>
           <br />
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "12px" }}>
-            1-2. Q방법론의 핵심 개념과 필요한 이유 (준비 중)
+            1-2. Q방법론의 핵심 개념과 필요한 이유 →
           </span>
-        </div>
+        </Link>
       </div>
     </div>
   );
