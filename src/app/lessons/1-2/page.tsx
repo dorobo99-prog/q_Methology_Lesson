@@ -10,17 +10,8 @@ export const metadata: Metadata = {
 
 const references = [
   {
-    key: "Stephenson1953",
-    text: "Stephenson, W. (1953). The study of behavior: Q-technique and its methodology. University of Chicago Press.",
-  },
-  {
     key: "Brown1980",
     text: "Brown, S. R. (1980). Political subjectivity: Applications of Q methodology in political science. Yale University Press.",
-  },
-  {
-    key: "Watts2012",
-    text: "Watts, S., & Stenner, P. (2012). Doing Q methodological research: Theory, method and interpretation. SAGE.",
-    doi: "https://doi.org/10.4135/9781446251911",
   },
   {
     key: "Churruca2021",
@@ -36,6 +27,15 @@ const references = [
     key: "Ockwell2008",
     text: "Ockwell, D. G. (2008). 'Opening up' policy to reflexive appraisal: A role for Q methodology? A case study of fire management in Cape York, Australia. Policy Sciences, 41(4), 263–292.",
     doi: "https://doi.org/10.1007/s11077-008-9066-y",
+  },
+  {
+    key: "Stephenson1953",
+    text: "Stephenson, W. (1953). The study of behavior: Q-technique and its methodology. University of Chicago Press.",
+  },
+  {
+    key: "Watts2012",
+    text: "Watts, S., & Stenner, P. (2012). Doing Q methodological research: Theory, method and interpretation. SAGE.",
+    doi: "https://doi.org/10.4135/9781446251911",
   },
   {
     key: "Zabala2018",
