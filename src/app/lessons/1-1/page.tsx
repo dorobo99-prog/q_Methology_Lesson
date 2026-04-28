@@ -11,25 +11,45 @@ export const metadata: Metadata = {
 const references = [
   {
     key: "Brown1980",
-    text: "Brown, S. R. (1980). Political subjectivity: Applications of Q methodology in political science. New Haven: Yale University.",
+    text: (
+      <>
+        Brown, S. R. (1980). <em>Political subjectivity: Applications of Q methodology in political science</em>. New Haven: Yale University.
+      </>
+    ),
   },
   {
     key: "Churruca2021",
-    text: "Churruca, K., Ludlow, K., Wu, W., Gibbons, K., Nguyen, H. M., Ellis, L. A., & Braithwaite, J. (2021). A scoping review of Q-methodology in healthcare research. BMC Medical Research Methodology, 21(1), 125.",
+    text: (
+      <>
+        Churruca, K., Ludlow, K., Wu, W., Gibbons, K., Nguyen, H. M., Ellis, L. A., & Braithwaite, J. (2021). A scoping review of Q-methodology in healthcare research. <em>BMC Medical Research Methodology, 21</em>(1), 125.
+      </>
+    ),
     doi: "https://doi.org/10.1186/s12874-021-01309-7",
   },
   {
     key: "Dieteren2023",
-    text: "Dieteren, C. M., Patty, N. J. S., Reckers-Droog, V. T., & Van Exel, J. (2023). Methodological choices in applications of Q methodology: A systematic literature review. Social Sciences & Humanities Open, 7(1), 100404.",
+    text: (
+      <>
+        Dieteren, C. M., Patty, N. J. S., Reckers-Droog, V. T., & Van Exel, J. (2023). Methodological choices in applications of Q methodology: A systematic literature review. <em>Social Sciences & Humanities Open, 7</em>(1), 100404.
+      </>
+    ),
     doi: "https://doi.org/10.1016/j.ssaho.2023.100404",
   },
   {
     key: "Stephenson1953",
-    text: "Stephenson, W. (1953). The study of behavior; Q-technique and its methodology. University of Chicago Press.",
+    text: (
+      <>
+        Stephenson, W. (1953). <em>The study of behavior; Q-technique and its methodology</em>. University of Chicago Press.
+      </>
+    ),
   },
   {
     key: "Watts2012",
-    text: "Watts, S., & Stenner, P. (2012). Doing Q Methodological Research: Theory, Method and Interpretation. SAGE Publications Ltd.",
+    text: (
+      <>
+        Watts, S., & Stenner, P. (2012). <em>Doing Q methodological research: Theory, method and interpretation</em>. SAGE Publications Ltd.
+      </>
+    ),
     doi: "https://doi.org/10.4135/9781446251911",
   },
 ];

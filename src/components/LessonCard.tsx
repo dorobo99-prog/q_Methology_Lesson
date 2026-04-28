@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 interface LessonCardProps {
-  title: string;
-  keyMessage: string;
-  description: string;
-  points: string[];
+  title: React.ReactNode;
+  keyMessage: React.ReactNode;
+  description: React.ReactNode;
+  points: React.ReactNode[];
   imageSrc: string;
   imageAlt: string;
   imageMaxWidth?: string;

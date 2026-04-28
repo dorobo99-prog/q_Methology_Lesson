@@ -12,85 +12,153 @@ export const metadata: Metadata = {
 const references = [
   {
     key: "BurtStephenson1939",
-    text: "Burt, C., & Stephenson, W. (1939). Alternative views on correlations between persons. Psychometrika, 4(4), 269–281.",
+    text: (
+      <>
+        Burt, C., & Stephenson, W. (1939). Alternative views on correlations between persons. <em>Psychometrika, 4</em>(4), 269–281.
+      </>
+    ),
     doi: "https://doi.org/10.1007/BF02287939",
   },
   {
     key: "Danziger1990",
-    text: "Danziger, K. (1990). Constructing the subject: Historical origins of psychological research. Cambridge University Press.",
+    text: (
+      <>
+        Danziger, K. (1990). <em>Constructing the subject: Historical origins of psychological research</em>. Cambridge University Press.
+      </>
+    ),
     doi: "https://doi.org/10.1017/CBO9780511524059",
   },
   {
     key: "Fisher2018",
-    text: "Fisher, A. J., Medaglia, J. D., & Jeronimus, B. F. (2018). Lack of group-to-individual generalizability is a threat to human subjects research. Proceedings of the National Academy of Sciences, 115(27).",
+    text: (
+      <>
+        Fisher, A. J., Medaglia, J. D., & Jeronimus, B. F. (2018). Lack of group-to-individual generalizability is a threat to human subjects research. <em>Proceedings of the National Academy of Sciences, 115</em>(27).
+      </>
+    ),
     doi: "https://doi.org/10.1073/pnas.1711978115",
   },
   {
     key: "Hardcastle1995",
-    text: "Hardcastle, G. L. (1995). S. S. Stevens and the origins of operationism. Philosophy of Science, 62(3), 404–424.",
+    text: (
+      <>
+        Hardcastle, G. L. (1995). S. S. Stevens and the origins of operationism. <em>Philosophy of Science, 62</em>(3), 404–424.
+      </>
+    ),
     doi: "https://doi.org/10.1086/289875",
   },
   {
     key: "JonesThissen2006",
-    text: "Jones, L. V., & Thissen, D. (2006). A history and overview of psychometrics. In Handbook of Statistics (Vol. 26, pp. 1–27). Elsevier.",
+    text: (
+      <>
+        Jones, L. V., & Thissen, D. (2006). A history and overview of psychometrics. In <em>Handbook of statistics</em> (Vol. 26, pp. 1–27). Elsevier.
+      </>
+    ),
     doi: "https://doi.org/10.1016/S0169-7161(06)26001-2",
   },
   {
     key: "Molenaar2004",
-    text: "Molenaar, P. C. M. (2004). A manifesto on psychology as idiographic science: Bringing the person back into scientific psychology, this time forever. Measurement: Interdisciplinary Research & Perspective, 2(4), 201–218.",
+    text: (
+      <>
+        Molenaar, P. C. M. (2004). A manifesto on psychology as idiographic science: Bringing the person back into scientific psychology, this time forever. <em>Measurement: Interdisciplinary Research & Perspective, 2</em>(4), 201–218.
+      </>
+    ),
     doi: "https://doi.org/10.1207/s15366359mea0204_1",
   },
   {
     key: "Skinner1938",
-    text: "Skinner, B. F. (1938). The behavior of organisms: An experimental analysis. Appleton-Century.",
+    text: (
+      <>
+        Skinner, B. F. (1938). <em>The behavior of organisms: An experimental analysis</em>. Appleton-Century.
+      </>
+    ),
   },
   {
     key: "Spearman1904",
-    text: "Spearman, C. (1904). \"General intelligence,\" objectively determined and measured. The American Journal of Psychology, 15(2), 201–292.",
+    text: (
+      <>
+        Spearman, C. (1904). &ldquo;General intelligence,&rdquo; objectively determined and measured. <em>The American Journal of Psychology, 15</em>(2), 201–292.
+      </>
+    ),
     doi: "https://doi.org/10.2307/1412107",
   },
   {
     key: "Stephenson1935a",
-    text: "Stephenson, W. (1935a). Correlating persons instead of tests. Journal of Personality, 4(1), 17–24.",
+    text: (
+      <>
+        Stephenson, W. (1935a). Correlating persons instead of tests. <em>Journal of Personality, 4</em>(1), 17–24.
+      </>
+    ),
     doi: "https://doi.org/10.1111/j.1467-6494.1935.tb02022.x",
   },
   {
     key: "Stephenson1935b",
-    text: "Stephenson, W. (1935b). Technique of factor analysis. Nature, 136(3434), 297.",
+    text: (
+      <>
+        Stephenson, W. (1935b). Technique of factor analysis. <em>Nature, 136</em>(3434), 297.
+      </>
+    ),
     doi: "https://doi.org/10.1038/136297b0",
   },
   {
     key: "Stephenson1936",
-    text: "Stephenson, W. (1936). The inverted factor technique. British Journal of Psychology, 26(4), 344–361.",
+    text: (
+      <>
+        Stephenson, W. (1936). The inverted factor technique. <em>British Journal of Psychology, 26</em>(4), 344–361.
+      </>
+    ),
     doi: "https://doi.org/10.1111/j.2044-8295.1936.tb00803.x",
   },
   {
     key: "Stephenson1953",
-    text: "Stephenson, W. (1953). The study of behavior: Q-technique and its methodology. University of Chicago Press.",
+    text: (
+      <>
+        Stephenson, W. (1953). <em>The study of behavior: Q-technique and its methodology</em>. University of Chicago Press.
+      </>
+    ),
   },
   {
     key: "Stevens1935",
-    text: "Stevens, S. S. (1935). The operational definition of psychological concepts. Psychological Review, 42(6), 517–527.",
+    text: (
+      <>
+        Stevens, S. S. (1935). The operational definition of psychological concepts. <em>Psychological Review, 42</em>(6), 517–527.
+      </>
+    ),
     doi: "https://doi.org/10.1037/h0056973",
   },
   {
     key: "Thurstone1931",
-    text: "Thurstone, L. L. (1931). Multiple factor analysis. Psychological Review, 38(5), 406–427.",
+    text: (
+      <>
+        Thurstone, L. L. (1931). Multiple factor analysis. <em>Psychological Review, 38</em>(5), 406–427.
+      </>
+    ),
     doi: "https://doi.org/10.1037/h0069792",
   },
   {
     key: "Thurstone1934",
-    text: "Thurstone, L. L. (1934). The vectors of mind. Psychological Review, 41(1), 1–32.",
+    text: (
+      <>
+        Thurstone, L. L. (1934). The vectors of mind. <em>Psychological Review, 41</em>(1), 1–32.
+      </>
+    ),
     doi: "https://doi.org/10.1037/h0075959",
   },
   {
     key: "Verhaegh2021",
-    text: "Verhaegh, S. (2021). Psychological operationisms at Harvard: Skinner, Boring, and Stevens. Journal of the History of the Behavioral Sciences, 57(2), 194–212.",
+    text: (
+      <>
+        Verhaegh, S. (2021). Psychological operationisms at Harvard: Skinner, Boring, and Stevens. <em>Journal of the History of the Behavioral Sciences, 57</em>(2), 194–212.
+      </>
+    ),
     doi: "https://doi.org/10.1002/jhbs.22071",
   },
   {
     key: "Watson1913",
-    text: "Watson, J. B. (1913). Psychology as the behaviorist views it. Psychological Review, 20(2), 158–177.",
+    text: (
+      <>
+        Watson, J. B. (1913). Psychology as the behaviorist views it. <em>Psychological Review, 20</em>(2), 158–177.
+      </>
+    ),
     doi: "https://doi.org/10.1037/h0074428",
   },
 ];
@@ -496,13 +564,13 @@ export default function Lesson21Page() {
         >
           ← 1-3. Q방법론에 대한 흔한 오해와 한계
         </Link>
-        <div className="text-sm text-right" style={{ color: "var(--gray-400)" }}>
-          <span>다음 강의</span>
-          <br />
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "12px" }}>
-            2-2. Stephenson의 문제의식 (준비 중)
-          </span>
-        </div>
+        <Link
+          href="/lessons/2-2"
+          className="text-sm text-right"
+          style={{ color: "var(--brand-deep)" }}
+        >
+          2-2. Stephenson의 문제의식 →
+        </Link>
       </div>
     </div>
   );
