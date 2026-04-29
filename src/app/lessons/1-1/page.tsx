@@ -284,7 +284,7 @@ export default function Lesson11Page() {
           imageAlt="비슷한 배열끼리 묶이는 관점 유형 도출 과정"
         >
           <p>
-            Q방법론이 찾는 것은 찬성률이나 평균점수가 아니다.
+            Q방법론이 찾는 것은 찬성률이나 평균점수가 아니다. 
             <strong>관점의 구조</strong>다.
           </p>
           <p>
@@ -296,7 +296,7 @@ export default function Lesson11Page() {
             비슷한 방식으로 배열한 사람들이 하나의 요인으로 묶인다.
           </p>
           <p>
-            여기서 요인(factor)은 추상적 변수 묶음이 아니라,
+            여기서 요인(factor)은 추상적 변수 묶음이 아니라, 
             <strong>유사한 관점을 공유하는 사람들의 유형</strong>이다.
           </p>
           <p>
@@ -325,7 +325,7 @@ export default function Lesson11Page() {
             이해관계자마다 우선순위와 판단 기준이 다른 문제다.
           </p>
           <p>
-            정책 수용성, 위험인식, 안전 판단, 조직문화, 교육과정 개편, 의료 서비스 경험, 환경 갈등.
+            정책 수용성, 위험인식, 안전 판단, 조직문화, 교육과정 개편, 의료 서비스 경험, 환경 갈등. 
             <strong>가치와 경험과 이해관계가 섞인 문제</strong>들이다.
           </p>
           <p>
@@ -366,7 +366,7 @@ export default function Lesson11Page() {
             회귀분석, 실험, 패널분석이 더 알맞다.
           </p>
           <p>
-            Churruca et al.(2021)도 Q방법론의 초점이 인구학적 일반화가 아니라
+            Churruca et al.(2021)도 Q방법론의 초점이 인구학적 일반화가 아니라 
             <strong>관점의 다양성 포착</strong>에 있음을 분명히 한다.
           </p>
         </Card>
