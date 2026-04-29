@@ -173,7 +173,7 @@ export default function Lesson13Page() {
     <div className="max-w-3xl mx-auto px-6 py-16">
       <CoursePageHero
         breadcrumbs={[
-          { label: "강의 목차", href: "/outline" },
+          { label: "강의목차", href: "/outline" },
           { label: "1부" },
           { label: "1-3. Q방법론에 대한 흔한 오해와 한계" },
         ]}

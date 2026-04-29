@@ -192,7 +192,7 @@ export default function Lesson21Page() {
     <div className="max-w-3xl mx-auto px-6 py-16">
       <CoursePageHero
         breadcrumbs={[
-          { label: "강의 목차", href: "/outline" },
+          { label: "강의목차", href: "/outline" },
           { label: "2부" },
           { label: "2-1. 기존 사회과학 방법론의 한계" },
         ]}

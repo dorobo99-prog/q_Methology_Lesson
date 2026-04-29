@@ -203,7 +203,7 @@ export default function Lesson23Page() {
     <div className="max-w-3xl mx-auto px-5 sm:px-8 py-12 sm:py-16">
       <CoursePageHero
         breadcrumbs={[
-          { label: "강의 목차", href: "/outline" },
+          { label: "강의목차", href: "/outline" },
           { label: "2부" },
           { label: "2-3. 주관성의 과학적 탐구" },
         ]}

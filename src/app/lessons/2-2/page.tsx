@@ -248,7 +248,7 @@ export default function Lesson22Page() {
     <div className="max-w-3xl mx-auto px-6 py-16">
       <CoursePageHero
         breadcrumbs={[
-          { label: "강의 목차", href: "/outline" },
+          { label: "강의목차", href: "/outline" },
           { label: "2부" },
           { label: "2-2. Stephenson의 문제의식" },
         ]}

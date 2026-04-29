@@ -89,7 +89,7 @@ export default function Lesson12Page() {
     <div className="max-w-3xl mx-auto px-6 py-16">
       <CoursePageHero
         breadcrumbs={[
-          { label: "강의 목차", href: "/outline" },
+          { label: "강의목차", href: "/outline" },
           { label: "1부" },
           { label: "1-2. Q방법론의 핵심 개념과 필요한 이유" },
         ]}
