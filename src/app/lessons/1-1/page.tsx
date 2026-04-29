@@ -326,7 +326,7 @@ export default function Lesson11Page() {
           </p>
           <p>
             정책 수용성, 위험인식, 안전 판단, 조직문화, 교육과정 개편, 의료 서비스 경험, 환경 갈등. 
-            <strong>가치와 경험과 이해관계가 섞인 문제</strong>들이다.
+            <br><strong>가치와 경험과 이해관계가 섞인 문제</strong>들이다.</br>
           </p>
           <p>
             이런 주제에서 단순 평균은 오히려 중요한 차이를 가린다.
@@ -367,7 +367,7 @@ export default function Lesson11Page() {
           </p>
           <p>
             Churruca et al.(2021)도 Q방법론의 초점이 인구학적 일반화가 아니라 
-            <strong>관점의 다양성 포착</strong>에 있음을 분명히 한다.
+            <strong> 관점의 다양성 포착</strong>에 있음을 분명히 한다.
           </p>
         </Card>
       </div>
