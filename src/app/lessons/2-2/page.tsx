@@ -350,7 +350,7 @@ export default function Lesson22Page() {
           <p>
             Stenner(2011)는 이를 <em>qualiquantology</em>로 더 깊게 본다.
             Q방법론은 질적 변동을 통제하지 않고
-            <strong>수학적으로 다룰 수 있게 만든다</strong>.
+            <strong> 수학적으로 다룰 수 있게 만든다</strong>.
             평균 밖에서 찾은 과학성이 여기에 있다.
           </p>
         </Card>
