@@ -249,7 +249,7 @@ export default function Lesson22Page() {
       <CoursePageHero
         breadcrumbs={[
           { label: "강의 목차", href: "/outline" },
-          { label: "2부. Q방법론의 등장과 발전" },
+          { label: "2부" },
           { label: "2-2. Stephenson의 문제의식" },
         ]}
         statusLabel="공개"

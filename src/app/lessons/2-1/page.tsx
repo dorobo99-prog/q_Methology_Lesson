@@ -193,7 +193,7 @@ export default function Lesson21Page() {
       <CoursePageHero
         breadcrumbs={[
           { label: "강의 목차", href: "/outline" },
-          { label: "2부. Q방법론의 등장과 발전" },
+          { label: "2부" },
           { label: "2-1. 기존 사회과학 방법론의 한계" },
         ]}
         statusLabel="공개"

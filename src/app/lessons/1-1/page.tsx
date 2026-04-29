@@ -95,7 +95,7 @@ export default function Lesson11Page() {
       <CoursePageHero
         breadcrumbs={[
           { label: "강의 목차", href: "/outline" },
-          { label: "1부. Q방법론 입문" },
+          { label: "1부" },
           { label: "1-1. Q방법론의 정의와 연구문제" },
         ]}
         statusLabel="공개"

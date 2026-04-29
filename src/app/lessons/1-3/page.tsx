@@ -174,7 +174,7 @@ export default function Lesson13Page() {
       <CoursePageHero
         breadcrumbs={[
           { label: "강의 목차", href: "/outline" },
-          { label: "1부. Q방법론 입문" },
+          { label: "1부" },
           { label: "1-3. Q방법론에 대한 흔한 오해와 한계" },
         ]}
         statusLabel="공개"
