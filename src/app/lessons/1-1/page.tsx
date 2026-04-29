@@ -284,8 +284,8 @@ export default function Lesson11Page() {
           imageAlt="비슷한 배열끼리 묶이는 관점 유형 도출 과정"
         >
           <p>
-            Q방법론이 찾는 것은 찬성률이나 평균점수가 아니다.<br />
-            <strong>관점의 구조</strong>다.
+            Q방법론이 찾는 것은 찬성률이나 평균점수가 아니다.
+            <strong> 관점의 구조</strong>다.
           </p>
           <p>
             같은 정책에 열 명이 찬성해도 이유는 서로 다를 수 있다.
@@ -296,8 +296,8 @@ export default function Lesson11Page() {
             비슷한 방식으로 배열한 사람들이 하나의 요인으로 묶인다.
           </p>
           <p>
-            여기서 요인(factor)은 추상적 변수 묶음이 아니라,<br />
-            <strong>유사한 관점을 공유하는 사람들의 유형</strong>이다.
+            여기서 요인(factor)은 추상적 변수 묶음이 아니라,
+            <strong> 유사한 관점을 공유하는 사람들의 유형</strong>이다.
           </p>
           <p>
             그래서 결과를 읽을 때 중요한 질문은 이렇다.
@@ -326,7 +326,7 @@ export default function Lesson11Page() {
           </p>
           <p>
             정책 수용성, 위험인식, 안전 판단, 조직문화, 교육과정 개편, 의료 서비스 경험, 환경 갈등. 
-            <strong>가치와 경험과 이해관계가 섞인 문제</strong>들이다.
+            <strong> 가치와 경험과 이해관계가 섞인 문제</strong>들이다.
           </p>
           <p>
             이런 주제에서 단순 평균은 오히려 중요한 차이를 가린다.

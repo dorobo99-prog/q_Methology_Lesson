@@ -133,7 +133,7 @@ export default function Lesson22Page() {
           </p>
           <p>
             그의 문제의식은 &ldquo;통계를 버리자&rdquo;가 아니라
-            <strong>&ldquo;통계가 다루지 못한 주관성을 어떻게 통계 안으로 가져올 것인가&rdquo;</strong>였다.
+            <strong> &ldquo;통계가 다루지 못한 주관성을 어떻게 통계 안으로 가져올 것인가&rdquo;</strong>였다.
           </p>
           <p>
             이 강의는 Stephenson(1935a, 1935b, 1936, 1953)을 <strong>하나의 발전선</strong>으로 읽는다.
@@ -216,13 +216,13 @@ export default function Lesson22Page() {
           <p>
             같은 해 Stephenson(1935a)은 이 제안을 색상 선호도 실험으로 옮겼다.
             60장의 색상지를 20명이 11점 척도로 배열했다.
-            <strong>오늘날 Q-sort의 원형</strong>인 사전 배열된 빈도분포가 사용되었다.
+            <strong> 오늘날 Q-sort의 원형</strong>인 사전 배열된 빈도분포가 사용되었다.
           </p>
           <p>
             결과는 두 개의 뚜렷한 유형이었다.
             은은한 색조를 선호한 12명, 밝은 원색을 선호한 8명.
             중요한 것은 평균이 아니라
-            <strong>사람들이 색상을 배열하는 방식 전체가 닮거나 다를 수 있다</strong>는 발견이었다.
+            <strong> 사람들이 색상을 배열하는 방식 전체가 닮거나 다를 수 있다</strong>는 발견이었다.
           </p>
         </Card>
 
@@ -284,7 +284,7 @@ export default function Lesson22Page() {
           <p>
             1953년 책의 핵심은 사람 간 상관을 계산하는 법이 아니다.
             더 큰 질문은 이것이다.
-            <strong>&ldquo;주관적 행동을 과학적으로 연구할 수 있는가?&rdquo;</strong>
+            <strong> &ldquo;주관적 행동을 과학적으로 연구할 수 있는가?&rdquo;</strong>
           </p>
           <p>
             Stephenson의 답은 그렇다였다.

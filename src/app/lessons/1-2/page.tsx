@@ -191,7 +191,7 @@ export default function Lesson12Page() {
           </p>
           <p>
             어떤 문장이 +4에 놓였다는 사실은 그 문장 하나만의 점수가 아니다.
-            <strong>다른 문장들과의 상대적 관계</strong>가 의미를 만든다.
+            <strong> 다른 문장들과의 상대적 관계</strong>가 의미를 만든다.
           </p>
           <p>
             Watts &amp; Stenner(2012)는 Q-sort를 총체적(holistic) 작업이라 부른다.
@@ -320,7 +320,7 @@ export default function Lesson12Page() {
           <p>
             다만 Q방법론을 과장해서는 안 된다.
             모집단 비율 추정도, 인과효과 검증도 아니다.
-            <strong>설계와 보고의 투명성</strong>이 그 강점을 살린다.
+            <strong> 설계와 보고의 투명성</strong>이 그 강점을 살린다.
           </p>
         </Card>
       </div>

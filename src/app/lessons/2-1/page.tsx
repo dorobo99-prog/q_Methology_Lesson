@@ -202,7 +202,7 @@ export default function Lesson21Page() {
           <p>
             Molenaar(2004)는 이를 에르고딕 정리로 형식화했다.
             인간의 발달·학습·적응은 시간에 따라 변동하는 비에르고딕 과정이다.
-            <strong>집단 결과를 개인에 일반화하는 것은 수학적으로 정당화되지 않는다.</strong>
+            <strong> 집단 결과를 개인에 일반화하는 것은 수학적으로 정당화되지 않는다.</strong>
           </p>
           <p>
             그는 22명을 90일간 30개 성격 변수로 측정했다.
@@ -294,7 +294,7 @@ export default function Lesson21Page() {
           </p>
           <p>
             공동의 결과는 하나였다.
-            <strong>&ldquo;주관성=비과학&rdquo;</strong>이라는 등식이다.
+            <strong> &ldquo;주관성=비과학&rdquo;</strong>이라는 등식이다.
             그러나 정치·교육·임상·정책에서 사람의 관점은 사라지지 않았다.
             사라지지 않은 영역이 학문적으로 비어버린 사정 — 이것이 가장 깊은 막다른 길이다.
           </p>
