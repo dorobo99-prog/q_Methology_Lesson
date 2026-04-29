@@ -652,13 +652,13 @@ export default function Lesson22Page() {
         >
           ← 2-1. 기존 사회과학 방법론의 한계
         </Link>
-        <div className="text-sm text-right" style={{ color: "var(--gray-400)" }}>
-          <span>다음 강의</span>
-          <br />
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "12px" }}>
-            2-3. 주관성의 과학적 탐구 (준비 중)
-          </span>
-        </div>
+        <Link
+          href="/lessons/2-3"
+          className="text-sm text-right"
+          style={{ color: "var(--brand-deep)" }}
+        >
+          2-3. 주관성의 과학적 탐구 →
+        </Link>
       </div>
     </div>
   );

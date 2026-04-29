@@ -53,7 +53,7 @@ const CURRICULUM: Part[] = [
         lessons: [
           { id: "2-1", title: "기존 사회과학 방법론의 한계", status: "open", href: "/lessons/2-1" },
           { id: "2-2", title: "Stephenson의 문제의식", status: "open", href: "/lessons/2-2" },
-          { id: "2-3", title: "주관성의 과학적 탐구", status: "locked" },
+          { id: "2-3", title: "주관성의 과학적 탐구", status: "open", href: "/lessons/2-3" },
           { id: "2-4", title: "Q와 R의 분리", status: "locked" },
         ],
       },
