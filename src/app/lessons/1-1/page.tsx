@@ -284,8 +284,8 @@ export default function Lesson11Page() {
           imageAlt="비슷한 배열끼리 묶이는 관점 유형 도출 과정"
         >
           <p>
-            Q방법론이 찾는 것은 찬성률이나 평균점수가 아니다.<br>
-            <strong>관점의 구조</strong>다.</br>
+            Q방법론이 찾는 것은 찬성률이나 평균점수가 아니다.<br />
+            <strong>관점의 구조</strong>다.
           </p>
           <p>
             같은 정책에 열 명이 찬성해도 이유는 서로 다를 수 있다.
