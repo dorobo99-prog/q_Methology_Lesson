@@ -90,7 +90,7 @@ const classics = [
 
 export default function Lesson11Page() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
+    <div className="max-w-3xl mx-auto px-6 py-16">
       {/* 내비게이션 */}
       <nav
         className="flex items-center gap-1.5 mb-8"
@@ -135,16 +135,7 @@ export default function Lesson11Page() {
       </header>
 
       {/* 도입 설명 */}
-      <section
-        className="px-8 py-7 mb-10 space-y-4 leading-relaxed text-sm"
-        style={{
-          background: "var(--white)",
-          border: "1px solid rgba(0,0,0,0.05)",
-          borderRadius: "16px",
-          boxShadow: "rgba(0,0,0,0.03) 0px 2px 4px",
-          color: "var(--gray-700)",
-        }}
-      >
+      <section className="mb-10 pt-8 space-y-4 leading-relaxed text-sm" style={{ borderTop: "1px solid rgba(0,0,0,0.08)", color: "var(--gray-700)" }}>
         <h2
           className="font-semibold mb-2"
           style={{ fontSize: "16px", color: "var(--black)" }}
@@ -317,22 +308,15 @@ export default function Lesson11Page() {
         </LessonCard>
       </div>
 
-      {/* 요약 박스 */}
-      <section
-        className="px-6 py-5 mb-10"
-        style={{
-          background: "var(--brand-light)",
-          borderLeft: "3px solid var(--brand)",
-          borderRadius: "0 16px 16px 0",
-        }}
-      >
-        <h2
-          className="text-xs font-medium uppercase mb-2"
-          style={{ fontFamily: "var(--font-mono)", color: "var(--brand-deep)", letterSpacing: "0.6px" }}
+      {/* 요약 */}
+      <section className="mb-10 pt-10" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
+        <div
+          className="text-xs font-medium uppercase mb-5"
+          style={{ fontFamily: "var(--font-mono)", color: "var(--brand)", letterSpacing: "0.6px" }}
         >
           요약
-        </h2>
-        <p className="text-sm leading-relaxed" style={{ color: "var(--black)" }}>
+        </div>
+        <p className="text-sm leading-relaxed" style={{ color: "var(--gray-700)" }}>
           Q방법론은 사람들의 생각을 단순 점수로 보는 것이 아니라, 여러 생각들이 어떤 우선순위와 긴장
           속에서 하나의 관점을 이루는지를 분석하는 방법이다. 이 방법은 대표성 있는 큰 표본으로 비율을
           추정하는 데보다, 특정 주제에 대해 의미 있게 구별되는 관점 유형을 발견하고 해석하는 데 강하다.
@@ -342,24 +326,25 @@ export default function Lesson11Page() {
       </section>
 
       {/* 핵심 고전 3선 */}
-      <section className="mb-10">
+      <section className="mb-10 pt-10" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
+        <div
+          className="text-xs font-medium uppercase mb-5"
+          style={{ fontFamily: "var(--font-mono)", color: "var(--brand)", letterSpacing: "0.6px" }}
+        >
+          핵심 고전
+        </div>
         <h2
           className="font-semibold mb-6"
-          style={{ fontSize: "24px", letterSpacing: "-0.24px", color: "var(--black)" }}
+          style={{ fontSize: "20px", letterSpacing: "-0.2px", color: "var(--black)" }}
         >
           핵심 고전 3선
         </h2>
-        <div className="space-y-4">
+        <div className="space-y-6">
           {classics.map((c) => (
             <div
               key={c.author}
-              className="px-6 py-5"
-              style={{
-                background: "var(--white)",
-                border: "1px solid rgba(0,0,0,0.05)",
-                borderRadius: "16px",
-                boxShadow: "rgba(0,0,0,0.03) 0px 2px 4px",
-              }}
+              className="pt-6"
+              style={{ borderTop: "1px solid rgba(0,0,0,0.07)" }}
             >
               <div
                 className="text-xs font-semibold mb-0.5"
@@ -383,10 +368,7 @@ export default function Lesson11Page() {
               </ul>
               <p
                 className="text-xs leading-relaxed pt-3"
-                style={{
-                  color: "var(--gray-400)",
-                  borderTop: "1px solid rgba(0,0,0,0.05)",
-                }}
+                style={{ color: "var(--gray-400)", borderTop: "1px solid rgba(0,0,0,0.07)" }}
               >
                 {c.note}
               </p>
@@ -396,14 +378,7 @@ export default function Lesson11Page() {
       </section>
 
       {/* 최근 보고 기준 */}
-      <section
-        className="px-6 py-5 mb-10"
-        style={{
-          background: "var(--gray-50)",
-          border: "1px solid rgba(0,0,0,0.05)",
-          borderRadius: "16px",
-        }}
-      >
+      <section className="mb-10 pt-10" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
         <h2
           className="font-semibold mb-3"
           style={{ fontSize: "16px", color: "var(--black)" }}

@@ -24,87 +24,67 @@ export default function LessonCard({
   children,
 }: LessonCardProps) {
   return (
-    <section
-      style={{
-        background: "var(--white)",
-        border: "1px solid rgba(0,0,0,0.05)",
-        borderRadius: "24px",
-        boxShadow: "rgba(0,0,0,0.03) 0px 2px 4px",
-        overflow: "hidden",
-      }}
-    >
-      {/* 카드 헤더 */}
-      <div className="px-8 pt-8 pb-6" style={{ borderLeft: "3px solid var(--brand)" }}>
-        <h2
-          className="font-semibold mb-3"
-          style={{ fontSize: "24px", letterSpacing: "-0.24px", color: "var(--black)" }}
-        >
-          {title}
-        </h2>
-        <p
-          className="font-medium mb-2"
-          style={{ fontSize: "16px", color: "var(--brand-deep)" }}
-        >
-          {keyMessage}
-        </p>
-        <p className="text-sm leading-relaxed" style={{ color: "var(--gray-500)" }}>
-          {description}
-        </p>
-      </div>
-
-      {/* 이미지 + 3포인트 */}
-      <div
-        className="px-8 py-6"
+    <section className="pt-10 sm:pt-12" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
+      <h2
+        className="font-semibold mb-5"
+        style={{ fontSize: "22px", letterSpacing: "-0.3px", lineHeight: 1.3, color: "var(--black)" }}
+      >
+        {title}
+      </h2>
+      <p
+        className="mb-4"
         style={{
-          background: "var(--gray-50)",
-          borderTop: "1px solid rgba(0,0,0,0.05)",
+          fontSize: "17px",
+          lineHeight: 1.65,
+          color: "var(--brand-deep)",
+          fontWeight: 500,
+          paddingLeft: "14px",
+          borderLeft: "3px solid var(--brand)",
         }}
       >
-        <div className={`flex gap-6 ${imageSide ? "flex-col md:flex-row md:items-start" : "flex-col"}`}>
-          <div
-            className="shrink-0 w-full overflow-hidden"
-            style={{
-              borderRadius: "16px",
-              border: "1px solid rgba(0,0,0,0.05)",
-              maxWidth: imageMaxWidth,
-            }}
-          >
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              width={960}
-              height={720}
-              className="w-full h-auto block"
-            />
-          </div>
-          <ul className={`space-y-3 ${imageSide ? "flex-1" : ""}`}>
-            {points.map((point, i) => (
-              <li key={i} className="flex items-start gap-3 text-sm" style={{ color: "var(--gray-700)" }}>
-                <span
-                  className="shrink-0 w-5 h-5 flex items-center justify-center text-xs font-semibold rounded-full mt-0.5"
-                  style={{
-                    background: "var(--brand-light)",
-                    color: "var(--brand-deep)",
-                    fontFamily: "var(--font-mono)",
-                  }}
-                >
-                  {i + 1}
-                </span>
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
+        {keyMessage}
+      </p>
+      {description && (
+        <p className="mb-7 text-sm leading-relaxed" style={{ color: "var(--gray-500)" }}>
+          {description}
+        </p>
+      )}
+
+      <div className={`mb-6 flex gap-6 ${imageSide ? "flex-col md:flex-row md:items-start" : "flex-col"}`}>
+        <div
+          className="shrink-0 overflow-hidden"
+          style={{ borderRadius: "12px", maxWidth: imageMaxWidth, width: "100%" }}
+        >
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            width={960}
+            height={720}
+            className="w-full h-auto block"
+          />
         </div>
+        <ul className={`space-y-3 ${imageSide ? "flex-1" : ""}`}>
+          {points.map((point, i) => (
+            <li key={i} className="flex items-start gap-3" style={{ color: "var(--gray-700)" }}>
+              <span
+                className="shrink-0 font-semibold mt-0.5"
+                style={{
+                  fontSize: "13px",
+                  color: "var(--brand)",
+                  fontFamily: "var(--font-mono)",
+                  minWidth: "18px",
+                }}
+              >
+                {i + 1}.
+              </span>
+              <span style={{ fontSize: "15px", lineHeight: 1.7 }}>{point}</span>
+            </li>
+          ))}
+        </ul>
       </div>
 
-      {/* 강의 원고 */}
-      <div className="px-8 py-8" style={{ borderTop: "1px solid rgba(0,0,0,0.05)" }}>
-        <div
-          className="space-y-4 text-base leading-relaxed"
-          style={{ color: "var(--gray-700)" }}
-        >
-          {children}
-        </div>
+      <div className="space-y-5" style={{ fontSize: "16px", lineHeight: 1.9, color: "var(--gray-700)" }}>
+        {children}
       </div>
     </section>
   );

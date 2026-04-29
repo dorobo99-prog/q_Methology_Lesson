@@ -169,7 +169,7 @@ const summaryTable = [
 
 export default function Lesson13Page() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
+    <div className="max-w-3xl mx-auto px-6 py-16">
       {/* 내비게이션 */}
       <nav
         className="flex items-center gap-1.5 mb-8"
@@ -225,16 +225,7 @@ export default function Lesson13Page() {
       </header>
 
       {/* 도입 설명 */}
-      <section
-        className="px-8 py-7 mb-10 space-y-4 leading-relaxed text-sm"
-        style={{
-          background: "var(--white)",
-          border: "1px solid rgba(0,0,0,0.05)",
-          borderRadius: "16px",
-          boxShadow: "rgba(0,0,0,0.03) 0px 2px 4px",
-          color: "var(--gray-700)",
-        }}
-      >
+      <section className="mb-10 pt-8 space-y-4 leading-relaxed text-sm" style={{ borderTop: "1px solid rgba(0,0,0,0.08)", color: "var(--gray-700)" }}>
         <h2
           className="font-semibold mb-2"
           style={{ fontSize: "16px", color: "var(--black)" }}
@@ -449,21 +440,13 @@ export default function Lesson13Page() {
 
       </div>
 
-      {/* 한계 박스 */}
-      <section
-        className="px-8 py-7 mb-10"
-        style={{
-          background: "var(--white)",
-          border: "1px solid rgba(0,0,0,0.05)",
-          borderRadius: "16px",
-          boxShadow: "rgba(0,0,0,0.03) 0px 2px 4px",
-        }}
-      >
+      {/* 한계 */}
+      <section className="mb-10 pt-10" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
         <div
           className="text-xs font-medium uppercase mb-3"
-          style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)", letterSpacing: "0.6px" }}
+          style={{ fontFamily: "var(--font-mono)", color: "var(--brand)", letterSpacing: "0.6px" }}
         >
-          한계 박스
+          한계
         </div>
         <h2
           className="font-semibold mb-4"
@@ -556,22 +539,15 @@ export default function Lesson13Page() {
         </table>
       </section>
 
-      {/* 요약 박스 */}
-      <section
-        className="px-6 py-5 mb-10"
-        style={{
-          background: "var(--brand-light)",
-          borderLeft: "3px solid var(--brand)",
-          borderRadius: "0 16px 16px 0",
-        }}
-      >
-        <h2
-          className="text-xs font-medium uppercase mb-2"
-          style={{ fontFamily: "var(--font-mono)", color: "var(--brand-deep)", letterSpacing: "0.6px" }}
+      {/* 요약 */}
+      <section className="mb-10 pt-10" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
+        <div
+          className="text-xs font-medium uppercase mb-5"
+          style={{ fontFamily: "var(--font-mono)", color: "var(--brand)", letterSpacing: "0.6px" }}
         >
           요약
-        </h2>
-        <p className="text-sm leading-relaxed" style={{ color: "var(--black)" }}>
+        </div>
+        <p className="text-sm leading-relaxed" style={{ color: "var(--gray-700)" }}>
           Q방법론에 대한 오해는 대개 R방법론의 잣대로 Q방법론을 평가할 때 생긴다. Q방법론의 강점은 표본
           크기가 아니라 관점 다양성의 포착, 비율 추정이 아니라 유형 구조의 발견, 인과 검증이 아니라
           의미의 해석에 있다. 동시에 Q방법론에는 연구자 해석 의존성, Q-set 구성의 주관성, 횡단성, 인과추론

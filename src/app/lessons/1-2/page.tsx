@@ -85,7 +85,7 @@ const conceptTable = [
 
 export default function Lesson12Page() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
+    <div className="max-w-3xl mx-auto px-6 py-16">
       {/* 내비게이션 */}
       <nav
         className="flex items-center gap-1.5 mb-8"
@@ -130,16 +130,7 @@ export default function Lesson12Page() {
       </header>
 
       {/* 도입 설명 */}
-      <section
-        className="px-8 py-7 mb-10 space-y-4 leading-relaxed text-sm"
-        style={{
-          background: "var(--white)",
-          border: "1px solid rgba(0,0,0,0.05)",
-          borderRadius: "16px",
-          boxShadow: "rgba(0,0,0,0.03) 0px 2px 4px",
-          color: "var(--gray-700)",
-        }}
-      >
+      <section className="mb-10 pt-8 space-y-4 leading-relaxed text-sm" style={{ borderTop: "1px solid rgba(0,0,0,0.08)", color: "var(--gray-700)" }}>
         <h2
           className="font-semibold mb-2"
           style={{ fontSize: "16px", color: "var(--black)" }}
@@ -383,19 +374,11 @@ export default function Lesson12Page() {
 
       </div>
 
-      {/* 사례 박스 */}
-      <section
-        className="px-8 py-7 mb-10"
-        style={{
-          background: "var(--white)",
-          border: "1px solid rgba(0,0,0,0.05)",
-          borderRadius: "16px",
-          boxShadow: "rgba(0,0,0,0.03) 0px 2px 4px",
-        }}
-      >
+      {/* 사례 */}
+      <section className="mb-10 pt-10" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
         <div
           className="text-xs font-medium uppercase mb-3"
-          style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)", letterSpacing: "0.6px" }}
+          style={{ fontFamily: "var(--font-mono)", color: "var(--brand)", letterSpacing: "0.6px" }}
         >
           사례
         </div>
@@ -469,22 +452,15 @@ export default function Lesson12Page() {
         </table>
       </section>
 
-      {/* 요약 박스 */}
-      <section
-        className="px-6 py-5 mb-10"
-        style={{
-          background: "var(--brand-light)",
-          borderLeft: "3px solid var(--brand)",
-          borderRadius: "0 16px 16px 0",
-        }}
-      >
-        <h2
-          className="text-xs font-medium uppercase mb-2"
-          style={{ fontFamily: "var(--font-mono)", color: "var(--brand-deep)", letterSpacing: "0.6px" }}
+      {/* 요약 */}
+      <section className="mb-10 pt-10" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
+        <div
+          className="text-xs font-medium uppercase mb-5"
+          style={{ fontFamily: "var(--font-mono)", color: "var(--brand)", letterSpacing: "0.6px" }}
         >
           요약
-        </h2>
-        <p className="text-sm leading-relaxed" style={{ color: "var(--black)" }}>
+        </div>
+        <p className="text-sm leading-relaxed" style={{ color: "var(--gray-700)" }}>
           Q방법론의 핵심은 사람들의 주관성을 진술문 배열로 드러내는 것이다. Concourse는 주제에 대해 말해질 수
           있는 생각의 넓은 장이고, Q-set은 그중 연구에 사용할 대표 진술문 묶음이다. P-set은 관점을 제공할
           참여자이고, Q-sort는 그 참여자가 만든 관점의 배열이다. 연구자는 여러 Q-sort를 비교해 비슷한 배열

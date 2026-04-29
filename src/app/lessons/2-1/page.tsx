@@ -188,7 +188,7 @@ const summaryTable = [
 
 export default function Lesson21Page() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
+    <div className="max-w-3xl mx-auto px-6 py-16">
       {/* 내비게이션 */}
       <nav
         className="flex items-center gap-1.5 mb-8"
@@ -244,16 +244,7 @@ export default function Lesson21Page() {
       </header>
 
       {/* 도입 설명 */}
-      <section
-        className="px-8 py-7 mb-10 space-y-4 leading-relaxed text-sm"
-        style={{
-          background: "var(--white)",
-          border: "1px solid rgba(0,0,0,0.05)",
-          borderRadius: "16px",
-          boxShadow: "rgba(0,0,0,0.03) 0px 2px 4px",
-          color: "var(--gray-700)",
-        }}
-      >
+      <section className="mb-10 pt-8 space-y-4 leading-relaxed text-sm" style={{ borderTop: "1px solid rgba(0,0,0,0.08)", color: "var(--gray-700)" }}>
         <h2
           className="font-semibold mb-2"
           style={{ fontSize: "16px", color: "var(--black)" }}
@@ -415,21 +406,13 @@ export default function Lesson21Page() {
 
       </div>
 
-      {/* 정리 박스 — 네 갈래 막다른 길 */}
-      <section
-        className="px-8 py-7 mb-10"
-        style={{
-          background: "var(--white)",
-          border: "1px solid rgba(0,0,0,0.05)",
-          borderRadius: "16px",
-          boxShadow: "rgba(0,0,0,0.03) 0px 2px 4px",
-        }}
-      >
+      {/* 정리 */}
+      <section className="mb-10 pt-10" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
         <div
           className="text-xs font-medium uppercase mb-3"
-          style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)", letterSpacing: "0.6px" }}
+          style={{ fontFamily: "var(--font-mono)", color: "var(--brand)", letterSpacing: "0.6px" }}
         >
-          정리 박스
+          정리
         </div>
         <h2
           className="font-semibold mb-4"
@@ -502,22 +485,15 @@ export default function Lesson21Page() {
         </table>
       </section>
 
-      {/* 요약 박스 */}
-      <section
-        className="px-6 py-5 mb-10"
-        style={{
-          background: "var(--brand-light)",
-          borderLeft: "3px solid var(--brand)",
-          borderRadius: "0 16px 16px 0",
-        }}
-      >
-        <h2
-          className="text-xs font-medium uppercase mb-2"
-          style={{ fontFamily: "var(--font-mono)", color: "var(--brand-deep)", letterSpacing: "0.6px" }}
+      {/* 요약 */}
+      <section className="mb-10 pt-10" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
+        <div
+          className="text-xs font-medium uppercase mb-5"
+          style={{ fontFamily: "var(--font-mono)", color: "var(--brand)", letterSpacing: "0.6px" }}
         >
           요약
-        </h2>
-        <p className="text-sm leading-relaxed" style={{ color: "var(--black)" }}>
+        </div>
+        <p className="text-sm leading-relaxed" style={{ color: "var(--gray-700)" }}>
           1930년대 사회과학은 행동주의·요인분석·조작주의가 결합한 변수 중심 R방법론으로 통일되어 갔다. Spearman의 일반지능 g, Thurstone의 다중 요인분석, Watson과 Skinner의 행동주의, Stevens의 조작주의, 그리고 1935–1936년 심리측정학회 창립과 <em>Psychometrika</em> 창간이 한 시대의 풍경을 이뤘다. 그러나 그 통일성은 네 가지 막다른 길을 남겼다. 사람이 단위에서 사라졌고, 평균은 누구의 관점도 아니었으며, 상관은 사람 간 차이를 보여주지 못했고, 주관성은 비과학으로 밀려났다. Stephenson이 1935년 <em>Nature</em>에 보낸 짧은 서신과 1936년 <em>British Journal of Psychology</em>에 발표한 <em>The Inverted Factor Technique</em>은 이 풍경을 거부한 것이 아니라, 그 풍경의 빈자리에서 다른 출발점을 찾으려 한 시도였다.
         </p>
       </section>

@@ -245,7 +245,7 @@ const summaryTable = [
 
 export default function Lesson22Page() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
+    <div className="max-w-3xl mx-auto px-6 py-16">
       {/* 내비게이션 */}
       <nav
         className="flex items-center gap-1.5 mb-8"
@@ -301,16 +301,7 @@ export default function Lesson22Page() {
       </header>
 
       {/* 도입 설명 */}
-      <section
-        className="px-8 py-7 mb-10 space-y-4 leading-relaxed text-sm"
-        style={{
-          background: "var(--white)",
-          border: "1px solid rgba(0,0,0,0.05)",
-          borderRadius: "16px",
-          boxShadow: "rgba(0,0,0,0.03) 0px 2px 4px",
-          color: "var(--gray-700)",
-        }}
-      >
+      <section className="mb-10 pt-8 space-y-4 leading-relaxed text-sm" style={{ borderTop: "1px solid rgba(0,0,0,0.08)", color: "var(--gray-700)" }}>
         <h2
           className="font-semibold mb-2"
           style={{ fontSize: "16px", color: "var(--black)" }}
@@ -515,21 +506,13 @@ export default function Lesson22Page() {
 
       </div>
 
-      {/* 정리 박스 — Stephenson의 새 출발점 */}
-      <section
-        className="px-8 py-7 mb-10"
-        style={{
-          background: "var(--white)",
-          border: "1px solid rgba(0,0,0,0.05)",
-          borderRadius: "16px",
-          boxShadow: "rgba(0,0,0,0.03) 0px 2px 4px",
-        }}
-      >
+      {/* 정리 */}
+      <section className="mb-10 pt-10" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
         <div
           className="text-xs font-medium uppercase mb-3"
-          style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)", letterSpacing: "0.6px" }}
+          style={{ fontFamily: "var(--font-mono)", color: "var(--brand)", letterSpacing: "0.6px" }}
         >
-          정리 박스
+          정리
         </div>
         <h2
           className="font-semibold mb-4"
@@ -590,22 +573,15 @@ export default function Lesson22Page() {
         </table>
       </section>
 
-      {/* 요약 박스 */}
-      <section
-        className="px-6 py-5 mb-10"
-        style={{
-          background: "var(--brand-light)",
-          borderLeft: "3px solid var(--brand)",
-          borderRadius: "0 16px 16px 0",
-        }}
-      >
-        <h2
-          className="text-xs font-medium uppercase mb-2"
-          style={{ fontFamily: "var(--font-mono)", color: "var(--brand-deep)", letterSpacing: "0.6px" }}
+      {/* 요약 */}
+      <section className="mb-10 pt-10" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
+        <div
+          className="text-xs font-medium uppercase mb-5"
+          style={{ fontFamily: "var(--font-mono)", color: "var(--brand)", letterSpacing: "0.6px" }}
         >
           요약
-        </h2>
-        <p className="text-sm leading-relaxed" style={{ color: "var(--black)" }}>
+        </div>
+        <p className="text-sm leading-relaxed" style={{ color: "var(--gray-700)" }}>
           Stephenson의 문제의식은 &ldquo;주관성을 과학 밖에 둘 것인가, 과학 안에서 새롭게 다룰 것인가&rdquo;였다. 그는 통계를 버리지 않았다. 요인분석을 뒤집었다. 1935년 <em>Nature</em> 서신에서 사람 간 상관의 가능성을 제안했고, 같은 해 색상 선호도 실험에서 그 가능성을 보여주었다. 1936년에는 역전된 요인 기법을 절차화했고, 1939년에는 Burt와의 논쟁 속에서 Q가 단순한 행렬 전치가 아니라 독자적 방법론임을 주장했다. 1953년 <em>The Study of Behavior</em>에서는 주관성을 Q-sort라는 구체적 행동 속에서 연구하는 체계를 세웠다. 그래서 Q방법론의 핵심은 &ldquo;주관성을 측정할 수 없는 것으로 포기하지 않고, 주관성이 드러나는 배열 행위를 과학적 자료로 만드는 것&rdquo;이다.
         </p>
       </section>
