@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import CoursePageHero from "@/components/CoursePageHero";
 
 export const metadata: Metadata = {
   title: "2-3. 주관성의 과학적 탐구 | Q방법론 온라인 강의",
@@ -200,48 +201,17 @@ function Card({
 export default function Lesson23Page() {
   return (
     <div className="max-w-3xl mx-auto px-5 sm:px-8 py-12 sm:py-16">
-      {/* 내비게이션 */}
-      <nav
-        className="flex items-center gap-1.5 mb-8 flex-wrap"
-        style={{ fontSize: "12px", fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}
-      >
-        <Link href="/outline" style={{ color: "var(--gray-400)" }} className="hover:underline">강의 목차</Link>
-        <span>›</span>
-        <span>2부</span>
-        <span>›</span>
-        <span style={{ color: "var(--black)" }}>2-3. 주관성의 과학적 탐구</span>
-      </nav>
-
-      {/* 히어로 */}
-      <header className="mb-10">
-        <div className="flex items-center gap-3 mb-4">
-          <span
-            className="text-xs font-medium px-3 py-1 rounded-full"
-            style={{
-              fontFamily: "var(--font-mono)",
-              background: "var(--brand-light)",
-              color: "var(--brand-deep)",
-            }}
-          >
-            ✅ 공개
-          </span>
-          <span
-            className="text-xs"
-            style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}
-          >
-            v1.0 · 2026-04-29
-          </span>
-        </div>
-        <h1
-          className="font-semibold mb-4"
-          style={{ fontSize: "32px", letterSpacing: "-0.6px", lineHeight: 1.15, color: "var(--black)" }}
-        >
-          주관성의 과학적 탐구
-        </h1>
-        <p style={{ fontSize: "17px", lineHeight: 1.65, color: "var(--gray-500)" }}>
-          Q방법론이 주관성을 단순한 내면 상태가 아니라, 사람이 자기 세계를 의미 있게 배열하는 관점의 구조로 보고 이를 어떻게 과학적으로 다루는지 설명한다.
-        </p>
-      </header>
+      <CoursePageHero
+        breadcrumbs={[
+          { label: "강의 목차", href: "/outline" },
+          { label: "2부. Q방법론의 등장과 발전" },
+          { label: "2-3. 주관성의 과학적 탐구" },
+        ]}
+        statusLabel="공개"
+        versionLabel="v1.0 · 2026-04-29"
+        title="주관성의 과학적 탐구"
+        description="Q방법론이 주관성을 단순한 내면 상태가 아니라, 사람이 자기 세계를 의미 있게 배열하는 관점의 구조로 보고 이를 어떻게 과학적으로 다루는지 설명한다."
+      />
 
       {/* 도입 */}
       <section className="mb-10 pt-8" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>

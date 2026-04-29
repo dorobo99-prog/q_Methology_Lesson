@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import LessonCard from "@/components/LessonCard";
+import CoursePageHero from "@/components/CoursePageHero";
 
 export const metadata: Metadata = {
   title: "2-1. 기존 사회과학 방법론의 한계 | Q방법론 온라인 강의",
@@ -189,59 +190,19 @@ const summaryTable = [
 export default function Lesson21Page() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16">
-      {/* 내비게이션 */}
-      <nav
-        className="flex items-center gap-1.5 mb-8"
-        style={{ fontSize: "12px", fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}
-      >
-        <Link href="/outline" style={{ color: "var(--gray-400)" }} className="hover:underline">강의 목차</Link>
-        <span>›</span>
-        <span>2부. Q방법론의 등장과 발전</span>
-        <span>›</span>
-        <span style={{ color: "var(--black)" }}>2-1. 기존 사회과학 방법론의 한계</span>
-      </nav>
-
-      {/* 히어로 */}
-      <header className="mb-12">
-        <div className="flex items-center gap-3 mb-4">
-          <span
-            className="text-xs font-medium px-3 py-1 rounded-full"
-            style={{
-              fontFamily: "var(--font-mono)",
-              background: "var(--brand-light)",
-              color: "var(--brand-deep)",
-            }}
-          >
-            ✅ 공개
-          </span>
-          <span
-            className="text-xs"
-            style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}
-          >
-            v1.0 · 2026-04-27
-          </span>
-        </div>
-        <h1
-          className="font-semibold mb-3"
-          style={{ fontSize: "40px", letterSpacing: "-0.8px", lineHeight: 1.1, color: "var(--black)" }}
-        >
-          기존 사회과학 방법론의 한계
-        </h1>
-        <p style={{ fontSize: "18px", lineHeight: 1.5, color: "var(--gray-500)" }}>
-          1930년대 심리학·사회과학이 변수 중심 R방법론에 의존하면서 부딪힌 학문적 막다른 길을 따라가, Q방법론이 등장하기 직전의 풍경을 그린다.
-        </p>
-        <div className="mt-8">
-          <Image
-            src="/images/2-1-card-00-r-methodology-limits.webp"
-            alt="평균값 막대그래프와 변수 간 상관행렬의 정연한 풍경 뒤로 다양한 표정의 개인 실루엣이 흐릿하게 가려진 1930년대 학문의 장면"
-            width={500}
-            height={280}
-            className="h-auto rounded-xl"
-            style={{ maxWidth: "500px", width: "100%" }}
-            priority
-          />
-        </div>
-      </header>
+      <CoursePageHero
+        breadcrumbs={[
+          { label: "강의 목차", href: "/outline" },
+          { label: "2부. Q방법론의 등장과 발전" },
+          { label: "2-1. 기존 사회과학 방법론의 한계" },
+        ]}
+        statusLabel="공개"
+        versionLabel="v1.0 · 2026-04-27"
+        title="기존 사회과학 방법론의 한계"
+        description="1930년대 심리학·사회과학이 변수 중심 R방법론에 의존하면서 부딪힌 학문적 막다른 길을 따라가, Q방법론이 등장하기 직전의 풍경을 그린다."
+        imageSrc="/images/2-1-card-00-r-methodology-limits.webp"
+        imageAlt="평균값 막대그래프와 변수 간 상관행렬의 정연한 풍경 뒤로 다양한 표정의 개인 실루엣이 흐릿하게 가려진 1930년대 학문의 장면"
+      />
 
       {/* 도입 설명 */}
       <section className="mb-10 pt-8 space-y-4 leading-relaxed text-sm" style={{ borderTop: "1px solid rgba(0,0,0,0.08)", color: "var(--gray-700)" }}>

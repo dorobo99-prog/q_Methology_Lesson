@@ -1,48 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --black: #0d0d0d;
+  --black: #1d1d1f;
+  --pure-black: #000000;
   --white: #ffffff;
-  --gray-50: #fafafa;
-  --gray-100: #f5f5f5;
-  --gray-200: #e5e5e5;
-  --gray-400: #888888;
-  --gray-500: #666666;
-  --gray-700: #333333;
-  --brand: #18E299;
-  --brand-light: #d4fae8;
-  --brand-deep: #0fa76e;
-  --border-subtle: rgba(0, 0, 0, 0.05);
-  --border-medium: rgba(0, 0, 0, 0.08);
-  --shadow-ambient: rgba(0, 0, 0, 0.03) 0px 2px 4px;
-  --shadow-button: rgba(0, 0, 0, 0.06) 0px 1px 2px;
+  --gray-50: #fafafc;
+  --gray-100: #f5f5f7;
+  --gray-200: #d2d2d7;
+  --gray-300: rgba(0, 0, 0, 0.16);
+  --gray-400: rgba(0, 0, 0, 0.48);
+  --gray-500: rgba(0, 0, 0, 0.8);
+  --gray-700: #424245;
+  --brand: #0071e3;
+  --brand-light: rgba(0, 113, 227, 0.08);
+  --brand-deep: #0066cc;
+  --brand-dark-surface: #2997ff;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-medium: rgba(0, 0, 0, 0.12);
+  --dark-surface-1: #272729;
+  --dark-surface-2: #2a2a2d;
+  --shadow-card: rgba(0, 0, 0, 0.22) 3px 5px 30px 0px;
+  --shadow-button: rgba(0, 0, 0, 0.12) 0px 1px 2px;
+  --font-display: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-text: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+html {
+  background: var(--white);
 }
 
 body {
   background: var(--white);
   color: var(--black);
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 17px;
+  line-height: 1.47;
+  letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: var(--font-text);
 }
 
 /* Header nav */
 .nav-link {
-  color: var(--gray-500);
-  font-size: 14px;
-  font-weight: 500;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
+  font-weight: 400;
   text-decoration: none;
   transition: color 0.15s;
 }
-.nav-link:hover { color: var(--brand-deep); }
+.nav-link:hover { color: var(--white); }
 
 .nav-cta {
-  background: var(--black);
+  background: var(--brand);
   color: var(--white);
-  padding: 7px 18px;
+  padding: 5px 14px;
   border-radius: 9999px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 400;
   text-decoration: none;
   box-shadow: var(--shadow-button);
   transition: opacity 0.15s;

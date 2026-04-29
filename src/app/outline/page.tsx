@@ -347,47 +347,57 @@ const CURRICULUM: Part[] = [
 
 type BadgeStyle = { label: string; bg: string; color: string };
 const statusBadge: Record<Status, BadgeStyle> = {
-  open:   { label: "✅ 공개",   bg: "var(--brand-light)", color: "var(--brand-deep)" },
-  draft:  { label: "🟡 작성 중", bg: "rgba(195,125,13,0.10)", color: "#c37d0d" },
-  locked: { label: "🔒 예정",   bg: "var(--gray-100)", color: "var(--gray-400)" },
+  open:   { label: "공개", bg: "var(--white)", color: "var(--black)" },
+  draft:  { label: "작성 중", bg: "var(--white)", color: "var(--black)" },
+  locked: { label: "예정", bg: "var(--white)", color: "var(--gray-400)" },
 };
 
 export default function OutlinePage() {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-16">
-      {/* 헤더 */}
-      <div
-        className="text-xs font-medium uppercase mb-3"
-        style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)", letterSpacing: "0.6px" }}
+    <div className="max-w-4xl mx-auto px-5 sm:px-8 py-12 sm:py-16">
+      <section
+        className="mb-12 px-5 py-6 sm:px-8 sm:py-8"
+        style={{ background: "var(--gray-100)", borderRadius: "8px" }}
       >
-        강의 목차
-      </div>
-      <h1
-        className="font-semibold mb-3"
-        style={{ fontSize: "40px", letterSpacing: "-0.8px", lineHeight: 1.1, color: "var(--black)" }}
-      >
-        전체 강의 목차
-      </h1>
-      <p className="mb-10 text-sm" style={{ color: "var(--gray-500)" }}>
-        대학원생을 위한 Q방법론 온라인 강의 — 10부 22장 구성. 작성된 강의만 링크가 활성화됩니다.
-      </p>
+        <div
+          className="text-xs mb-3"
+          style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}
+        >
+          강의 목차
+        </div>
+        <h1
+          className="font-semibold mb-3"
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "clamp(32px, 5vw, 44px)",
+            lineHeight: 1.1,
+            color: "var(--black)",
+          }}
+        >
+          전체 강의 목차
+        </h1>
+        <p className="text-sm sm:text-base" style={{ color: "var(--gray-700)", maxWidth: "740px", lineHeight: 1.6 }}>
+          대학원생을 위한 Q방법론 온라인 강의 전체 구조다. 공개된 강의는 바로 들어갈 수 있고,
+          아직 열리지 않은 장은 순서대로 이어질 수 있도록 자리만 먼저 고정해 두었다.
+        </p>
 
-      {/* 상태 범례 */}
-      <div className="flex flex-wrap gap-2 mb-12">
-        {Object.values(statusBadge).map((v) => (
-          <span
-            key={v.label}
-            className="text-xs font-medium px-3 py-1 rounded-full"
-            style={{
-              fontFamily: "var(--font-mono)",
-              background: v.bg,
-              color: v.color,
-            }}
-          >
-            {v.label}
-          </span>
-        ))}
-      </div>
+        <div className="flex flex-wrap gap-2 mt-7">
+          {Object.values(statusBadge).map((v) => (
+            <span
+              key={v.label}
+              className="text-xs px-3 py-1 rounded-full"
+              style={{
+                fontFamily: "var(--font-mono)",
+                background: v.bg,
+                color: v.color,
+                border: "1px solid var(--border-subtle)",
+              }}
+            >
+              {v.label}
+            </span>
+          ))}
+        </div>
+      </section>
 
       {/* 목차 */}
       <div className="space-y-12">
@@ -397,9 +407,9 @@ export default function OutlinePage() {
               className="font-semibold mb-5 pb-3"
               style={{
                 fontSize: "20px",
-                letterSpacing: "-0.2px",
+                fontFamily: "var(--font-display)",
                 color: "var(--black)",
-                borderBottom: "1px solid rgba(0,0,0,0.05)",
+                borderBottom: "1px solid var(--border-subtle)",
               }}
             >
               <span style={{ color: "var(--brand-deep)" }}>{part.num}.</span>{" "}
@@ -425,11 +435,12 @@ export default function OutlinePage() {
                           style={{ background: isOpen ? "transparent" : undefined }}
                         >
                           <span
-                            className="shrink-0 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                            className="shrink-0 text-xs px-2.5 py-0.5 rounded-full"
                             style={{
                               fontFamily: "var(--font-mono)",
                               background: badge.bg,
                               color: badge.color,
+                              border: "1px solid var(--border-subtle)",
                             }}
                           >
                             {badge.label}

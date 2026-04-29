@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import LessonCard from "@/components/LessonCard";
+import CoursePageHero from "@/components/CoursePageHero";
 
 export const metadata: Metadata = {
   title: "2-2. Stephenson의 문제의식 | Q방법론 온라인 강의",
@@ -246,59 +246,19 @@ const summaryTable = [
 export default function Lesson22Page() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16">
-      {/* 내비게이션 */}
-      <nav
-        className="flex items-center gap-1.5 mb-8"
-        style={{ fontSize: "12px", fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}
-      >
-        <Link href="/outline" style={{ color: "var(--gray-400)" }} className="hover:underline">강의 목차</Link>
-        <span>›</span>
-        <span>2부. Q방법론의 등장과 발전</span>
-        <span>›</span>
-        <span style={{ color: "var(--black)" }}>2-2. Stephenson의 문제의식</span>
-      </nav>
-
-      {/* 히어로 */}
-      <header className="mb-12">
-        <div className="flex items-center gap-3 mb-4">
-          <span
-            className="text-xs font-medium px-3 py-1 rounded-full"
-            style={{
-              fontFamily: "var(--font-mono)",
-              background: "var(--brand-light)",
-              color: "var(--brand-deep)",
-            }}
-          >
-            ✅ 공개
-          </span>
-          <span
-            className="text-xs"
-            style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}
-          >
-            v1.0 · 2026-04-28
-          </span>
-        </div>
-        <h1
-          className="font-semibold mb-3"
-          style={{ fontSize: "40px", letterSpacing: "-0.8px", lineHeight: 1.1, color: "var(--black)" }}
-        >
-          Stephenson의 문제의식
-        </h1>
-        <p style={{ fontSize: "18px", lineHeight: 1.5, color: "var(--gray-500)" }}>
-          1930년대 사회과학의 네 갈래 막다른 길 위에서, Stephenson이 &ldquo;주관성을 어떻게 과학의 대상으로 삼을 것인가&rdquo;라는 질문을 어떻게 Q방법론의 출발점으로 바꾸었는지 따라간다.
-        </p>
-        <div className="mt-8">
-          <Image
-            src="/images/2-2-card-00-stephenson-problematic.webp"
-            alt="Stephenson의 1935년 서신, 1936년 논문, 1953년 단행본이 한 책상 위에 놓이고 변수 행렬이 사람들의 관점 배열로 바뀌는 장면"
-            width={500}
-            height={280}
-            className="h-auto rounded-xl"
-            style={{ maxWidth: "500px", width: "100%" }}
-            priority
-          />
-        </div>
-      </header>
+      <CoursePageHero
+        breadcrumbs={[
+          { label: "강의 목차", href: "/outline" },
+          { label: "2부. Q방법론의 등장과 발전" },
+          { label: "2-2. Stephenson의 문제의식" },
+        ]}
+        statusLabel="공개"
+        versionLabel="v1.0 · 2026-04-28"
+        title="Stephenson의 문제의식"
+        description="1930년대 사회과학의 네 갈래 막다른 길 위에서, Stephenson이 “주관성을 어떻게 과학의 대상으로 삼을 것인가”라는 질문을 어떻게 Q방법론의 출발점으로 바꾸었는지 따라간다."
+        imageSrc="/images/2-2-card-00-stephenson-problematic.webp"
+        imageAlt="Stephenson의 1935년 서신, 1936년 논문, 1953년 단행본이 한 책상 위에 놓이고 변수 행렬이 사람들의 관점 배열로 바뀌는 장면"
+      />
 
       {/* 도입 설명 */}
       <section className="mb-10 pt-8 space-y-4 leading-relaxed text-sm" style={{ borderTop: "1px solid rgba(0,0,0,0.08)", color: "var(--gray-700)" }}>

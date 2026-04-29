@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LessonCard from "@/components/LessonCard";
+import CoursePageHero from "@/components/CoursePageHero";
 
 export const metadata: Metadata = {
   title: "1-1. Q방법론의 정의와 연구문제 | Q방법론 온라인 강의",
@@ -91,48 +92,17 @@ const classics = [
 export default function Lesson11Page() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16">
-      {/* 내비게이션 */}
-      <nav
-        className="flex items-center gap-1.5 mb-8"
-        style={{ fontSize: "12px", fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}
-      >
-        <Link href="/outline" style={{ color: "var(--gray-400)" }} className="hover:underline">강의 목차</Link>
-        <span>›</span>
-        <span>1부. Q방법론 입문</span>
-        <span>›</span>
-        <span style={{ color: "var(--black)" }}>1-1. Q방법론의 정의와 연구문제</span>
-      </nav>
-
-      {/* 히어로 */}
-      <header className="mb-12">
-        <div className="flex items-center gap-3 mb-4">
-          <span
-            className="text-xs font-medium px-3 py-1 rounded-full"
-            style={{
-              fontFamily: "var(--font-mono)",
-              background: "var(--brand-light)",
-              color: "var(--brand-deep)",
-            }}
-          >
-            ✅ 공개
-          </span>
-          <span
-            className="text-xs"
-            style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}
-          >
-            v1.0 · 2026-04-25
-          </span>
-        </div>
-        <h1
-          className="font-semibold mb-3"
-          style={{ fontSize: "40px", letterSpacing: "-0.8px", lineHeight: 1.1, color: "var(--black)" }}
-        >
-          Q방법론의 정의와 연구문제
-        </h1>
-        <p style={{ fontSize: "18px", lineHeight: 1.5, color: "var(--gray-500)" }}>
-          Q방법론은 사람들의 생각 배열 패턴을 비교해, 서로 다른 관점의 구조를 밝혀내는 방법이다.
-        </p>
-      </header>
+      <CoursePageHero
+        breadcrumbs={[
+          { label: "강의 목차", href: "/outline" },
+          { label: "1부. Q방법론 입문" },
+          { label: "1-1. Q방법론의 정의와 연구문제" },
+        ]}
+        statusLabel="공개"
+        versionLabel="v1.0 · 2026-04-25"
+        title="Q방법론의 정의와 연구문제"
+        description="Q방법론은 사람들의 생각 배열 패턴을 비교해, 서로 다른 관점의 구조를 밝혀내는 방법이다."
+      />
 
       {/* 도입 설명 */}
       <section className="mb-10 pt-8 space-y-4 leading-relaxed text-sm" style={{ borderTop: "1px solid rgba(0,0,0,0.08)", color: "var(--gray-700)" }}>
