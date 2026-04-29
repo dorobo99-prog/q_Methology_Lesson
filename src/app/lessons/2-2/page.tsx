@@ -309,7 +309,7 @@ export default function Lesson22Page() {
           <p>
             Good(2010)의 &ldquo;주관성의 과학&rdquo;이 이 지점을 잘 붙잡는다.
             Stephenson은 행동주의가 배제한 내면을 단순히 복원하려 한 것이 아니라,
-            <strong>주관성을 과학이 다룰 수 있는 방식</strong>으로 다시 형식화하려 했다.
+            <strong> 주관성을 과학이 다룰 수 있는 방식</strong>으로 다시 형식화하려 했다.
           </p>
         </Card>
 
