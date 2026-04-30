@@ -700,13 +700,17 @@ export default function Lesson23Page() {
         >
           ← 2-2. Stephenson의 문제의식
         </Link>
-        <div className="text-sm text-right" style={{ color: "var(--gray-400)" }}>
+        <Link
+          href="/lessons/2-4"
+          className="text-sm text-right"
+          style={{ color: "var(--gray-400)" }}
+        >
           <span>다음 강의</span>
           <br />
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "12px" }}>
-            2-4. Q와 R의 분리 (준비 중)
+            2-4. Q와 R의 분리 →
           </span>
-        </div>
+        </Link>
       </div>
     </div>
   );

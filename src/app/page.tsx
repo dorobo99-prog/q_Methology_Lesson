@@ -1,29 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
-const releasedLessons = [
-  {
-    id: "1-1",
-    title: "Q방법론의 정의와 연구문제",
-    description: "Q방법론이 어떤 연구문제에 맞고, 무엇을 연구 대상으로 삼는지부터 시작합니다.",
-    href: "/lessons/1-1",
-    image: "/images/1-1-card-01-definition.webp",
-  },
-  {
-    id: "2-2",
-    title: "Stephenson의 문제의식",
-    description: "왜 사람이 아니라 변수가 중심이 되었는지, Stephenson이 어디서 방향을 틀었는지 따라갑니다.",
-    href: "/lessons/2-2",
-    image: "/images/2-2-card-00-stephenson-problematic.webp",
-  },
-  {
-    id: "2-3",
-    title: "주관성의 과학적 탐구",
-    description: "조작적 주관성, 개인내 유의성, 심리적 유의성을 연결해 Q방법론의 핵심을 설명합니다.",
-    href: "/lessons/2-3",
-    image: "/images/2-3-card-01-subjectivity-as-organization.webp",
-  },
-];
+import { useEffect, useState } from "react";
+import { openLessons, heroImages, type Lesson } from "@/data/lessons";
 
 const pillars = [
   {
@@ -47,10 +27,23 @@ const stats = [
   { value: "대학원생", label: "주 대상" },
 ];
 
+function pickRandom<T>(arr: T[], n: number): T[] {
+  return [...arr].sort(() => Math.random() - 0.5).slice(0, n);
+}
+
 export default function HomePage() {
+  const [hero, setHero] = useState(heroImages[0]);
+  const [featured, setFeatured] = useState<Lesson[]>(openLessons.slice(0, 3));
+
+  useEffect(() => {
+    setHero(heroImages[Math.floor(Math.random() * heroImages.length)]);
+    const picked = pickRandom(openLessons, 3).sort((a, b) => a.order - b.order);
+    setFeatured(picked);
+  }, []);
+
   return (
     <div>
-      {/* HERO — 검정 밴드, 단일 초점 */}
+      {/* HERO */}
       <section style={{ background: "var(--pure-black)", color: "var(--white)" }}>
         <div className="max-w-[1100px] mx-auto px-5 sm:px-8 pt-20 sm:pt-28 pb-0">
           <div className="max-w-[820px]">
@@ -106,11 +99,11 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* 히어로 이미지 — 오버레이 없이 깨끗하게 */}
+          {/* 히어로 이미지 — 랜덤 */}
           <div className="mt-14 sm:mt-20">
             <Image
-              src="/images/2-3-card-01-subjectivity-as-organization.webp"
-              alt="Q방법론 강의 메인 시각 이미지"
+              src={hero.src}
+              alt={hero.alt}
               width={2000}
               height={1100}
               className="w-full h-auto block"
@@ -119,11 +112,10 @@ export default function HomePage() {
             />
           </div>
         </div>
-        {/* 하단 여백을 검정 밴드 안에서 마무리 */}
         <div className="h-20 sm:h-28" />
       </section>
 
-      {/* STATS — 밝은 회색, 조용한 밴드 */}
+      {/* STATS */}
       <section style={{ background: "var(--gray-100)" }}>
         <div className="max-w-[1100px] mx-auto px-5 sm:px-8 py-12 sm:py-14">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-6">
@@ -140,13 +132,7 @@ export default function HomePage() {
                 >
                   {stat.value}
                 </div>
-                <div
-                  style={{
-                    fontSize: "13px",
-                    color: "var(--gray-400)",
-                    marginTop: "6px",
-                  }}
-                >
+                <div style={{ fontSize: "13px", color: "var(--gray-400)", marginTop: "6px" }}>
                   {stat.label}
                 </div>
               </div>
@@ -155,17 +141,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* LESSONS — 흰 배경, 그림자 없는 평평한 카드 */}
+      {/* LESSONS — 랜덤 3개, 강의 순서 정렬 */}
       <section style={{ background: "var(--white)" }}>
         <div className="max-w-[1100px] mx-auto px-5 sm:px-8 py-20 sm:py-28">
           <div className="max-w-[760px] mb-12 sm:mb-16">
-            <div
-              style={{
-                fontSize: "13px",
-                color: "var(--gray-400)",
-                marginBottom: "10px",
-              }}
-            >
+            <div style={{ fontSize: "13px", color: "var(--gray-400)", marginBottom: "10px" }}>
               공개된 강의
             </div>
             <h2
@@ -182,10 +162,10 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-x-6 gap-y-12">
-            {releasedLessons.map((lesson) => (
+            {featured.map((lesson) => (
               <Link
                 key={lesson.id}
-                href={lesson.href}
+                href={lesson.href!}
                 className="group block"
                 style={{ textDecoration: "none", color: "inherit" }}
               >
@@ -199,7 +179,7 @@ export default function HomePage() {
                   }}
                 >
                   <Image
-                    src={lesson.image}
+                    src={lesson.image!}
                     alt={lesson.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -239,13 +219,7 @@ export default function HomePage() {
                   >
                     {lesson.description}
                   </p>
-                  <div
-                    style={{
-                      color: "var(--brand)",
-                      fontSize: "14px",
-                      marginTop: "16px",
-                    }}
-                  >
+                  <div style={{ color: "var(--brand)", fontSize: "14px", marginTop: "16px" }}>
                     강의 보기 →
                   </div>
                 </div>
@@ -255,17 +229,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PILLARS — 밝은 회색, 카드 없이 3열 텍스트 */}
+      {/* PILLARS */}
       <section style={{ background: "var(--gray-100)" }}>
         <div className="max-w-[1100px] mx-auto px-5 sm:px-8 py-20 sm:py-28">
           <div className="max-w-[760px] mb-12 sm:mb-16">
-            <div
-              style={{
-                fontSize: "13px",
-                color: "var(--gray-400)",
-                marginBottom: "10px",
-              }}
-            >
+            <div style={{ fontSize: "13px", color: "var(--gray-400)", marginBottom: "10px" }}>
               강의 방향
             </div>
             <h2
@@ -314,7 +282,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA — 검정 밴드, 단일 액션 */}
+      {/* CTA */}
       <section style={{ background: "var(--pure-black)", color: "var(--white)" }}>
         <div className="max-w-[820px] mx-auto px-5 sm:px-8 py-24 sm:py-32 text-center">
           <h2
