@@ -78,8 +78,8 @@ function Card({
       >
         {keyMessage}
       </p>
-      <div className="mb-6 overflow-hidden" style={{ borderRadius: "12px" }}>
-        <Image src={imageSrc} alt={imageAlt} width={960} height={540} className="w-full h-auto block" />
+      <div className="mb-6 overflow-hidden w-full sm:w-[500px]" style={{ borderRadius: "12px" }}>
+        <Image src={imageSrc} alt={imageAlt} width={960} height={540} className="w-full h-auto block" sizes="(max-width: 640px) 100vw, 500px" />
       </div>
       <ul className="mb-8 space-y-3">
         {points.map((point, i) => (

@@ -185,13 +185,14 @@ function Card({
         {keyMessage}
       </p>
 
-      <div className="mb-6 overflow-hidden" style={{ borderRadius: "12px" }}>
+      <div className="mb-6 overflow-hidden w-full sm:w-[500px]" style={{ borderRadius: "12px" }}>
         <Image
           src={imageSrc}
           alt={imageAlt}
           width={960}
           height={540}
           className="w-full h-auto block"
+          sizes="(max-width: 640px) 100vw, 500px"
         />
       </div>
 
@@ -930,13 +931,17 @@ export default function Lesson24Page() {
         >
           ← 2-3. 주관성의 과학적 탐구
         </Link>
-        <div className="text-sm text-right" style={{ color: "var(--gray-400)" }}>
+        <Link
+          href="/lessons/3-1"
+          className="text-sm text-right"
+          style={{ color: "var(--gray-400)" }}
+        >
           <span>다음 강의</span>
           <br />
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "12px" }}>
-            3-1. 변수 중심 vs 사람 중심 (준비 중)
+            3-1. Stephenson 이후 Q의 전개 →
           </span>
-        </div>
+        </Link>
       </div>
     </div>
   );

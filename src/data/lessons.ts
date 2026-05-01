@@ -117,7 +117,13 @@ export const CURRICULUM: Part[] = [
         num: "3장",
         title: "Q방법론의 역사와 현대적 발전",
         lessons: [
-          { id: "3-1", order: 301, status: "locked", title: "Stephenson 이후 Q방법론의 전개" },
+          {
+            id: "3-1", order: 301, status: "open",
+            title: "Stephenson 이후 Q방법론의 전개",
+            href: "/lessons/3-1",
+            description: "Stephenson의 주관성의 과학이 Brown, Q 커뮤니티, 현대 절차화, 응용 연구, 보고 기준을 거쳐 어떻게 독자적 연구 전통으로 축적되었는지 본다.",
+            image: "/images/3-1-hero-after-stephenson-development.webp",
+          },
           { id: "3-2", order: 302, status: "locked", title: "Brown과 정치적 주관성 연구" },
           { id: "3-3", order: 303, status: "locked", title: "Watts & Stenner와 현대 Q 연구 절차" },
           { id: "3-4", order: 304, status: "locked", title: "최근 Q방법론의 보고 기준과 재현가능성 논의" },

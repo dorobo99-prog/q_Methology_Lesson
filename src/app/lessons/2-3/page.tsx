@@ -157,13 +157,14 @@ function Card({
       </p>
 
       {/* 이미지 */}
-      <div className="mb-6 overflow-hidden" style={{ borderRadius: "12px" }}>
+      <div className="mb-6 overflow-hidden w-full sm:w-[500px]" style={{ borderRadius: "12px" }}>
         <Image
           src={imageSrc}
           alt={imageAlt}
           width={960}
           height={540}
           className="w-full h-auto block"
+          sizes="(max-width: 640px) 100vw, 500px"
         />
       </div>
 
