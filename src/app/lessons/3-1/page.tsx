@@ -389,7 +389,7 @@ export default function Lesson31Page() {
             </li>
           </ul>
           <p>
-            이 여섯 걸음을 따라가면 흩어진 주제들이 하나의 흐름으로 묶인다.
+            이 다섯 걸음을 따라가면 흩어진 주제들이 하나의 흐름으로 묶인다.
           </p>
         </div>
       </section>
