@@ -303,7 +303,7 @@ export default function Lesson31Page() {
       <CoursePageHero
         breadcrumbs={[
           { label: "강의목차", href: "/outline" },
-          { label: "2부" },
+          { label: "3부" },
           { label: "3-1. Stephenson 이후 Q방법론의 전개" },
         ]}
         statusLabel="공개"
