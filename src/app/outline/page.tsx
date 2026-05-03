@@ -39,8 +39,8 @@ export default function OutlinePage() {
           전체 강의 목차
         </h1>
         <p className="text-sm sm:text-base" style={{ color: "var(--gray-700)", maxWidth: "740px", lineHeight: 1.6 }}>
-          대학원생을 위한 Q방법론 온라인 강의 전체 구조다. 공개된 강의는 바로 들어갈 수 있고,
-          아직 열리지 않은 장은 순서대로 이어질 수 있도록 자리만 먼저 고정해 두었다.
+          대학원생과 연구자를 위한 Q방법론 온라인 강의 전체 목차입니다.<br />
+          이 강의는 Stephenson의 Q방법론, Brown의 정치적 주관성, Q와 R의 차이, Q-set 개발, P-set 선정, Q-sort, 요인분석, PQMethod, R qmethod, 논문 작성법까지 단계별로 다룹니다.
         </p>
 
         <div className="flex flex-wrap gap-2 mt-7">
