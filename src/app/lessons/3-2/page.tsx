@@ -219,7 +219,7 @@ export default function Lesson32Page() {
           { label: "3부" },
           { label: "3-2. Brown과 정치적 주관성 연구" },
         ]}
-        statusLabel="준비 중"
+        statusLabel="공개"
         versionLabel="v1.0 · 2026-05-03"
         title="Brown과 정치적 주관성 연구"
         description="Q방법론은 사람을 분류하는 기술이 아니라, 사람이 정치적 세계를 의미 있게 배열하는 방식을 연구하는 방법론이다."
