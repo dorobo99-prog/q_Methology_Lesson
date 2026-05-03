@@ -233,7 +233,7 @@ export default function Lesson32Page() {
           className="font-semibold mb-4"
           style={{ fontSize: "17px", color: "var(--black)" }}
         >
-          Brown을 왜 따로 읽어야 하는가
+          들어가며
         </h2>
         <div
           className="space-y-5"
