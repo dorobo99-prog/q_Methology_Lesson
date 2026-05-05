@@ -589,7 +589,7 @@ export default function Lesson33Page() {
           { label: "3-3. Watts & Stenner와 현대 Q 연구 절차" },
         ]}
         statusLabel="공개"
-        versionLabel="v1.0 · 2026-05-04"
+        versionLabel="v1.0 · 2026-05-05"
         title="Watts & Stenner와 현대 Q 연구 절차"
         description="Q방법론 절차는 작업 순서가 아니라, 주관성이 자료로 나타나고 비교되고 해석되는 장치들의 연결이다."
         imageSrc="/images/3-3-hero-watts-stenner-modern-q-procedure.webp"
