@@ -170,6 +170,7 @@ export default function HomePage() {
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <div
+                  className="-mx-5 w-[calc(100%+40px)] sm:mx-0 sm:w-[500px] md:w-full"
                   style={{
                     aspectRatio: "16 / 10",
                     position: "relative",

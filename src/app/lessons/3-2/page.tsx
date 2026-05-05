@@ -170,7 +170,7 @@ function Card({
         {keyMessage}
       </p>
 
-      <div className="mb-6 overflow-hidden w-full sm:w-[500px]" style={{ borderRadius: "12px" }}>
+      <div className="mb-6 overflow-hidden -mx-5 w-[calc(100%+40px)] sm:mx-0 sm:w-[500px]" style={{ borderRadius: "12px" }}>
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -943,13 +943,17 @@ export default function Lesson32Page() {
         >
           ← 3-1. Stephenson 이후 Q방법론의 전개
         </Link>
-        <div className="text-sm text-right" style={{ color: "var(--gray-400)" }}>
+        <Link
+          href="/lessons/3-3"
+          className="text-sm text-right"
+          style={{ color: "var(--gray-400)" }}
+        >
           <span>다음 강의</span>
           <br />
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "12px" }}>
-            3-3. Watts &amp; Stenner와 현대 Q 연구 절차
+            3-3. Watts &amp; Stenner와 현대 Q 연구 절차 →
           </span>
-        </div>
+        </Link>
       </div>
     </div>
   );

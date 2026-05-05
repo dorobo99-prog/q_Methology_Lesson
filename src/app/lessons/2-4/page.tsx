@@ -185,7 +185,7 @@ function Card({
         {keyMessage}
       </p>
 
-      <div className="mb-6 overflow-hidden w-full sm:w-[500px]" style={{ borderRadius: "12px" }}>
+      <div className="mb-6 overflow-hidden -mx-5 w-[calc(100%+40px)] sm:mx-0 sm:w-[500px]" style={{ borderRadius: "12px" }}>
         <Image
           src={imageSrc}
           alt={imageAlt}
