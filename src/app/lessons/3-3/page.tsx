@@ -730,13 +730,13 @@ export default function Lesson33Page() {
         <Link href="/lessons/3-2" className="text-sm" style={{ color: "var(--gray-400)" }}>
           ← 3-2. Brown과 정치적 주관성 연구
         </Link>
-        <div className="text-sm text-right" style={{ color: "var(--gray-400)" }}>
+        <Link href="/lessons/3-4" className="text-sm text-right" style={{ color: "var(--gray-400)" }}>
           <span>다음 강의</span>
           <br />
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "12px" }}>
             3-4. 최근 Q방법론의 보고 기준과 재현가능성 논의
           </span>
-        </div>
+        </Link>
       </div>
     </div>
   );
