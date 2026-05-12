@@ -157,7 +157,13 @@ export const CURRICULUM: Part[] = [
         num: "4장",
         title: "Q와 R은 무엇이 다른가",
         lessons: [
-          { id: "4-1", order: 401, status: "locked", title: "변수 중심 분석과 사람 중심 분석" },
+          {
+            id: "4-1", order: 401, status: "open",
+            title: "변수 중심 분석과 사람 중심 분석",
+            href: "/lessons/4-1",
+            description: "Q와 R의 차이를 계산 방향이 아니라 무엇을 분석의 중심에 놓는가의 차이로 살핀다.",
+            image: "/images/4-1-hero-variable-centered-person-centered.webp",
+          },
           { id: "4-2", order: 402, status: "locked", title: "R방법론의 논리" },
           { id: "4-3", order: 403, status: "locked", title: "Q방법론의 논리" },
           { id: "4-4", order: 404, status: "locked", title: "표본 개념의 차이" },

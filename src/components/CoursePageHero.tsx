@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { findOpenLessonById, getLessonJsonLd } from "@/lib/seo";
 
 type BreadcrumbItem = {
   label: string;
@@ -25,8 +26,22 @@ export default function CoursePageHero({
   imageSrc,
   imageAlt,
 }: CoursePageHeroProps) {
+  const currentLabel = breadcrumbs[breadcrumbs.length - 1]?.label;
+  const lessonId = currentLabel?.match(/^(\d+-\d+)/)?.[1];
+  const lesson = findOpenLessonById(lessonId);
+  const jsonLd = lesson ? getLessonJsonLd(lesson, description) : undefined;
+
   return (
     <>
+      {jsonLd ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+      ) : null}
+
       <nav
         className="flex items-center gap-1.5 mb-8 flex-wrap"
         style={{ fontSize: "12px", fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}

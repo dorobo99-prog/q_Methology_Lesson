@@ -943,13 +943,13 @@ export default function Lesson34Page() {
         <Link href="/lessons/3-3" className="text-sm" style={{ color: "var(--gray-400)" }}>
           ← 3-3. Watts &amp; Stenner와 현대 Q 연구 절차
         </Link>
-        <div className="text-sm text-right" style={{ color: "var(--gray-400)" }}>
+        <Link href="/lessons/4-1" className="text-sm text-right" style={{ color: "var(--brand-deep)" }}>
           <span>다음 장</span>
           <br />
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "12px" }}>
-            4장. Q와 R은 무엇이 다른가
+            4-1. 변수 중심 분석과 사람 중심 분석 →
           </span>
-        </div>
+        </Link>
       </div>
     </div>
   );
