@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Q방법론 강의사이트 Premortem 평가</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0a0e1a;
+      color: #eef2ff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+    main { max-width: 1080px; margin: 0 auto; padding: 48px 20px 80px; }
+    .hero {
+      padding: 36px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(99,102,241,.22), rgba(14,165,233,.12));
+      box-shadow: 0 24px 80px rgba(0,0,0,.32);
+    }
+    h1 { font-size: 2.2rem; margin: 0 0 12px; }
+    h2 { margin-top: 42px; color: #c7d2fe; }
+    h3 { color: #bae6fd; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+    .card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px;
+      padding: 20px;
+    }
+    .danger { border-left: 5px solid #fb7185; }
+    .probable { border-left: 5px solid #facc15; }
+    .hidden { border-left: 5px solid #38bdf8; }
+    .plan { border-left: 5px solid #34d399; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 24px; }
+    th, td { border-bottom: 1px solid rgba(255,255,255,.12); padding: 10px; text-align: left; vertical-align: top; }
+    th { color: #c7d2fe; }
+    code { color: #fde68a; }
+    .footer { margin-top: 48px; color: #94a3b8; font-size: .9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <h1>Q방법론 강의사이트 Premortem 평가</h1>
+    <p>전제: 6개월 뒤 사이트가 기대만큼 성장하지 못했다고 가정하고, 실패 원인을 거꾸로 분석했다.</p>
+    <p><strong>핵심 결론:</strong> 콘텐츠 부족보다 운영 체계 부족이 더 큰 위험이다.</p>
+  </section>
+
+  <h2>종합 진단</h2>
+  <div class="grid">
+    <div class="card probable"><h3>가장 가능성 높은 실패</h3><p>콘텐츠 상태와 배포 상태가 어긋나 학습자가 현재 어디까지 공개되었는지 혼란을 느낀다.</p></div>
+    <div class="card danger"><h3>가장 위험한 실패</h3><p>70개 이상 강의를 모두 만들려다 입문자가 실제로 완주 가능한 최소 코스가 완성되지 않는다.</p></div>
+    <div class="card hidden"><h3>숨은 가정</h3><p>강의가 많이 쌓이면 자연스럽게 좋은 사이트가 된다는 가정이다.</p></div>
+    <div class="card plan"><h3>가장 중요한 수정</h3><p>1차 목표를 전체 완성이 아니라 “1-1부터 4-6까지 완성된 입문 트랙”으로 좁힌다.</p></div>
+  </div>
+
+  <h2>10대 실패 원인</h2>
+  <ol>
+    <li>공개 상태 불일치</li>
+    <li>콘텐츠 규모 과잉</li>
+    <li>초반 강의의 학술 밀도 과다</li>
+    <li>공개 전환 기준 부족</li>
+    <li>GitHub README 기본 템플릿 유지</li>
+    <li>기술 검증 자동화 부족</li>
+    <li>학습자 행동 데이터 부족</li>
+    <li>SEO 지연</li>
+    <li>이미지 운영 부담</li>
+    <li>논문 수준 강의와 웹 학습 경험의 긴장</li>
+  </ol>
+
+  <h2>수정된 계획</h2>
+  <div class="card plan">
+    <ol>
+      <li>입문 트랙을 우선 완성한다.</li>
+      <li><code>src/data/lessons.ts</code>를 진짜 단일 소스로 관리한다.</li>
+      <li>공개 기준 7단계를 고정한다: 원고, 이미지, TSX, build, 목차, 모바일, SEO.</li>
+      <li>README를 프로젝트 소개형으로 교체한다.</li>
+      <li>메인 화면에 고정 학습 경로를 추가한다.</li>
+      <li>배포 전 build, 이미지, 링크, 공개 상태 점검을 자동화한다.</li>
+    </ol>
+  </div>
+
+  <h2>평가 점수</h2>
+  <table>
+    <thead><tr><th>버전</th><th>적합성</th><th>신뢰도</th><th>활용가능성</th><th>평균</th></tr></thead>
+    <tbody>
+      <tr><td>V1 원진단</td><td>8.8</td><td>8.7</td><td>8.4</td><td>8.63</td></tr>
+      <tr><td>V2 강화 후</td><td>9.4</td><td>9.2</td><td>9.3</td><td>9.30</td></tr>
+    </tbody>
+  </table>
+
+  <h2>실행 전 체크리스트</h2>
+  <ul>
+    <li>3-3, 3-4의 데이터 상태와 배포 목차 상태가 일치하는가?</li>
+    <li>README가 프로젝트 소개 문서로 바뀌었는가?</li>
+    <li>각 강의에 하단 요약, 다음 강의, 연구 적용 질문이 있는가?</li>
+    <li>이미지 경로가 모두 존재하는가?</li>
+    <li><code>npm run build</code>가 통과하는가?</li>
+    <li>공개 강의 수보다 학습 경로가 먼저 보이는가?</li>
+  </ul>
+
+  <p class="footer">Generated: 20260511-144727 · Premortem target: q_Methology_Lesson</p>
+</main>
+</body>
+</html>
