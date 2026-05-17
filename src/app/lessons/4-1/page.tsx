@@ -947,6 +947,9 @@ export default function Lesson41Page() {
         <Link href="/lessons/3-4" className="text-sm" style={{ color: "var(--gray-400)" }}>
           ← 3-4. 최근 Q방법론의 보고 기준과 재현가능성 논의
         </Link>
+        <Link href="/lessons/4-2" className="text-sm text-right" style={{ color: "var(--brand-deep)" }}>
+          4-2. R방법론의 논리 →
+        </Link>
       </div>
     </div>
   );
