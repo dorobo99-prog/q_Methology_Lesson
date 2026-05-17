@@ -765,9 +765,22 @@ function Card({
         />
       </div>
 
-      <ul className="mb-6 space-y-2" style={{ fontSize: "15px", lineHeight: 1.7, color: "var(--gray-700)" }}>
-        {points.map((point) => (
-          <li key={point}>- {point}</li>
+      <ul className="mb-8 space-y-3">
+        {points.map((point, index) => (
+          <li key={point} className="flex items-start gap-3" style={{ color: "var(--gray-700)" }}>
+            <span
+              className="shrink-0 font-semibold mt-0.5"
+              style={{
+                fontSize: "13px",
+                color: "var(--brand)",
+                fontFamily: "var(--font-mono)",
+                minWidth: "18px",
+              }}
+            >
+              {index + 1}.
+            </span>
+            <span style={{ fontSize: "15px", lineHeight: 1.7 }}>{point}</span>
+          </li>
         ))}
       </ul>
 
