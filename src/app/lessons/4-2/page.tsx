@@ -1034,6 +1034,9 @@ export default function Lesson42Page() {
         <Link href="/lessons/4-1" className="text-sm" style={{ color: "var(--gray-400)" }}>
           ← 4-1. 변수 중심 분석과 사람 중심 분석
         </Link>
+        <Link href="/lessons/4-3" className="text-sm text-right" style={{ color: "var(--brand-deep)" }}>
+          4-3. Q방법론의 논리 →
+        </Link>
       </div>
     </div>
   );
