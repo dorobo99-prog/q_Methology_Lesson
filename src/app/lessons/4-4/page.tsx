@@ -953,15 +953,6 @@ export default function Lesson44Page() {
         <div className="space-y-8">
           <ReferenceList title="핵심 참고문헌" items={references.core} />
           <ReferenceList title="본문 보조 또는 추가 읽기" items={references.supporting} />
-          <div>
-            <h3 className="font-semibold mb-3" style={{ fontSize: "17px", color: "var(--black)" }}>
-              이번 강의에서 제외 또는 이동 처리한 문헌
-            </h3>
-            <div className="space-y-3" style={{ fontSize: "14px", lineHeight: 1.7, color: "var(--gray-700)" }}>
-              <p>Ramlo(2024)는 내용상 일반화 논의와 잘 맞지만 PDF 접근성이 낮기 때문에 본문 직접 근거와 핵심 참고문헌에서 제외한다.</p>
-              <p>Jedlicska et al.(2026)은 P-set이 아니라 Q-sample/Q-set 설계 중심 문헌이므로 이후 Q-set 개발 강의에서 다룬다.</p>
-            </div>
-          </div>
         </div>
       </section>
 
