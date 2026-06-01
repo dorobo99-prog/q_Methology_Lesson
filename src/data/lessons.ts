@@ -273,13 +273,7 @@ export const CURRICULUM: Part[] = [
         title: "요인 수 결정",
         lessons: [
           { id: "10-1", order: 1001, status: "locked", title: "요인 수 결정의 중요성" },
-          {
-            id: "10-2", order: 1002, status: "open",
-            title: "요인 개수 결정을 위한 객관적 기준 3가지",
-            href: "/lessons/10-2",
-            description: "Kaiser-Guttman, 최소 2인 유의 적재, Humphrey's Rule의 공식을 학습하고, Brown(1980)의 이론적 비판을 고찰합니다.",
-            image: "/images/10-2-hero-objective-criteria.webp",
-          },
+          { id: "10-2", order: 1002, status: "locked", title: "요인 개수 결정을 위한 객관적 기준 3가지" },
           { id: "10-3", order: 1003, status: "locked", title: "설명분산 기준" },
           { id: "10-4", order: 1004, status: "locked", title: "해석가능성 기준" },
         ],
