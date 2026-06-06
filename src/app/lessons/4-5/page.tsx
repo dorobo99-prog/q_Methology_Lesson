@@ -647,9 +647,13 @@ export default function Lesson45Page() {
         <Link href="/lessons/4-4" className="text-sm" style={{ color: "var(--gray-400)" }}>
           ← 4-4. 표본 개념의 차이
         </Link>
-        <span className="text-sm text-right" style={{ color: "var(--gray-400)" }}>
+        <Link
+          href="/lessons/4-6"
+          className="text-sm text-right"
+          style={{ color: "var(--gray-400)" }}
+        >
           4-6. Q와 R 중 무엇을 선택할 것인가 →
-        </span>
+        </Link>
       </div>
     </div>
   );
