@@ -1016,11 +1016,18 @@ export default function Lesson46Page() {
       </section>
 
       <div
-        className="pt-8 mt-12 flex items-center"
+        className="pt-8 mt-12 flex items-center justify-between gap-4"
         style={{ borderTop: "1px solid rgba(0,0,0,0.05)" }}
       >
         <Link href="/lessons/4-5" className="text-sm" style={{ color: "var(--gray-400)" }}>
           ← 4-5. 상관과 요인분석 대상의 차이
+        </Link>
+        <Link
+          href="/lessons/5-1"
+          className="text-sm text-right"
+          style={{ color: "var(--gray-400)" }}
+        >
+          5-1. Q 연구의 전체 흐름 →
         </Link>
       </div>
     </div>

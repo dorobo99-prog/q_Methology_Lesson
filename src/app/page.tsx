@@ -170,7 +170,7 @@ export default function HomePage() {
             <div>
               <h2 className="mb-2 font-semibold" style={{ fontSize: "40px", lineHeight: 1.1 }}>백승창</h2>
               <p style={{ fontSize: "17px", color: "rgba(0,0,0,0.8)", lineHeight: 1.47 }}>
-                소방위 · 동아대학교 재난관리학과 박사과정
+                동아대학교 재난관리학과 박사과정
                 <br />
                 부산소방재난본부 현직 소방공무원 (경력 20년)
               </p>

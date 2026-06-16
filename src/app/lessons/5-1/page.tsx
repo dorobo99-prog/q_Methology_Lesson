@@ -399,8 +399,8 @@ export default function Lesson51Page() {
       </section>
 
       <div className="mt-14 flex items-center justify-between border-t pt-6" style={{ borderColor: "var(--gray-200)" }}>
-        <Link href="/outline" style={{ color: "var(--brand)", fontSize: "14px", fontWeight: 600 }} className="hover:underline">
-          &larr; 전체 목차로
+        <Link href="/lessons/4-6" style={{ color: "var(--brand)", fontSize: "14px", fontWeight: 600 }} className="hover:underline">
+          &larr; 4-6. Q와 R 중 무엇을 선택할 것인가
         </Link>
       </div>
     </div>
