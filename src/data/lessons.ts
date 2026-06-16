@@ -7,7 +7,7 @@
  *
  * 공개 강의로 전환할 때:
  *   status: "locked" → "open"
- *   href, description, image 채우기
+ *   href, description, image, publishedAt 채우기
  */
 
 export type LessonStatus = "open" | "draft" | "locked";
@@ -24,6 +24,8 @@ export interface Lesson {
   description?: string;
   /** 공개 강의만 — 랜딩 카드 + 히어로 풀 이미지 */
   image?: string;
+  /** 공개 강의만 — 업로드 날짜 (YYYY-MM-DD) */
+  publishedAt?: string;
 }
 
 export interface Chapter {
@@ -56,6 +58,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/1-1",
             description: "Q방법론이 어떤 연구문제에 맞고, 무엇을 연구 대상으로 삼는지부터 시작합니다.",
             image: "/images/1-1-card-01-definition.webp",
+            publishedAt: "2026-04-25",
           },
           {
             id: "1-2", order: 102, status: "open",
@@ -63,6 +66,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/1-2",
             description: "주관성, concourse, Q-set, P-set, Q-sort가 어떻게 연결되는지 핵심 구조를 잡습니다.",
             image: "/images/1-2-card-01-subjectivity.webp",
+            publishedAt: "2026-04-26",
           },
           {
             id: "1-3", order: 103, status: "open",
@@ -70,6 +74,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/1-3",
             description: "소표본 오해, 설문 혼동, 한계까지 솔직하게 정리합니다.",
             image: "/images/1-3-hero-misunderstanding-and-limitations.webp",
+            publishedAt: "2026-04-27",
           },
         ],
       },
@@ -89,6 +94,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/2-1",
             description: "변수 중심 사고가 사람의 주관성을 어떻게 밀어냈는지 따라갑니다.",
             image: "/images/2-1-card-00-r-methodology-limits.webp",
+            publishedAt: "2026-04-28",
           },
           {
             id: "2-2", order: 202, status: "open",
@@ -96,6 +102,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/2-2",
             description: "왜 사람이 아니라 변수가 중심이 되었는지, Stephenson이 어디서 방향을 틀었는지 따라갑니다.",
             image: "/images/2-2-card-00-stephenson-problematic.webp",
+            publishedAt: "2026-04-28",
           },
           {
             id: "2-3", order: 203, status: "open",
@@ -103,6 +110,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/2-3",
             description: "조작적 주관성, 개인내 유의성, 심리적 유의성을 연결해 Q방법론의 핵심을 설명합니다.",
             image: "/images/2-3-card-01-subjectivity-as-organization.webp",
+            publishedAt: "2026-04-29",
           },
           {
             id: "2-4", order: 204, status: "open",
@@ -110,6 +118,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/2-4",
             description: "Q와 R은 같은 통계 언어를 일부 공유하지만, 자료 구조·상관의 의미·요인 해석이 근본적으로 다릅니다.",
             image: "/images/2-4-card-00-separation-of-q-and-r.webp",
+            publishedAt: "2026-04-30",
           },
         ],
       },
@@ -123,6 +132,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/3-1",
             description: "Stephenson의 주관성의 과학이 Brown, Q 커뮤니티, 현대 절차화, 응용 연구, 보고 기준을 거쳐 어떻게 독자적 연구 전통으로 축적되었는지 본다.",
             image: "/images/3-1-hero-after-stephenson-development.webp",
+            publishedAt: "2026-05-01",
           },
           {
             id: "3-2", order: 302, status: "open",
@@ -130,6 +140,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/3-2",
             description: "Brown(1980)을 통해 Q방법론이 정치적 주관성, 조작적 주관성, 개인내 유의성의 사회과학 방법론으로 재정식화되는 과정을 살핀다.",
             image: "/images/3-2-hero-brown-political-subjectivity.webp",
+            publishedAt: "2026-05-03",
           },
           {
             id: "3-3", order: 303, status: "open",
@@ -137,6 +148,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/3-3",
             description: "Brown(1980)의 주관성 이론이 Watts & Stenner(2012)의 현대 Q 연구 절차로 어떻게 번역되는지 살핀다.",
             image: "/images/3-3-hero-watts-stenner-modern-q-procedure.webp",
+            publishedAt: "2026-05-04",
           },
           {
             id: "3-4", order: 304, status: "open",
@@ -144,6 +156,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/3-4",
             description: "Q방법론이 여러 분야로 확산된 이후, 연구자가 무엇을 어떻게 보고해야 독자가 설계와 해석 과정을 따라갈 수 있는지 살핀다.",
             image: "/images/3-4-hero-reporting-standards-and-reproducibility.webp",
+            publishedAt: "2026-05-07",
           },
         ],
       },
@@ -163,6 +176,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/4-1",
             description: "Q와 R의 차이를 계산 방향이 아니라 무엇을 분석의 중심에 놓는가의 차이로 살핀다.",
             image: "/images/4-1-hero-variable-centered-person-centered.webp",
+            publishedAt: "2026-05-11",
           },
           {
             id: "4-2", order: 402, status: "open",
@@ -170,6 +184,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/4-2",
             description: "R방법론이 변수값, 상관, 잠재 차원을 어떻게 분석하는지 공정하게 살펴봅니다.",
             image: "/images/4-2-hero-r-methodology-logic.webp",
+            publishedAt: "2026-05-17",
           },
           {
             id: "4-3", order: 403, status: "open",
@@ -177,6 +192,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/4-3",
             description: "Q방법론이 전체 Q-sort 배열을 자료로 삼고, 공유된 관점 구조를 어떻게 해석하는지 살펴봅니다.",
             image: "/images/4-3-hero-q-methodology-logic.webp",
+            publishedAt: "2026-05-21",
           },
           {
             id: "4-4", order: 404, status: "open",
@@ -184,6 +200,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/4-4",
             description: "R방법론의 표본은 모집단 추정 논리와 연결되고, Q방법론의 P-set은 의미 있는 관점 다양성을 드러내기 위한 참여자 구성과 연결됩니다.",
             image: "/images/4-4-hero-sampling-concepts.webp",
+            publishedAt: "2026-05-24",
           },
           {
             id: "4-5", order: 405, status: "open",
@@ -191,6 +208,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/4-5",
             description: "R방법론은 변수들이 함께 움직이는 방식을 분석하고, Q방법론은 사람들이 만든 Q-sort 배열이 서로 얼마나 닮았는지를 분석합니다.",
             image: "/images/4-5-hero-correlation-factor-analysis-targets.webp",
+            publishedAt: "2026-06-01",
           },
           {
             id: "4-6", order: 406, status: "open",
@@ -198,6 +216,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/4-6",
             description: "연구질문, 자료 단위, 표본 논리, 분석 방식, 해석 언어의 정합성을 기준으로 Q방법론과 R방법론을 선택합니다.",
             image: "/images/4-6-hero-choosing-between-q-and-r.webp",
+            publishedAt: "2026-06-06",
           },
         ],
       },
@@ -217,6 +236,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/5-1",
             description: "Q방법론 연구 절차의 5단계(준비-설계-시행-분석-보고)가 유기적으로 연동되는 전체 흐름을 개괄적으로 살펴봅니다.",
             image: "/images/5-1-hero-overall-flow.webp",
+            publishedAt: "2026-06-16",
           },
           { id: "5-2", order: 502, status: "locked", title: "연구문제 설정" },
           { id: "5-3", order: 503, status: "locked", title: "Concourse 수집" },

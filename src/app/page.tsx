@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { openLessons } from "@/data/lessons";
+
 const stats = [
   { value: "10부", label: "파트 구성" },
   { value: "22장", label: "챕터 수" },
@@ -8,26 +10,12 @@ const stats = [
   { value: "대학원생", label: "주 대상" },
 ];
 
-const lectures = [
-  {
-    id: "1-1",
-    title: "Q방법론의 정의와 연구문제",
-    description: "Q방법론이 어떤 연구문제에 맞고, 무엇을 연구 대상으로 삼는지부터 시작합니다.",
-    href: "/lessons/1-1",
-  },
-  {
-    id: "1-2",
-    title: "Q방법론의 핵심 개념과 필요한 이유",
-    description: "주관성, concourse, Q-set, P-set, Q-sort가 어떻게 연결되는지 핵심 구조를 잡습니다.",
-    href: "/lessons/1-2",
-  },
-  {
-    id: "1-3",
-    title: "Q방법론에 대한 흔한 오해와 한계",
-    description: "소표본 오해, 설문 혼동, 한계까지 솔직하게 정리합니다.",
-    href: "/lessons/1-3",
-  },
-];
+const latestLessons = [...openLessons]
+  .filter((lesson) => lesson.publishedAt)
+  .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+  .slice(0, 5);
+
+const formatDate = (date: string) => date.replaceAll("-", ".");
 
 const features = [
   {
@@ -118,23 +106,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-5 py-18 sm:px-8 sm:py-20" style={{ background: "var(--gray-100)" }}>
-        <div className="mx-auto max-w-[900px]">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.5px]" style={{ color: "rgba(0,0,0,0.48)" }}>공개된 강의</p>
-          <h2 className="mb-9 font-semibold" style={{ fontSize: "clamp(28px, 5vw, 40px)", lineHeight: 1.1 }}>지금 바로 읽을 수 있는 강의들</h2>
-          <div className="grid gap-4 md:grid-cols-3">
-            {lectures.map((lecture) => (
-              <article key={lecture.id} className="flex flex-col rounded-lg bg-white px-6 py-7 transition-shadow hover:shadow-lg">
-                <span className="text-[11px] font-semibold tracking-[0.4px]" style={{ color: "var(--brand)" }}>{lecture.id}</span>
-                <h3 className="mt-2 font-semibold" style={{ fontSize: "17px", lineHeight: 1.3 }}>{lecture.title}</h3>
-                <p className="mt-2 text-sm" style={{ color: "rgba(0,0,0,0.8)", lineHeight: 1.43 }}>{lecture.description}</p>
-                <Link className="mt-auto pt-5 text-sm" style={{ color: "var(--brand-deep)" }} href={lecture.href}>강의 보기 →</Link>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="px-5 py-18 sm:px-8 sm:py-20">
         <div className="mx-auto max-w-[900px]">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.5px]" style={{ color: "rgba(0,0,0,0.48)" }}>강의 방향</p>
@@ -149,6 +120,41 @@ export default function HomePage() {
                 <h3 className="mb-2 font-semibold" style={{ fontSize: "19px", lineHeight: 1.2 }}>{feature.title}</h3>
                 <p className="text-[15px]" style={{ color: "rgba(0,0,0,0.8)", lineHeight: 1.5 }}>{feature.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-18 sm:px-8 sm:py-20" style={{ background: "var(--gray-100)" }}>
+        <div className="mx-auto max-w-[900px]">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.5px]" style={{ color: "rgba(0,0,0,0.48)" }}>공개된 강의</p>
+          <h2 className="mb-9 font-semibold" style={{ fontSize: "clamp(28px, 5vw, 40px)", lineHeight: 1.1 }}>최신 강의</h2>
+          <div className="overflow-hidden rounded-xl border bg-white" style={{ borderColor: "var(--gray-200)" }}>
+            <div
+              className="hidden grid-cols-[116px_1fr_140px] border-b px-5 py-3 text-xs font-semibold sm:grid"
+              style={{ borderColor: "var(--gray-200)", color: "rgba(0,0,0,0.48)" }}
+            >
+              <span>강의 차수</span>
+              <span>강의 제목</span>
+              <span className="text-right">업로드 날짜</span>
+            </div>
+            {latestLessons.map((lesson) => (
+              <Link
+                key={lesson.id}
+                className="grid gap-1 border-b px-5 py-4 transition-colors last:border-b-0 hover:bg-[var(--gray-100)] sm:grid-cols-[116px_1fr_140px] sm:items-center sm:gap-4"
+                style={{ borderColor: "var(--gray-200)" }}
+                href={lesson.href}
+              >
+                <span className="text-xs font-semibold sm:text-sm" style={{ color: "var(--brand)" }}>
+                  <span className="mr-2 font-medium sm:hidden" style={{ color: "rgba(0,0,0,0.48)" }}>강의 차수</span>
+                  {lesson.id}
+                </span>
+                <span className="font-semibold" style={{ fontSize: "16px", lineHeight: 1.35 }}>{lesson.title}</span>
+                <span className="text-xs sm:text-right sm:text-sm" style={{ color: "rgba(0,0,0,0.48)" }}>
+                  <span className="mr-2 font-medium sm:hidden">업로드 날짜</span>
+                  {formatDate(lesson.publishedAt)}
+                </span>
+              </Link>
             ))}
           </div>
         </div>
