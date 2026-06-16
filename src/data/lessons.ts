@@ -211,7 +211,13 @@ export const CURRICULUM: Part[] = [
         num: "5장",
         title: "Q 연구 절차 한눈에 보기",
         lessons: [
-          { id: "5-1", order: 501, status: "locked", title: "Q 연구의 전체 흐름" },
+          {
+            id: "5-1", order: 501, status: "open",
+            title: "Q 연구의 전체 흐름",
+            href: "/lessons/5-1",
+            description: "Q방법론 연구 절차의 5단계(준비-설계-시행-분석-보고)가 유기적으로 연동되는 전체 흐름을 개괄적으로 살펴봅니다.",
+            image: "/images/5-1-hero-overall-flow.webp",
+          },
           { id: "5-2", order: 502, status: "locked", title: "연구문제 설정" },
           { id: "5-3", order: 503, status: "locked", title: "Concourse 수집" },
           { id: "5-4", order: 504, status: "locked", title: "Q-set 구성" },
