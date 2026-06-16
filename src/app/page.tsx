@@ -1,24 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { openLessons, heroImages, type Lesson } from "@/data/lessons";
-
-const pillars = [
-  {
-    title: "원전에서 시작",
-    text: "Stephenson, Brown, Watts & Stenner를 따라가며 개념이 어떻게 생기고 바뀌는지 차근히 읽습니다.",
-  },
-  {
-    title: "논문까지 연결",
-    text: "강의는 정의에서 멈추지 않고, 설계, 분석, 보고, 심사 대응까지 이어지는 연구 작업을 염두에 둡니다.",
-  },
-  {
-    title: "가치 갈등을 다루는 방법",
-    text: "정책, 위험, 안전, 교육처럼 평균만으로는 설명되지 않는 문제에서 관점 구조를 어떻게 읽는지 배웁니다.",
-  },
-];
 
 const stats = [
   { value: "10부", label: "파트 구성" },
@@ -27,311 +8,236 @@ const stats = [
   { value: "대학원생", label: "주 대상" },
 ];
 
-function pickRandom<T>(arr: T[], n: number): T[] {
-  return [...arr].sort(() => Math.random() - 0.5).slice(0, n);
-}
+const lectures = [
+  {
+    id: "1-1",
+    title: "Q방법론의 정의와 연구문제",
+    description: "Q방법론이 어떤 연구문제에 맞고, 무엇을 연구 대상으로 삼는지부터 시작합니다.",
+    href: "/lessons/1-1",
+  },
+  {
+    id: "1-2",
+    title: "Q방법론의 핵심 개념과 필요한 이유",
+    description: "주관성, concourse, Q-set, P-set, Q-sort가 어떻게 연결되는지 핵심 구조를 잡습니다.",
+    href: "/lessons/1-2",
+  },
+  {
+    id: "1-3",
+    title: "Q방법론에 대한 흔한 오해와 한계",
+    description: "소표본 오해, 설문 혼동, 한계까지 솔직하게 정리합니다.",
+    href: "/lessons/1-3",
+  },
+];
+
+const features = [
+  {
+    title: "원전에서 시작",
+    description: "Stephenson, Brown, Watts & Stenner를 따라가며 개념이 어떻게 생기고 바뀌는지 차근히 읽습니다.",
+  },
+  {
+    title: "논문까지 연결",
+    description: "강의는 정의에서 멈추지 않고, 설계, 분석, 보고, 심사 대응까지 이어지는 연구 작업을 염두에 둡니다.",
+  },
+  {
+    title: "가치 갈등을 다루는 방법",
+    description: "정책, 위험, 안전, 교육처럼 평균만으로는 설명되지 않는 문제에서 관점 구조를 어떻게 읽는지 배웁니다.",
+  },
+];
+
+const papers = [
+  {
+    journal: "재무행정연구 · 2025",
+    title: "Systemic Risk 시대, 소방안전교부세 운용 딜레마에 관한 주관성 연구: Musgrave(1959) 재정 3기능의 재해석을 중심으로",
+    meta: "백승창 & 이동규 · 5(3), 193-227",
+  },
+  {
+    journal: "한국행정학보 · 2025",
+    title: "커뮤니티 위험 경감(Community Risk Reduction)에 대한 소방공무원의 주관성 연구",
+    meta: "백승창 & 이동규 · 59(2), 207-231",
+    doi: "https://doi.org/10.18333/kpar.59.2.207",
+  },
+  {
+    journal: "국정관리연구 · 2024",
+    title: "한국형 회복탄력성 지수검사(KRQ-53)의 주관성 연구: 부산 소방서 119 안전센터 소방공무원을 중심으로",
+    meta: "백승창, 김정훈 & 이동규 · 19(3), 65-91",
+    doi: "https://doi.org/10.16973/JGS.2024.19.3.003",
+  },
+];
+
+const presentations = [
+  ["2026", "재난연구의 방법론적 편향과 주관성 분석의 공백 — Q방법론의 필요성에 관한 실증적 검토", "한국정책분석평가학회 춘계학술대회"],
+  ["2026", "소방공무원의 소방예산 위험판단에 관한 연구", "한국정책학회 춘계학술대회"],
+  ["2025", "Systemic Risk 시대의 소방안전교부세 활용에 대한 소방예산담당자 인식 유형 연구", "한국정책학회 동계학술대회 · 최우수논문상"],
+  ["2025", "커뮤니티 위험 경감에 대한 재난관리 실무자의 주관성 연구", "한국행정학회 하계학술대회"],
+  ["2025", "커뮤니티 위험 경감(CRR)에 대한 재난관리학 대학원생의 주관성 연구", "제10회 전국 행정학과 대학원생 학술대회 · 우수상"],
+  ["2024", "부산광역시 B소방서 B119안전센터 소방공무원의 회복탄력성에 관한 주관성 연구", "제9회 전국 행정학과 대학원생 학술대회 · 특별상"],
+  ["2024", "소방공무원의 커뮤니티 위험 경감에 관한 주관성 연구", "한국정책분석평가학회 동계학술대회"],
+  ["2023", "부산지역 소방공무원의 회복탄력성에 관한 주관성 연구", "한국행정학회 동계학술대회"],
+];
+
+const awards = [
+  ["한국정책학회 동계학술대회 최우수논문상", "2025"],
+  ["제10회 전국 행정학과 대학원생 학술대회 우수상", "2025"],
+  ["제9회 전국 행정학과 대학원생 학술대회 특별상", "2024"],
+];
 
 export default function HomePage() {
-  const [hero, setHero] = useState(heroImages[0]);
-  const [featured, setFeatured] = useState<Lesson[]>(openLessons.slice(0, 3));
-
-  useEffect(() => {
-    setHero(heroImages[Math.floor(Math.random() * heroImages.length)]);
-    const picked = pickRandom(openLessons, 3).sort((a, b) => a.order - b.order);
-    setFeatured(picked);
-  }, []);
-
   return (
     <div>
-      {/* HERO */}
-      <section style={{ background: "var(--pure-black)", color: "var(--white)" }}>
-        <div className="max-w-[1100px] mx-auto px-5 sm:px-8 pt-20 sm:pt-28 pb-0">
-          <div className="max-w-[820px]">
-            <h1
-              className="font-semibold"
-              style={{
-                fontSize: "clamp(44px, 7.4vw, 72px)",
-                lineHeight: 1.05,
-                letterSpacing: "-0.015em",
-              }}
-            >
-              관점의 차이를
-              <br />
-              연구 가능한 질서로.
-            </h1>
-            <p
-              className="mt-6 max-w-[640px]"
-              style={{
-                fontSize: "21px",
-                lineHeight: 1.45,
-                color: "rgba(255,255,255,0.72)",
-              }}
-            >
-              Q방법론은 사람들이 무엇을 더 중요하게 보고, 무엇을 뒤로 미루며, 어떤 방식으로 세계를
-              배열하는지를 탐구합니다. 이 강의는 그 발상에서 분석과 보고까지를 대학원생의 연구
-              언어로 정리합니다.
-            </p>
-            <div className="flex flex-wrap items-center gap-6 mt-9">
-              <Link
-                href="/lessons/1-1"
-                className="inline-flex items-center justify-center"
-                style={{
-                  padding: "12px 26px",
-                  borderRadius: "999px",
-                  background: "var(--brand)",
-                  color: "var(--white)",
-                  fontSize: "17px",
-                  textDecoration: "none",
-                }}
-              >
-                1강 시작하기
-              </Link>
-              <Link
-                href="/outline"
-                style={{
-                  color: "var(--brand-dark-surface)",
-                  fontSize: "17px",
-                  textDecoration: "none",
-                }}
-              >
-                전체 목차 보기 →
-              </Link>
-            </div>
-          </div>
-
-          {/* 히어로 이미지 — 랜덤 */}
-          <div className="mt-14 sm:mt-20">
-            <Image
-              src={hero.src}
-              alt={hero.alt}
-              width={2000}
-              height={1100}
-              className="w-full h-auto block"
-              style={{ borderRadius: "18px" }}
-              priority
-            />
-          </div>
+      <section className="px-5 py-24 text-center sm:px-8 sm:py-28" style={{ background: "var(--gray-100)" }}>
+        <h1
+          className="mx-auto max-w-[760px] font-semibold"
+          style={{ fontSize: "clamp(36px, 7vw, 56px)", lineHeight: 1.07, color: "var(--black)" }}
+        >
+          관점의 차이를
+          <br />
+          연구 가능한 질서로.
+        </h1>
+        <p className="mx-auto mt-5 max-w-[620px]" style={{ fontSize: "19px", lineHeight: 1.47, color: "rgba(0,0,0,0.8)" }}>
+          Q방법론은 사람들이 무엇을 더 중요하게 보고, 무엇을 뒤로 미루며, 어떤 방식으로 세계를 배열하는지를 탐구합니다.
+          이 강의는 그 발상에서 분석과 보고까지를 대학원생의 연구 언어로 정리합니다.
+        </p>
+        <div className="mt-9 flex flex-wrap justify-center gap-4">
+          <Link className="rounded-full px-6 py-2.5 text-[17px] text-white" style={{ background: "var(--brand)" }} href="/lessons/1-1">
+            1강 시작하기
+          </Link>
+          <Link className="rounded-full border px-6 py-2.5 text-[17px]" style={{ borderColor: "var(--brand)", color: "var(--brand)" }} href="/outline">
+            전체 목차 보기 →
+          </Link>
         </div>
-        <div className="h-20 sm:h-28" />
       </section>
 
-      {/* STATS */}
-      <section style={{ background: "var(--gray-100)" }}>
-        <div className="max-w-[1100px] mx-auto px-5 sm:px-8 py-12 sm:py-14">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-6">
-            {stats.map((stat) => (
-              <div key={stat.label}>
-                <div
-                  style={{
-                    fontSize: "clamp(28px, 3.4vw, 36px)",
-                    lineHeight: 1.1,
-                    fontWeight: 600,
-                    color: "var(--black)",
-                    letterSpacing: "-0.01em",
-                  }}
-                >
-                  {stat.value}
-                </div>
-                <div style={{ fontSize: "13px", color: "var(--gray-400)", marginTop: "6px" }}>
-                  {stat.label}
-                </div>
-              </div>
+      <section className="border-y" style={{ borderColor: "var(--gray-200)" }}>
+        <div className="mx-auto grid max-w-[900px] grid-cols-2 sm:grid-cols-4">
+          {stats.map((stat) => (
+            <div key={stat.label} className="border-r px-5 py-7 text-center last:border-r-0" style={{ borderColor: "var(--gray-200)" }}>
+              <div className="font-semibold" style={{ fontSize: "36px", lineHeight: 1.07 }}>{stat.value}</div>
+              <div className="mt-1 text-xs" style={{ color: "rgba(0,0,0,0.48)" }}>{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="px-5 py-18 sm:px-8 sm:py-20" style={{ background: "var(--gray-100)" }}>
+        <div className="mx-auto max-w-[900px]">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.5px]" style={{ color: "rgba(0,0,0,0.48)" }}>공개된 강의</p>
+          <h2 className="mb-9 font-semibold" style={{ fontSize: "clamp(28px, 5vw, 40px)", lineHeight: 1.1 }}>지금 바로 읽을 수 있는 강의들</h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            {lectures.map((lecture) => (
+              <article key={lecture.id} className="flex flex-col rounded-lg bg-white px-6 py-7 transition-shadow hover:shadow-lg">
+                <span className="text-[11px] font-semibold tracking-[0.4px]" style={{ color: "var(--brand)" }}>{lecture.id}</span>
+                <h3 className="mt-2 font-semibold" style={{ fontSize: "17px", lineHeight: 1.3 }}>{lecture.title}</h3>
+                <p className="mt-2 text-sm" style={{ color: "rgba(0,0,0,0.8)", lineHeight: 1.43 }}>{lecture.description}</p>
+                <Link className="mt-auto pt-5 text-sm" style={{ color: "var(--brand-deep)" }} href={lecture.href}>강의 보기 →</Link>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* LESSONS — 랜덤 3개, 강의 순서 정렬 */}
-      <section style={{ background: "var(--white)" }}>
-        <div className="max-w-[1100px] mx-auto px-5 sm:px-8 py-20 sm:py-28">
-          <div className="max-w-[760px] mb-12 sm:mb-16">
-            <div style={{ fontSize: "13px", color: "var(--gray-400)", marginBottom: "10px" }}>
-              공개된 강의
-            </div>
-            <h2
-              style={{
-                fontSize: "clamp(32px, 5vw, 48px)",
-                lineHeight: 1.1,
-                fontWeight: 600,
-                color: "var(--black)",
-                letterSpacing: "-0.015em",
-              }}
-            >
-              지금 바로 읽을 수 있는 강의들
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-x-6 gap-y-12">
-            {featured.map((lesson) => (
-              <Link
-                key={lesson.id}
-                href={lesson.href!}
-                className="group block"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                <div
-                  className="-mx-5 w-[calc(100%+40px)] sm:mx-0 sm:w-[500px] md:w-full"
-                  style={{
-                    aspectRatio: "16 / 10",
-                    position: "relative",
-                    borderRadius: "14px",
-                    overflow: "hidden",
-                    background: "var(--gray-100)",
-                  }}
-                >
-                  <Image
-                    src={lesson.image!}
-                    alt={lesson.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-                <div className="pt-5">
-                  <div
-                    style={{
-                      fontSize: "12px",
-                      fontFamily: "var(--font-mono)",
-                      color: "var(--gray-400)",
-                      marginBottom: "8px",
-                      letterSpacing: "0.4px",
-                    }}
-                  >
-                    {lesson.id}
-                  </div>
-                  <h3
-                    style={{
-                      fontSize: "21px",
-                      lineHeight: 1.2,
-                      fontWeight: 600,
-                      color: "var(--black)",
-                      letterSpacing: "-0.01em",
-                    }}
-                  >
-                    {lesson.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "15px",
-                      lineHeight: 1.6,
-                      color: "var(--gray-700)",
-                      marginTop: "10px",
-                    }}
-                  >
-                    {lesson.description}
-                  </p>
-                  <div style={{ color: "var(--brand)", fontSize: "14px", marginTop: "16px" }}>
-                    강의 보기 →
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PILLARS */}
-      <section style={{ background: "var(--gray-100)" }}>
-        <div className="max-w-[1100px] mx-auto px-5 sm:px-8 py-20 sm:py-28">
-          <div className="max-w-[760px] mb-12 sm:mb-16">
-            <div style={{ fontSize: "13px", color: "var(--gray-400)", marginBottom: "10px" }}>
-              강의 방향
-            </div>
-            <h2
-              style={{
-                fontSize: "clamp(32px, 5vw, 44px)",
-                lineHeight: 1.1,
-                fontWeight: 600,
-                color: "var(--black)",
-                letterSpacing: "-0.015em",
-              }}
-            >
-              개념 설명에서 멈추지 않고 연구 작업까지.
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-x-8 gap-y-10">
-            {pillars.map((pillar) => (
-              <div
-                key={pillar.title}
-                style={{ borderTop: "1px solid var(--border-medium)", paddingTop: "20px" }}
-              >
-                <h3
-                  style={{
-                    fontSize: "19px",
-                    lineHeight: 1.25,
-                    fontWeight: 600,
-                    color: "var(--black)",
-                    letterSpacing: "-0.01em",
-                  }}
-                >
-                  {pillar.title}
-                </h3>
-                <p
-                  style={{
-                    fontSize: "15px",
-                    lineHeight: 1.65,
-                    color: "var(--gray-700)",
-                    marginTop: "10px",
-                  }}
-                >
-                  {pillar.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section style={{ background: "var(--pure-black)", color: "var(--white)" }}>
-        <div className="max-w-[820px] mx-auto px-5 sm:px-8 py-24 sm:py-32 text-center">
-          <h2
-            style={{
-              fontSize: "clamp(34px, 5vw, 52px)",
-              lineHeight: 1.1,
-              fontWeight: 600,
-              letterSpacing: "-0.015em",
-            }}
-          >
-            처음부터 순서대로.
+      <section className="px-5 py-18 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-[900px]">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.5px]" style={{ color: "rgba(0,0,0,0.48)" }}>강의 방향</p>
+          <h2 className="mb-9 font-semibold" style={{ fontSize: "clamp(28px, 5vw, 40px)", lineHeight: 1.1 }}>
+            개념 설명에서 멈추지 않고
+            <br />
+            연구 작업까지.
           </h2>
-          <p
-            style={{
-              fontSize: "19px",
-              lineHeight: 1.45,
-              color: "rgba(255,255,255,0.72)",
-              maxWidth: "560px",
-              margin: "18px auto 0",
-            }}
-          >
-            정의, 역사, 개념, 절차, 분석, 보고까지 이어지는 전체 흐름을 목차에서 먼저 훑고
-            첫 강의부터 들어오면 가장 자연스럽습니다.
+          <div className="grid gap-8 md:grid-cols-3">
+            {features.map((feature) => (
+              <div key={feature.title}>
+                <h3 className="mb-2 font-semibold" style={{ fontSize: "19px", lineHeight: 1.2 }}>{feature.title}</h3>
+                <p className="text-[15px]" style={{ color: "rgba(0,0,0,0.8)", lineHeight: 1.5 }}>{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="author" className="px-5 py-20 sm:px-8" style={{ background: "var(--gray-100)" }}>
+        <div className="mx-auto max-w-[900px]">
+          <p className="mb-8 text-xs font-semibold uppercase tracking-[0.5px]" style={{ color: "rgba(0,0,0,0.48)" }}>강의 개설자</p>
+          <div className="mb-12 flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-9">
+            <div className="relative h-[88px] w-[88px] shrink-0 overflow-hidden rounded-full bg-black">
+              <Image src="/images/profile.webp" alt="백승창 프로필 사진" fill sizes="88px" style={{ objectFit: "cover", objectPosition: "center top" }} />
+            </div>
+            <div>
+              <h2 className="mb-2 font-semibold" style={{ fontSize: "40px", lineHeight: 1.1 }}>백승창</h2>
+              <p style={{ fontSize: "17px", color: "rgba(0,0,0,0.8)", lineHeight: 1.47 }}>
+                소방위 · 동아대학교 재난관리학과 박사과정
+                <br />
+                부산소방재난본부 현직 소방공무원 (경력 20년)
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {["Q방법론", "재난관리정책", "단절적 균형이론 (PET)", "소방예산 분석"].map((tag) => (
+                  <span key={tag} className="rounded-full border bg-white px-3.5 py-1 text-[13px]" style={{ borderColor: "var(--gray-200)" }}>{tag}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-12 grid overflow-hidden rounded-xl border sm:grid-cols-3" style={{ borderColor: "var(--gray-200)" }}>
+            <div className="bg-white px-5 py-6 text-center"><div className="text-[40px] font-semibold leading-none">3</div><div className="mt-1 text-xs" style={{ color: "rgba(0,0,0,0.48)" }}>KCI 등재 논문</div></div>
+            <div className="border-y bg-white px-5 py-6 text-center sm:border-x sm:border-y-0" style={{ borderColor: "var(--gray-200)" }}><div className="text-[40px] font-semibold leading-none">8</div><div className="mt-1 text-xs" style={{ color: "rgba(0,0,0,0.48)" }}>학회 발표</div></div>
+            <div className="bg-white px-5 py-6 text-center"><div className="text-[40px] font-semibold leading-none">3</div><div className="mt-1 text-xs" style={{ color: "rgba(0,0,0,0.48)" }}>수상</div></div>
+          </div>
+
+          <details className="overflow-hidden rounded-xl border bg-white" style={{ borderColor: "var(--gray-200)" }}>
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 font-semibold [&::-webkit-details-marker]:hidden" style={{ fontSize: "21px" }}>
+              논문 실적 · 학회 발표 · 수상경력
+              <span className="text-sm font-medium" style={{ color: "var(--brand-deep)" }}>펼치기 / 접기</span>
+            </summary>
+            <div className="border-t px-5 py-6" style={{ borderColor: "var(--gray-200)" }}>
+              <h3 className="mb-5 font-semibold" style={{ fontSize: "21px" }}>논문 실적</h3>
+              <div className="grid gap-3">
+                {papers.map((paper) => (
+                  <article key={paper.title} className="rounded-lg bg-white p-5" style={{ border: "1px solid var(--gray-200)" }}>
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.4px]" style={{ color: "var(--brand)" }}>{paper.journal}</span>
+                    <p className="mt-1 text-[15px] font-semibold leading-relaxed">{paper.title}</p>
+                    <p className="mt-1 text-[13px]" style={{ color: "rgba(0,0,0,0.48)" }}>{paper.meta}</p>
+                    {paper.doi ? <a className="mt-1 block text-xs" style={{ color: "var(--brand-deep)" }} href={paper.doi} target="_blank" rel="noopener noreferrer">{paper.doi.replace("https://", "")} ›</a> : null}
+                  </article>
+                ))}
+              </div>
+
+              <hr className="my-9 border-0 border-t" style={{ borderColor: "var(--gray-200)" }} />
+
+              <h3 className="mb-5 font-semibold" style={{ fontSize: "21px" }}>학회 발표</h3>
+              <div className="relative pl-5">
+                <div className="absolute bottom-2 left-[6px] top-2 w-px" style={{ background: "var(--gray-200)" }} />
+                {presentations.map(([year, title, venue]) => (
+                  <div key={`${year}-${title}`} className="relative pb-5 pl-6 last:pb-0">
+                    <div className="absolute left-[-14px] top-1.5 h-2 w-2 rounded-full border-2" style={{ background: "var(--brand)", borderColor: "var(--gray-100)" }} />
+                    <p className="mb-0.5 text-[11px] font-semibold tracking-[0.3px]" style={{ color: "var(--brand)" }}>{year}</p>
+                    <p className="text-sm leading-relaxed" style={{ color: "rgba(0,0,0,0.8)" }}>{title}<br /><span className="text-xs" style={{ color: "rgba(0,0,0,0.48)" }}>{venue}</span></p>
+                  </div>
+                ))}
+              </div>
+
+              <hr className="my-9 border-0 border-t" style={{ borderColor: "var(--gray-200)" }} />
+
+              <h3 className="mb-5 font-semibold" style={{ fontSize: "21px" }}>수상경력</h3>
+              <div className="flex flex-wrap gap-2.5">
+                {awards.map(([title, year]) => (
+                  <div key={title} className="rounded-lg border px-4 py-3" style={{ borderColor: "var(--gray-200)" }}>
+                    <div className="text-[13px] leading-snug">{title}<span className="mt-0.5 block text-[11px]" style={{ color: "rgba(0,0,0,0.48)" }}>{year}</span></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section className="px-5 py-20 text-center sm:px-8" style={{ background: "var(--white)" }}>
+        <div className="mx-auto max-w-[600px]">
+          <h2 className="font-semibold" style={{ fontSize: "clamp(30px, 5vw, 40px)", lineHeight: 1.1 }}>처음부터 순서대로.</h2>
+          <p className="mt-4" style={{ fontSize: "17px", color: "rgba(0,0,0,0.8)" }}>
+            정의, 역사, 개념, 절차, 분석, 보고까지 이어지는 전체 흐름을 목차에서 먼저 훑고 첫 강의부터 들어오면 가장 자연스럽습니다.
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-6 mt-10">
-            <Link
-              href="/outline"
-              style={{
-                padding: "12px 26px",
-                borderRadius: "999px",
-                background: "var(--brand)",
-                color: "var(--white)",
-                fontSize: "17px",
-                textDecoration: "none",
-              }}
-            >
-              강의 목차 보기
-            </Link>
-            <Link
-              href="/lessons/1-1"
-              style={{
-                color: "var(--brand-dark-surface)",
-                fontSize: "17px",
-                textDecoration: "none",
-              }}
-            >
-              1강 바로 시작 →
-            </Link>
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
+            <Link className="rounded-full border px-6 py-2.5 text-[17px]" style={{ borderColor: "var(--brand)", color: "var(--brand)" }} href="/outline">강의 목차 보기</Link>
+            <Link className="rounded-full px-6 py-2.5 text-[17px] text-white" style={{ background: "var(--brand)" }} href="/lessons/1-1">1강 바로 시작 →</Link>
           </div>
         </div>
       </section>
