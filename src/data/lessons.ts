@@ -244,6 +244,7 @@ export const CURRICULUM: Part[] = [
             href: "/lessons/5-2",
             description: "Q방법론 연구는 어떤 연구문제에서 시작해야 하는가. 비율 추정이 아니라 관점 구조를 탐색하는 Q형 연구문제를 설계하는 원칙과 방법을 다룹니다.",
             image: "/images/5-2-hero-research-question.webp",
+            publishedAt: "2026-06-19",
           },
           { id: "5-3", order: 503, status: "locked", title: "Concourse 수집" },
           { id: "5-4", order: 504, status: "locked", title: "Q-set 구성" },
