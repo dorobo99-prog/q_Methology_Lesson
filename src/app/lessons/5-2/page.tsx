@@ -426,6 +426,9 @@ export default function LessonPage() {
         <Link href="/lessons/5-1" style={{ color: "var(--brand)", fontSize: "14px", fontWeight: 600 }} className="hover:underline">
           &larr; 5-1. Q 연구의 전체 흐름
         </Link>
+        <Link href="/lessons/5-3" style={{ color: "var(--brand)", fontSize: "14px", fontWeight: 600 }} className="hover:underline">
+          5-3. concourse 수집 &rarr;
+        </Link>
       </div>
     </div>
   );

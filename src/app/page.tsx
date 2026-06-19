@@ -12,7 +12,10 @@ const stats = [
 
 const latestLessons = [...openLessons]
   .filter((lesson) => lesson.publishedAt)
-  .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+  .sort((a, b) => {
+    const dateOrder = b.publishedAt.localeCompare(a.publishedAt);
+    return dateOrder !== 0 ? dateOrder : b.order - a.order;
+  })
   .slice(0, 5);
 
 const formatDate = (date: string) => date.replaceAll("-", ".");
