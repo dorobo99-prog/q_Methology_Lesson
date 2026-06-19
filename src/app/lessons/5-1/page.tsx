@@ -402,6 +402,9 @@ export default function Lesson51Page() {
         <Link href="/lessons/4-6" style={{ color: "var(--brand)", fontSize: "14px", fontWeight: 600 }} className="hover:underline">
           &larr; 4-6. Q와 R 중 무엇을 선택할 것인가
         </Link>
+        <Link href="/lessons/5-2" style={{ color: "var(--brand)", fontSize: "14px", fontWeight: 600 }} className="hover:underline">
+          5-2. Q에 맞는 연구문제 설정 &rarr;
+        </Link>
       </div>
     </div>
   );

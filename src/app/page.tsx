@@ -6,7 +6,7 @@ import { openLessons } from "@/data/lessons";
 const stats = [
   { value: "10부", label: "파트 구성" },
   { value: "22장", label: "챕터 수" },
-  { value: "70+", label: "전체 강의 편수" },
+  { value: "123강", label: "전체 강의 편수" },
   { value: "대학원생", label: "주 대상" },
 ];
 
