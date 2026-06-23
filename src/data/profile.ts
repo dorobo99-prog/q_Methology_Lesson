@@ -1,5 +1,6 @@
 export type Paper = {
   journal: string;
+  kciGrade: string;
   title: string;
   meta: string;
   doi?: string;
@@ -11,17 +12,20 @@ export type Award = [title: string, year: string];
 export const papers: Paper[] = [
   {
     journal: "재무행정연구 · 2025",
+    kciGrade: "KCI후보",
     title: "Systemic Risk 시대, 소방안전교부세 운용 딜레마에 관한 주관성 연구: Musgrave(1959) 재정 3기능의 재해석을 중심으로",
     meta: "백승창 & 이동규 · 5(3), 193-227",
   },
   {
     journal: "한국행정학보 · 2025",
+    kciGrade: "KCI우수등재",
     title: "커뮤니티 위험 경감(Community Risk Reduction)에 대한 소방공무원의 주관성 연구",
     meta: "백승창 & 이동규 · 59(2), 207-231",
     doi: "https://doi.org/10.18333/kpar.59.2.207",
   },
   {
     journal: "국정관리연구 · 2024",
+    kciGrade: "KCI등재",
     title: "한국형 회복탄력성 지수검사(KRQ-53)의 주관성 연구: 부산 소방서 119 안전센터 소방공무원을 중심으로",
     meta: "백승창, 김정훈 & 이동규 · 19(3), 65-91",
     doi: "https://doi.org/10.16973/JGS.2024.19.3.003",

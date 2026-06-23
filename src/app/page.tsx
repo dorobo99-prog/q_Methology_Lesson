@@ -165,7 +165,10 @@ export default function HomePage() {
               <div className="grid gap-3">
                 {papers.map((paper) => (
                   <article key={paper.title} className="rounded-lg bg-white p-5" style={{ border: "1px solid var(--gray-200)" }}>
-                    <span className="text-[11px] font-semibold uppercase tracking-[0.4px]" style={{ color: "var(--brand)" }}>{paper.journal}</span>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="text-[11px] font-semibold uppercase tracking-[0.4px]" style={{ color: "var(--brand)" }}>{paper.journal}</span>
+                      <span className="rounded-full border px-2 py-0.5 text-[10px] font-semibold tracking-[0.2px]" style={{ borderColor: "var(--gray-200)", color: "rgba(0,0,0,0.56)" }}>{paper.kciGrade}</span>
+                    </div>
                     <p className="mt-1 text-[15px] font-semibold leading-relaxed">{paper.title}</p>
                     <p className="mt-1 text-[13px]" style={{ color: "rgba(0,0,0,0.48)" }}>{paper.meta}</p>
                     {paper.doi ? <a className="mt-1 block text-xs" style={{ color: "var(--brand-deep)" }} href={paper.doi} target="_blank" rel="noopener noreferrer">{paper.doi.replace("https://", "")} ›</a> : null}
