@@ -448,6 +448,9 @@ export default function LessonPage() {
         <Link href="/lessons/5-2" style={{ color: "var(--brand)", fontSize: "14px", fontWeight: 600 }} className="hover:underline">
           &larr; 5-2. Q에 맞는 연구문제 설정
         </Link>
+        <Link href="/lessons/5-4" style={{ color: "var(--brand)", fontSize: "14px", fontWeight: 600 }} className="hover:underline">
+          5-4. Q-set 구성 &rarr;
+        </Link>
       </div>
     </div>
   );
