@@ -264,7 +264,7 @@ export default function LessonPage() {
       <CoursePageHero
         breadcrumbs={[
           { label: "강의목차", href: "/outline" },
-          { label: "5부" },
+          { label: "4부" },
           { label: "5-4. Q-set 구성" },
         ]}
         statusLabel="공개"
