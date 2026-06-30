@@ -12,7 +12,7 @@ export type Award = [title: string, year: string];
 export const papers: Paper[] = [
   {
     journal: "한국정책학회보 · 2026",
-    kciGrade: "KCI등재",
+    kciGrade: "KCI우수등재",
     title: "커뮤니티 위험 경감(Community Risk Reduction)에 대한 재난관리 실무자의 주관성 연구",
     meta: "백승창 & 이동규 · 35(2), 757-783",
     doi: "https://doi.org/10.33900/KAPS.2026.35.2.24",
