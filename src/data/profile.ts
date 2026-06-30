@@ -11,6 +11,13 @@ export type Award = [title: string, year: string];
 
 export const papers: Paper[] = [
   {
+    journal: "한국정책학회보 · 2026",
+    kciGrade: "KCI등재",
+    title: "커뮤니티 위험 경감(Community Risk Reduction)에 대한 재난관리 실무자의 주관성 연구",
+    meta: "백승창 & 이동규 · 35(2), 757-783",
+    doi: "https://doi.org/10.33900/KAPS.2026.35.2.24",
+  },
+  {
     journal: "재무행정연구 · 2025",
     kciGrade: "KCI후보",
     title: "Systemic Risk 시대, 소방안전교부세 운용 딜레마에 관한 주관성 연구: Musgrave(1959) 재정 3기능의 재해석을 중심으로",
