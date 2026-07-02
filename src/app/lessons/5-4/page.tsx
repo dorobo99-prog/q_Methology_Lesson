@@ -310,9 +310,9 @@ export default function LessonPage() {
           <Link href="/lessons/5-3" className="text-sm-medium" style={{ color: "var(--brand)" }}>
             ← 5-3. concourse 수집
           </Link>
-          <span className="text-sm" style={{ color: "var(--gray-400)" }}>
-            5-4. Q-set 구성
-          </span>
+          <Link href="/lessons/5-5" className="text-sm-medium" style={{ color: "var(--brand)" }}>
+            5-5. P-set 선정 →
+          </Link>
         </div>
       </section>
     </div>

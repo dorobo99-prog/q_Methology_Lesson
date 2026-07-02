@@ -15,3 +15,7 @@ For codebase navigation and retrieval in indexed repositories, prefer `jcodemunc
 - Use `search_text` for literals/comments/regex text lookup.
 
 Avoid falling back to Grep/Read/Glob for indexed repositories unless strictly necessary.
+
+## Q Course Lesson Navigation Rule
+
+When a new Q방법론 lesson page is completed and opened, update the previous lesson page footer navigation in the same change so the right-side link points to the newly opened lesson. The previous lesson must not remain as a plain current-lesson label once the next lesson is public.
