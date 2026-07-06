@@ -315,9 +315,9 @@ export default function LessonPage() {
           <Link href="/lessons/5-4" className="text-sm font-medium hover:underline" style={{ color: "var(--brand)" }}>
             이전 강의: 5-4 Q-set 구성
           </Link>
-          <span className="text-sm" style={{ color: "var(--gray-400)" }}>
+          <Link href="/lessons/5-6" className="text-sm font-medium hover:underline" style={{ color: "var(--brand)" }}>
             다음 강의: 5-6 Q-sort 시행
-          </span>
+          </Link>
         </nav>
       </section>
     </div>
