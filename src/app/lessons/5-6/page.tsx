@@ -349,9 +349,9 @@ export default function LessonPage() {
           <Link href="/lessons/5-5" className="text-sm font-medium hover:underline" style={{ color: "var(--brand)" }}>
             이전 강의: 5-5 P-set 선정
           </Link>
-          <span className="text-sm" style={{ color: "var(--gray-400)" }}>
+          <Link href="/lessons/5-7" className="text-sm font-medium hover:underline text-right" style={{ color: "var(--brand)" }}>
             다음 강의: 5-7 요인분석에서 해석까지
-          </span>
+          </Link>
         </nav>
       </section>
     </div>
