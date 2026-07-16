@@ -17,6 +17,9 @@ export default function Footer() {
           dorobo99@gmail.com
         </a>
       </p>
+      <p className="mt-2" style={{ fontSize: "13px" }}>
+        Copyright © 백승창. All rights reserved.
+      </p>
     </footer>
   );
 }
