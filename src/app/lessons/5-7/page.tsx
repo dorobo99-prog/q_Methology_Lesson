@@ -404,6 +404,9 @@ export default function LessonPage() {
           <Link href="/lessons/5-6" className="text-sm font-medium hover:underline" style={{ color: "var(--brand)" }}>
             ← 5-6. Q-sort 시행
           </Link>
+          <Link href="/lessons/5-8" className="text-sm font-medium hover:underline text-right" style={{ color: "var(--brand)" }}>
+            5-8. Q 연구를 논문으로 옮기는 흐름 →
+          </Link>
         </div>
       </section>
     </div>

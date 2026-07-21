@@ -286,7 +286,14 @@ export const CURRICULUM: Part[] = [
             image: "/images/5-7-hero-factor-analysis-to-interpretation.webp",
             publishedAt: "2026-07-11",
           },
-          { id: "5-8", order: 508, status: "locked", title: "Q 연구를 논문으로 옮기는 흐름" },
+          {
+            id: "5-8", order: 508, status: "open",
+            title: "Q 연구를 논문으로 옮기는 흐름",
+            href: "/lessons/5-8",
+            description: "Q분석 결과를 학술 논문의 논증 구조(서론-방법-결과-논의)로 전환하고, 20개 항목 보고 체크리스트로 최종 점검하는 방법을 배웁니다.",
+            image: "/images/5-8-hero-from-analysis-to-manuscript.webp",
+            publishedAt: "2026-07-21",
+          },
         ],
       },
       {
