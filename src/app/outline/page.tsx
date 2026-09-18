@@ -4,7 +4,7 @@ import { CURRICULUM, type LessonStatus } from "@/data/lessons";
 
 export const metadata: Metadata = {
   title: "강의 목차 | Q방법론 온라인 강의",
-  description: "Q방법론 온라인 강의 전체 목차. 10부 22장 구성.",
+  description: "Q방법론 온라인 강의 전체 목차. 10부 22장 130회차 구성. 연구 설계부터 분석·해석·논문 작성까지.",
 };
 
 type BadgeStyle = { label: string; bg: string; color: string };
@@ -42,6 +42,10 @@ export default function OutlinePage() {
           대학원생과 연구자를 위한 Q방법론 온라인 강의 전체 목차입니다.<br />
           이 강의는 Stephenson의 Q방법론, Brown의 정치적 주관성, Q와 R의 차이, Q-set 개발, P-set 선정, Q-sort, 요인분석, PQMethod, R qmethod, 논문 작성법까지 단계별로 다룹니다.
         </p>
+        <p className="text-sm mt-4" style={{ color: "var(--gray-700)", lineHeight: 1.6 }}>
+          10부 · 22장 · {CURRICULUM.reduce((total, part) => total + part.chapters.reduce((count, chapter) => count + chapter.lessons.length, 0), 0)}회차
+          <br />예정 회차는 원고와 실습자료를 준비한 뒤 순차적으로 공개합니다.
+        </p>
 
         <div className="flex flex-wrap gap-2 mt-7">
           {Object.values(statusBadge).map((v) => (
@@ -59,6 +63,17 @@ export default function OutlinePage() {
             </span>
           ))}
         </div>
+      </section>
+
+      <section className="mb-12" aria-labelledby="learning-path">
+        <h2 id="learning-path" className="text-lg font-semibold mb-3" style={{ fontFamily: "var(--font-display)" }}>
+          내 연구에 맞게 따라가기
+        </h2>
+        <ul className="space-y-3 text-sm" style={{ color: "var(--gray-700)", lineHeight: 1.7 }}>
+          <li>처음 배우면: 1장 → 5장 → 6~12장 → 13장 또는 14장 → 16~18장. 요인 수를 판단할 때는 11-1~11-3의 정의 Q분류(Defining sort)를 먼저 읽고 10장으로 돌아옵니다.</li>
+          <li>이론을 깊게 배우면: 1장 → 2~4장 → 5장 이후. 연구 목적에 따라 19~21장의 응용·확장을 선택합니다.</li>
+          <li>분석 실습은 PQMethod와 R qmethod 중 한 경로를 먼저 완주하고, 15장에서 설정과 결과를 비교합니다. 22장의 체크리스트와 자료실은 각 단계에서 활용합니다.</li>
+        </ul>
       </section>
 
       {/* 목차 */}

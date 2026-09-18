@@ -228,7 +228,7 @@ export const CURRICULUM: Part[] = [
     chapters: [
       {
         num: "5장",
-        title: "Q 연구 절차 한눈에 보기",
+        title: "사례로 따라가는 Q 연구의 전체 과정",
         lessons: [
           {
             id: "5-1", order: 501, status: "open",
@@ -248,7 +248,7 @@ export const CURRICULUM: Part[] = [
           },
           {
             id: "5-3", order: 503, status: "open",
-            title: "concourse 수집",
+            title: "Concourse 수집",
             href: "/lessons/5-3",
             description: "Q방법론 연구에서 진술문 모집단(concourse)을 어떻게 넓고 균형 있게 수집하고, Q-set 후보로 정리하며, 논문 보고가 가능한 기록으로 남길지 다룹니다.",
             image: "/images/5-3-hero-concourse-collection.webp",
@@ -298,27 +298,27 @@ export const CURRICULUM: Part[] = [
       },
       {
         num: "6장",
-        title: "Concourse와 Q-set 개발",
+        title: "Concourse 수집과 Q표본 개발 실습",
         lessons: [
-          { id: "6-1", order: 601, status: "locked", title: "Concourse란 무엇인가" },
-          { id: "6-2", order: 602, status: "locked", title: "Concourse 수집원" },
-          { id: "6-3", order: 603, status: "locked", title: "Q-set 개발 원리" },
-          { id: "6-4", order: 604, status: "locked", title: "좋은 진술문과 나쁜 진술문" },
-          { id: "6-5", order: 605, status: "locked", title: "Q-set 검토와 파일럿" },
-          { id: "6-6", order: 606, status: "locked", title: "Q-set 개발 보고 방법" },
+          { id: "6-1", order: 601, status: "locked", title: "연구질문에서 Concourse의 범위 정하기" },
+          { id: "6-2", order: 602, status: "locked", title: "Concourse 수집원과 출처 기록" },
+          { id: "6-3", order: 603, status: "locked", title: "구조화·비구조화 Q표본과 표집틀 설계" },
+          { id: "6-4", order: 604, status: "locked", title: "좋은 진술문과 나쁜 진술문: 선별·수정 실습" },
+          { id: "6-5", order: 605, status: "locked", title: "Q표본 검토와 파일럿: 수정 근거 남기기" },
+          { id: "6-6", order: 606, status: "locked", title: "Q표본 개발 과정 기록과 방법 문단 작성" },
         ],
       },
       {
         num: "7장",
-        title: "P-set과 Q-sort",
+        title: "P표본 선정과 Q분류 시행 실습",
         lessons: [
-          { id: "7-1", order: 701, status: "locked", title: "P-set의 의미" },
-          { id: "7-2", order: 702, status: "locked", title: "대표성보다 다양성이 중요한 이유" },
-          { id: "7-3", order: 703, status: "locked", title: "P-set 규모와 선정 기준" },
-          { id: "7-4", order: 704, status: "locked", title: "Q-sort 지시문과 과제 설계" },
-          { id: "7-5", order: 705, status: "locked", title: "강제분포와 비강제분포" },
-          { id: "7-6", order: 706, status: "locked", title: "온라인 Q-sort 시행법" },
-          { id: "7-7", order: 707, status: "locked", title: "Post-sort interview" },
+          { id: "7-1", order: 701, status: "locked", title: "연구질문에서 P표본의 참여 조건 정하기" },
+          { id: "7-2", order: 702, status: "locked", title: "관점 다양성을 위한 참여자 선정표 만들기" },
+          { id: "7-3", order: 703, status: "locked", title: "P표본 규모와 모집계획 정당화" },
+          { id: "7-4", order: 704, status: "locked", title: "Q분류 지시문과 과제 설계 실습" },
+          { id: "7-5", order: 705, status: "locked", title: "강제·비강제분포와 격자 설계 실습" },
+          { id: "7-6", order: 706, status: "locked", title: "온라인 Q분류 모의 시행과 데이터 내보내기" },
+          { id: "7-7", order: 707, status: "locked", title: "사후 인터뷰 질문지와 해석 자료 기록" },
           { id: "7-8", order: 708, status: "locked", title: "연구윤리와 자료관리" },
         ],
       },
@@ -330,7 +330,7 @@ export const CURRICULUM: Part[] = [
     chapters: [
       {
         num: "8장",
-        title: "Q 분석은 무엇을 계산하는가",
+        title: "Q 데이터와 상관행렬 읽기",
         lessons: [
           { id: "8-1", order: 801, status: "locked", title: "Q 데이터의 구조" },
           { id: "8-2", order: 802, status: "locked", title: "Q-sort 상관행렬 만들기와 읽기" },
@@ -352,43 +352,46 @@ export const CURRICULUM: Part[] = [
       },
       {
         num: "10장",
-        title: "요인 수 결정",
+        title: "요인 수 결정과 대안 요인해 비교",
         lessons: [
           { id: "10-1", order: 1001, status: "locked", title: "요인 수 결정의 중요성" },
           { id: "10-2", order: 1002, status: "locked", title: "통계적 기준: 고유값, Scree, 유의 적재자" },
           { id: "10-3", order: 1003, status: "locked", title: "설명분산 기준" },
           { id: "10-4", order: 1004, status: "locked", title: "해석가능성 기준" },
+          { id: "10-5", order: 1005, status: "locked", title: "대안 요인해 비교와 최종 선택 기록" },
         ],
       },
     ],
   },
   {
     num: "6부",
-    title: "요인 해석",
+    title: "요인배열 구성과 해석",
     chapters: [
       {
         num: "11장",
-        title: "요인적재치와 대표 Q-sort",
+        title: "요인적재치와 정의 Q분류 판정",
         lessons: [
           { id: "11-1", order: 1101, status: "locked", title: "요인적재치의 의미" },
           { id: "11-2", order: 1102, status: "locked", title: "유의수준 계산" },
-          { id: "11-3", order: 1103, status: "locked", title: "Defining sort" },
-          { id: "11-4", order: 1104, status: "locked", title: "Confounded sort" },
-          { id: "11-5", order: 1105, status: "locked", title: "Non-significant sort" },
+          { id: "11-3", order: 1103, status: "locked", title: "요인을 정의하는 Q분류: Defining sort" },
+          { id: "11-4", order: 1104, status: "locked", title: "혼합적재 Q분류: Confounded sort" },
+          { id: "11-5", order: 1105, status: "locked", title: "비유의 적재 Q분류: Non-significant sort" },
           { id: "11-6", order: 1106, status: "locked", title: "자동 flagging과 수동 판단" },
           { id: "11-7", order: 1107, status: "locked", title: "양극 요인과 부적 적재 해석" },
         ],
       },
       {
         num: "12장",
-        title: "Z-score, factor array, 진술문 해석",
+        title: "요인배열 산출과 근거 기반 해석",
         lessons: [
-          { id: "12-1", order: 1201, status: "locked", title: "Z-score란 무엇인가" },
-          { id: "12-2", order: 1202, status: "locked", title: "Factor array 읽기" },
+          { id: "12-1", order: 1201, status: "locked", title: "Z점수와 요인배열 산출: 정의 Q분류의 가중 결합" },
+          { id: "12-2", order: 1202, status: "locked", title: "요인배열 전체 읽기와 상대적 위치 해석" },
           { id: "12-3", order: 1203, status: "locked", title: "극단 진술문 해석" },
-          { id: "12-4", order: 1204, status: "locked", title: "Distinguishing statements" },
-          { id: "12-5", order: 1205, status: "locked", title: "Consensus statements" },
+          { id: "12-4", order: 1204, status: "locked", title: "구별 진술문: Distinguishing statements" },
+          { id: "12-5", order: 1205, status: "locked", title: "공통 진술문: Consensus statements" },
           { id: "12-6", order: 1206, status: "locked", title: "요인 명명과 유형 서사" },
+          { id: "12-7", order: 1207, status: "locked", title: "크립시트와 사후 인터뷰를 결합한 요인해석" },
+          { id: "12-8", order: 1208, status: "locked", title: "요인 간 비교와 연구질문에 답하기" },
         ],
       },
     ],
@@ -399,7 +402,7 @@ export const CURRICULUM: Part[] = [
     chapters: [
       {
         num: "13장",
-        title: "PQMethod",
+        title: "PQMethod 분석 실습",
         lessons: [
           { id: "13-1", order: 1301, status: "locked", title: "PQMethod란 무엇인가" },
           { id: "13-2", order: 1302, status: "locked", title: "설치와 기본 구조" },
@@ -408,29 +411,31 @@ export const CURRICULUM: Part[] = [
           { id: "13-5", order: 1305, status: "locked", title: "요인추출" },
           { id: "13-6", order: 1306, status: "locked", title: "회전" },
           { id: "13-7", order: 1307, status: "locked", title: "결과표 읽기" },
+          { id: "13-8", order: 1308, status: "locked", title: "PQMethod 전체 분석과 결과문단 연결 실습" },
         ],
       },
       {
         num: "14장",
-        title: "R qmethod",
+        title: "R qmethod 분석 실습",
         lessons: [
           { id: "14-1", order: 1401, status: "locked", title: "R qmethod란 무엇인가" },
           { id: "14-2", order: 1402, status: "locked", title: "RStudio와 패키지 설치" },
           { id: "14-3", order: 1403, status: "locked", title: "데이터 구조" },
           { id: "14-4", order: 1404, status: "locked", title: "기본 분석 실행" },
-          { id: "14-5", order: 1405, status: "locked", title: "PCA와 centroid 적용" },
-          { id: "14-6", order: 1406, status: "locked", title: "Rotation 설정" },
+          { id: "14-5", order: 1405, status: "locked", title: "추출법 설정과 지원 범위 확인" },
+          { id: "14-6", order: 1406, status: "locked", title: "회전 설정과 요인해 비교" },
           { id: "14-7", order: 1407, status: "locked", title: "결과 추출과 저장" },
+          { id: "14-8", order: 1408, status: "locked", title: "R 전체 분석과 결과문단 연결 실습" },
         ],
       },
       {
         num: "15장",
-        title: "PQMethod와 R qmethod 비교",
+        title: "분석 결과 비교와 재현 점검",
         lessons: [
-          { id: "15-1", order: 1501, status: "locked", title: "공통 분석 흐름" },
-          { id: "15-2", order: 1502, status: "locked", title: "입력 방식의 차이" },
-          { id: "15-3", order: 1503, status: "locked", title: "출력 결과의 차이" },
-          { id: "15-4", order: 1504, status: "locked", title: "재현가능성의 차이" },
+          { id: "15-1", order: 1501, status: "locked", title: "공통 데이터와 분석 설정 맞추기" },
+          { id: "15-2", order: 1502, status: "locked", title: "입력 변환과 진술문·Q분류 번호 대조" },
+          { id: "15-3", order: 1503, status: "locked", title: "적재치·요인배열·구별 진술문 결과 비교" },
+          { id: "15-4", order: 1504, status: "locked", title: "환경·설정·판단 기록으로 분석 재현하기" },
           { id: "15-5", order: 1505, status: "locked", title: "어떤 상황에서 무엇을 쓸 것인가" },
         ],
       },
@@ -442,7 +447,7 @@ export const CURRICULUM: Part[] = [
     chapters: [
       {
         num: "16장",
-        title: "Q 논문의 기본 구조",
+        title: "Q 논문 작성 실습",
         lessons: [
           { id: "16-1", order: 1601, status: "locked", title: "서론에서 Q방법론을 제시하는 법" },
           { id: "16-2", order: 1602, status: "locked", title: "이론적 배경과 연구설계의 역할 구분" },
@@ -466,7 +471,7 @@ export const CURRICULUM: Part[] = [
       },
       {
         num: "18장",
-        title: "심사자가 자주 지적하는 문제",
+        title: "Q 논문 오류 진단과 수정 실습",
         lessons: [
           { id: "18-1", order: 1801, status: "locked", title: "Q-set 개발 과정이 불투명한 경우" },
           { id: "18-2", order: 1802, status: "locked", title: "P-set 선정 근거가 약한 경우" },
@@ -521,7 +526,7 @@ export const CURRICULUM: Part[] = [
     chapters: [
       {
         num: "22장",
-        title: "체크리스트와 템플릿",
+        title: "체크리스트·템플릿·공통 실습자료",
         lessons: [
           { id: "22-1", order: 2201, status: "locked", title: "Q 연구 전체 체크리스트" },
           { id: "22-2", order: 2202, status: "locked", title: "Concourse 수집 템플릿" },
@@ -530,6 +535,8 @@ export const CURRICULUM: Part[] = [
           { id: "22-5", order: 2205, status: "locked", title: "Q-sort 안내문 템플릿" },
           { id: "22-6", order: 2206, status: "locked", title: "Post-sort interview 질문지" },
           { id: "22-7", order: 2207, status: "locked", title: "논문작성 템플릿" },
+          { id: "22-8", order: 2208, status: "locked", title: "공통 실습 데이터와 설정·출력 예시" },
+          { id: "22-9", order: 2209, status: "locked", title: "분석 결정 기록표와 요인해석표" },
         ],
       },
     ],
