@@ -389,6 +389,9 @@ export default function LessonPage() {
           <Link href="/lessons/5-7" className="text-sm" style={{ color: "var(--gray-400)" }}>
             ← 5-7. 요인분석에서 해석까지의 흐름
           </Link>
+          <Link href="/lessons/6-1" className="text-sm" style={{ color: "var(--brand-deep)" }}>
+            6-1. 연구질문에서 Concourse의 범위 정하기 →
+          </Link>
         </div>
       </section>
     </div>

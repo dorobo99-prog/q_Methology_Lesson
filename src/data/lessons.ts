@@ -300,7 +300,12 @@ export const CURRICULUM: Part[] = [
         num: "6장",
         title: "Concourse 수집과 Q표본 개발 실습",
         lessons: [
-          { id: "6-1", order: 601, status: "locked", title: "연구질문에서 Concourse의 범위 정하기" },
+          { id: "6-1", order: 601, status: "open", title: "연구질문에서 Concourse의 범위 정하기",
+            href: "/lessons/6-1",
+            description: "선행연구의 Concourse 범위 설정 사례를 비교하고 자기 연구의 대상·상황·시간·쟁점과 자료 기준을 정리합니다.",
+            image: "/images/6-1-hero-concourse-scope.webp",
+            publishedAt: "2026-09-18",
+},
           { id: "6-2", order: 602, status: "locked", title: "Concourse 수집원과 출처 기록" },
           { id: "6-3", order: 603, status: "locked", title: "구조화·비구조화 Q표본과 표집틀 설계" },
           { id: "6-4", order: 604, status: "locked", title: "좋은 진술문과 나쁜 진술문: 선별·수정 실습" },
