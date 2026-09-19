@@ -35,7 +35,7 @@ const cards = [
     title: "출처 대장은 자료 한 건의 이력을 남긴다",
     keyMessage: "확인한 정보와 아직 확인하지 못한 정보를 출처 단위로 나눠 적습니다.",
     paragraphs: [
-      "Dieteren 등(2023)은 Q방법론 연구가 Concourse의 출처, 항목 표집 과정, 항목 유형과 수를 보고해야 한다고 제안했습니다. Churruca 등(2021)도 Q표본 진술문을 어떻게 수집하고 축소·정제했는지 설명해야 한다고 제안했습니다. 두 고찰은 기록의 필요성을 뒷받침하지만, 하나의 표준 출처 대장 양식을 제시하지는 않습니다.",
+      "Dieteren et al.(2023)은 Q방법론 연구가 Concourse의 출처, 항목 표집 과정, 항목 유형과 수를 보고해야 한다고 제안했습니다. Churruca et al.(2021)도 Q표본 진술문을 어떻게 수집하고 축소·정제했는지 설명해야 한다고 제안했습니다. 두 고찰은 기록의 필요성을 뒷받침하지만, 하나의 표준 출처 대장 양식을 제시하지는 않습니다.",
       "이번 강의에서는 이 보고 요구를 실제 작업에 적용하기 위해 출처 대장을 만듭니다. 출처 식별번호, 출처 유형, 자료명 또는 참여자 집단, 연구질문과의 관련성, 자료 생성 기간, 검색·면담 기간, 언어·지역, 수집방법, 포함 기준과 상태를 기록합니다. 이 항목들은 선행연구의 공식 공통 절차가 아니라 강의용 도구입니다.",
       "자료 한 건을 등록하세요. 확인한 정보만 적으세요. 검색 기간이나 URL을 확인하지 못했다면 임의로 채우지 마세요. ‘미정’은 앞으로 결정할 항목에 쓰고, ‘미명시’는 선행연구나 원자료가 보고하지 않은 항목에 쓰세요.",
     ],
@@ -57,7 +57,7 @@ const cards = [
     title: "빈칸을 숨기지 않고 6-3으로 넘긴다",
     keyMessage: "미보고 항목을 추측하지 않고 수집원별 후보 목록을 다음 실습으로 넘깁니다.",
     paragraphs: [
-      "Shim 등(2024)은 문헌에서 121개, 중·고등학교 교사 10명의 서면 면담에서 220개를 수집해 초기 Concourse 341개를 구성했다고 보고했습니다. 그러나 문헌 검색 데이터베이스와 구체적인 검색·면담 기간은 보고하지 않았습니다. 윤리심의 승인일이나 출판연도로 이 빈칸을 대신 채울 수는 없습니다.",
+      "Shim et al.(2024)은 문헌에서 121개, 중·고등학교 교사 10명의 서면 면담에서 220개를 수집해 초기 Concourse 341개를 구성했다고 보고했습니다. 그러나 문헌 검색 데이터베이스와 구체적인 검색·면담 기간은 보고하지 않았습니다. 윤리심의 승인일이나 출판연도로 이 빈칸을 대신 채울 수는 없습니다.",
       "좋은 기록은 모든 칸이 채워진 표가 아닙니다. 무엇을 확인했고 무엇을 확인하지 못했는지 구분한 표입니다. 확인하지 못한 정보는 ‘미명시’로 남기세요. 이후 확인하면 값을 추가하고 확인일을 기록하세요. 출처가 바뀌거나 범위가 넓어졌다면 6-1 범위표에도 변경 이유를 남기세요.",
       "이번 회차의 산출물은 수집원 지도, 출처 대장, 후보 진술문 출처 기록입니다. 다음 6-3에서는 수집원별 후보가 어떤 주제와 쟁점을 대표하는지 살펴봅니다. 오늘 만든 기록은 표집틀에서 누락과 편중을 확인하는 자료가 됩니다.",
     ],
@@ -66,10 +66,10 @@ const cards = [
 ];
 
 const references = [
-  { id: "churruca2021", label: "Churruca 등(2021)", text: "Churruca, K., Ludlow, K., Wu, W., Gibbons, K., Nguyen, H. M., Ellis, L. A., & Braithwaite, J. (2021). A scoping review of Q-methodology in healthcare research. BMC Medical Research Methodology, 21(1), 125.", doi: "10.1186/s12874-021-01309-7" },
-  { id: "dieteren2023", label: "Dieteren 등(2023)", text: "Dieteren, C. M., Patty, N. J. S., Reckers-Droog, V. T., & Van Exel, J. (2023). Methodological choices in applications of Q methodology: A systematic literature review. Social Sciences & Humanities Open, 7(1), 100404.", doi: "10.1016/j.ssaho.2023.100404" },
+  { id: "churruca2021", label: "Churruca et al.(2021)", text: "Churruca, K., Ludlow, K., Wu, W., Gibbons, K., Nguyen, H. M., Ellis, L. A., & Braithwaite, J. (2021). A scoping review of Q-methodology in healthcare research. BMC Medical Research Methodology, 21(1), 125.", doi: "10.1186/s12874-021-01309-7" },
+  { id: "dieteren2023", label: "Dieteren et al.(2023)", text: "Dieteren, C. M., Patty, N. J. S., Reckers-Droog, V. T., & Van Exel, J. (2023). Methodological choices in applications of Q methodology: A systematic literature review. Social Sciences & Humanities Open, 7(1), 100404.", doi: "10.1016/j.ssaho.2023.100404" },
   { id: "fontein2016", label: "Fontein-Kuipers(2016)", text: "Fontein-Kuipers, Y. (2016). Development of a Q-set for a Q-method study about midwives’ perspectives of woman-centered care. Health Education and Care, 1(2), 31–36.", doi: "10.15761/HEC.1000107" },
-  { id: "shim2024", label: "Shim 등(2024)", text: "Shim, T., Jun, M., & Lee, S. Y. (2024). How do Korean secondary school teachers perceive psychological burnout in their teaching careers? Behavioral Sciences, 14(12), 1210.", doi: "10.3390/bs14121210" },
+  { id: "shim2024", label: "Shim et al.(2024)", text: "Shim, T., Jun, M., & Lee, S. Y. (2024). How do Korean secondary school teachers perceive psychological burnout in their teaching careers? Behavioral Sciences, 14(12), 1210.", doi: "10.3390/bs14121210" },
 ];
 
 const sourceMapFields = [
@@ -120,7 +120,7 @@ export default function LessonSixTwoPage() {
     <div className="max-w-4xl mx-auto px-5 sm:px-8 py-12 sm:py-16">
       <CoursePageHero
         breadcrumbs={[{ label: "강의 목차", href: "/outline" }, { label: "4부" }, { label: "6-2. Concourse 수집원과 출처 기록" }]}
-        statusLabel="공개" versionLabel="v1.0 · 2026-09-19"
+        statusLabel="공개" versionLabel="v1.1 · 2026-09-19"
         title="Concourse 수집원과 출처 기록"
         description={metadata.description as string}
         imageSrc="/images/6-2-hero-source-provenance.webp"
