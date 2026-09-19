@@ -192,7 +192,7 @@ export default function LessonSixOnePage() {
         </section>
         <nav aria-label="강의 이동" className="pt-8 mt-12 flex flex-wrap items-center justify-between gap-4 border-t" style={{ borderColor: "var(--gray-200)" }}>
           <Link href="/lessons/5-8" className="text-sm" style={{ color: "var(--brand-deep)" }}>← 5-8. Q 연구를 논문으로 옮기는 흐름</Link>
-          <span className="text-sm" style={{ color: "var(--gray-400)" }}>6-2. Concourse 수집원과 출처 기록 · 예정</span>
+          <Link href="/lessons/6-2" className="text-sm" style={{ color: "var(--brand-deep)" }}>6-2. Concourse 수집원과 출처 기록 →</Link>
         </nav>
       </div>
     </div>
