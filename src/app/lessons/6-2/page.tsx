@@ -48,7 +48,7 @@ const cards = [
     paragraphs: [
       "출처 대장은 자료 단위를 기록합니다. 후보 진술문 기록은 그 자료에서 얻은 표현을 추적합니다. 두 기록을 출처 식별번호로 연결하면 후보 진술문이 어느 문헌·면담·게시물에서 왔는지 다시 확인할 수 있습니다.",
       "후보 진술문 기록에는 진술문 식별번호, 현재 문장, 원래 표현이나 위치, 출처 식별번호, 직접 추출·요약·번역 여부, 수집일과 상태를 적습니다. 아직은 문장이 좋은지 판단하거나 최종 Q표본에 포함할지 결정하지 않습니다. 구조화·비구조화 표집틀은 6-3에서, 문장 선별과 수정은 6-4에서 다룹니다.",
-      "후보 진술문 세 개를 등록하세요. 같은 자료에서 가져와도 각각 다른 진술문 식별번호를 붙이세요. 원래 위치를 확인할 수 없다면 ‘미명시’라고 적으세요. 문장을 요약하거나 번역했다면 그 상태를 표시하고 원문과 현재 문장을 구분하세요.",
+      "수집한 후보 진술문을 출처 기록과 연결하세요. 같은 자료에서 여러 문장을 가져왔다면 각 문장에 서로 다른 진술문 식별번호를 붙이세요. 원래 위치를 확인할 수 없다면 ‘미명시’라고 적으세요. 문장을 요약하거나 번역했다면 그 상태를 표시하고 원문과 현재 문장을 구분하세요. 등록 개수보다 중요한 것은 후보 문장을 원자료에서 다시 찾을 수 있게 기록하는 것입니다.",
     ],
     sources: ["dieteren2023", "churruca2021"],
   },
@@ -120,7 +120,7 @@ export default function LessonSixTwoPage() {
     <div className="max-w-4xl mx-auto px-5 sm:px-8 py-12 sm:py-16">
       <CoursePageHero
         breadcrumbs={[{ label: "강의 목차", href: "/outline" }, { label: "4부" }, { label: "6-2. Concourse 수집원과 출처 기록" }]}
-        statusLabel="공개" versionLabel="v1.1 · 2026-09-19"
+        statusLabel="공개" versionLabel="v1.2 · 2026-09-19"
         title="Concourse 수집원과 출처 기록"
         description={metadata.description as string}
         imageSrc="/images/6-2-hero-source-provenance.webp"
@@ -161,7 +161,7 @@ export default function LessonSixTwoPage() {
         <section className="mb-14" aria-labelledby="statement-register">
           <div className="text-xs mb-2" style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}>적용 활동 3</div>
           <h2 id="statement-register" className="text-2xl font-semibold mb-3">후보 진술문 출처 기록</h2>
-          <p className="text-sm mb-5" style={{ color: "var(--gray-700)", lineHeight: 1.7 }}>후보 진술문 세 개를 등록하고 출처 ID로 원자료와 연결하세요. 문장을 요약하거나 번역했다면 원문과 현재 문장을 구분해 처리 상태를 남기세요.</p>
+          <p className="text-sm mb-5" style={{ color: "var(--gray-700)", lineHeight: 1.7 }}>수집한 후보 진술문을 출처 ID로 원자료와 연결하세요. 각 후보의 원래 표현·위치와 처리 상태를 기록해 문장이 어디에서 왔고 어떻게 바뀌었는지 확인할 수 있게 하세요. 등록 개수는 연구의 수집 상황에 따라 정합니다.</p>
           <PracticeGrid fields={statementFields} />
         </section>
 
