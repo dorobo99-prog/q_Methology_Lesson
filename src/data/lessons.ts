@@ -308,7 +308,7 @@ export const CURRICULUM: Part[] = [
 },
           { id: "6-2", order: 602, status: "open", title: "Concourse 수집원과 출처 기록",
             href: "/lessons/6-2",
-            description: "6-1 범위표를 수집원 지도와 출처 대장으로 바꾸고 후보 진술문의 출처를 기록합니다.",
+            description: "6-1 범위표에서 수집 방법의 역할을 설계하고 실제 연구와 대조한 뒤 수집원 지도와 출처 기록을 만듭니다.",
             image: "/images/6-2-hero-source-provenance.webp",
             publishedAt: "2026-09-19",
 },
