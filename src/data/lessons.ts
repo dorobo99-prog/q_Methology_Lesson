@@ -302,7 +302,7 @@ export const CURRICULUM: Part[] = [
         lessons: [
           { id: "6-1", order: 601, status: "open", title: "연구질문에서 Concourse의 범위 정하기",
             href: "/lessons/6-1",
-            description: "선행연구의 Concourse 범위 설정 사례를 비교하고 자기 연구의 대상·상황·시간·쟁점과 자료 기준을 정리합니다.",
+            description: "류승훈 연구의 자료 선택을 먼저 예측하고 대조한 뒤 내 연구의 Concourse 범위를 정합니다.",
             image: "/images/6-1-hero-concourse-scope.webp",
             publishedAt: "2026-09-18",
 },
