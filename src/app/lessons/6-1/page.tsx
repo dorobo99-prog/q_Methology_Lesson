@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 const cards = [
   {
     num: 1,
+    caseLabel: "관통사례 · 류승훈(2023)",
     title: "연구질문만 보고 수집 범위를 예상해 보기",
     message: "연구질문을 읽고 후보 자료의 범위를 먼저 판단합니다.",
     paragraphs: [
@@ -21,6 +22,7 @@ const cards = [
   },
   {
     num: 2,
+    caseLabel: "관통사례 · 류승훈(2023)",
     title: "연구자는 어떤 후보 자료를 모았을까?",
     message: "관점을 탐구할 사람과 후보 문장의 수집원을 구별합니다.",
     paragraphs: [
@@ -32,6 +34,7 @@ const cards = [
   },
   {
     num: 3,
+    caseLabel: "비교사례 · 박철우(2024)",
     title: "같은 주제라도 경계는 달라진다",
     message: "자료 경로가 비슷해도 관점을 탐구할 사람은 다를 수 있습니다.",
     paragraphs: [
@@ -42,6 +45,7 @@ const cards = [
   },
   {
     num: 4,
+    caseLabel: "내 연구 적용",
     title: "판단을 기록해 다음 수집으로 넘기기",
     message: "포함·제외·보류의 이유와 확인 질문을 범위표에 남깁니다.",
     paragraphs: [
@@ -55,10 +59,6 @@ const cards = [
 const references = [
   { id: "ryu2023", label: "류승훈(2023)", text: "류승훈. (2023). 재난대응상황에서 부산광역시 A 소방서 소방공무원의 리더십에 대한 주관성 연구 [박사학위논문, 동아대학교]. 연구설계 70–101쪽." },
   { id: "park2024", label: "박철우(2024)", text: "박철우. (2024). 재난대응상황에서 대한적십자사 리더십 구성요소와 행위에 관한 주관성 연구 [박사학위논문, 동아대학교]. 연구설계 108–133쪽." },
-  { id: "alsulami2024", label: "Alsulami et al.(2024)", text: "Alsulami, S., Konstantinidis, S. Th., & Wharrad, H. (2024). Development of a concourse for two Q-method studies exploring perspectives of patients with multiple sclerosis and healthcare professionals on the use of wearable technology—Lessons learnt. In Digital Health and Informatics Innovations for Sustainable Health Care Systems (pp. 466–470). IOS Press. https://doi.org/10.3233/SHTI240449" },
-  { id: "fontein2016", label: "Fontein-Kuipers(2016)", text: "Fontein-Kuipers, Y. (2016). Development of a Q-set for a Q-method study about midwives’ perspectives of woman-centered care. Health Education and Care, 1(2), 31–36. https://doi.org/10.15761/HEC.1000107" },
-  { id: "kenward2019", label: "Kenward(2019)", text: "Kenward, L. (2019). A literature review to guide novice researchers using Q methodology in the development of a framework for concourse management. Nurse Researcher, 27(1), 17–21. https://doi.org/10.7748/nr.2019.e1616" },
-  { id: "shim2024", label: "Shim et al.(2024)", text: "Shim, T., Jun, M., & Lee, S. Y. (2024). How do Korean secondary school teachers perceive psychological burnout in their teaching careers? Behavioral Sciences, 14(12), 1210. https://doi.org/10.3390/bs14121210" },
 ];
 
 const practiceCases = [
@@ -82,7 +82,7 @@ export default function LessonSixOnePage() {
     <div className="max-w-4xl mx-auto px-5 sm:px-8 py-12 sm:py-16">
       <CoursePageHero
         breadcrumbs={[{ label: "강의 목차", href: "/outline" }, { label: "4부" }, { label: "6-1. 연구질문에서 Concourse의 범위 정하기" }]}
-        statusLabel="공개" versionLabel="v2.1 · 2026-09-26"
+        statusLabel="공개" versionLabel="v2.2 · 2026-09-26"
         title="연구질문에서 Concourse의 범위 정하기"
         description={metadata.description as string}
         imageSrc="/images/6-1-hero-concourse-scope.webp"
@@ -92,7 +92,7 @@ export default function LessonSixOnePage() {
         {cards.map((card, index) => (
           <Fragment key={card.title}>
           <section className="mb-14 sm:mb-16" aria-labelledby={`card-${index + 1}`}>
-            <div className="text-xs mb-2" style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}>카드 {index + 1}</div>
+            <div className="flex flex-wrap items-center gap-2 mb-2"><span className="text-xs" style={{ fontFamily: "var(--font-mono)", color: "var(--gray-400)" }}>카드 {index + 1}</span><span className="text-xs rounded-full px-2.5 py-0.5" style={{ background: "var(--gray-100)", color: "var(--gray-700)" }}>{card.caseLabel}</span></div>
             <h2 id={`card-${index + 1}`} className="font-semibold mb-3" style={{ fontSize: "24px", color: "var(--black)" }}>{card.title}</h2>
             <p className="mb-6" style={{ fontSize: "17px", lineHeight: 1.6, color: "var(--gray-800)" }}>{card.message}</p>
             <div className="lesson-card-body space-y-5" style={{ fontSize: "15px", lineHeight: 1.8, color: "var(--gray-700)" }}>{card.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
@@ -114,6 +114,7 @@ export default function LessonSixOnePage() {
           <dl className="space-y-3">{scopeFields.map(([label, question]) => <div key={label} className="rounded-lg p-4 sm:p-5" style={{ background: "var(--gray-100)" }}><dt className="font-semibold text-sm mb-2">{label}</dt><dd className="text-sm" style={{ color: "var(--gray-700)", lineHeight: 1.7 }}>{question}</dd><dd className="text-xs mt-3" style={{ color: "var(--gray-500)" }}>내 선택 · 근거 · 미정 항목:</dd></div>)}</dl>
         </section>
         <section className="mb-14 rounded-xl p-5 sm:p-6" style={{ background: "var(--gray-100)" }} aria-labelledby="report-check"><h2 id="report-check" className="text-xl font-semibold mb-4">논문에 남길 항목</h2><ul className="space-y-2 text-sm" style={{ color: "var(--gray-700)", lineHeight: 1.7 }}><li>□ 연구질문과 관점을 탐구할 대상</li><li>□ 후보 자료를 탐색할 범위와 관점을 탐구할 대상의 관계</li><li>□ 상황·기관·시간·쟁점의 포함 경계</li><li>□ 제외·보류한 자료와 그 이유</li><li>□ 수집 중 범위를 수정한 날짜와 근거</li></ul></section>
+        <section className="mb-14 rounded-xl p-5 sm:p-6" style={{ background: "var(--gray-100)" }} aria-labelledby="lesson-takeaway"><h2 id="lesson-takeaway" className="text-xl font-semibold mb-3">오늘의 결론</h2><p className="text-sm" style={{ color: "var(--gray-800)", lineHeight: 1.8 }}>Concourse의 범위는 연구질문에서 시작합니다. 수집 중 새로운 관점이 나타나면 범위를 수정하고 그 이유를 기록합니다.</p><p className="text-sm mt-4" style={{ color: "var(--gray-700)", lineHeight: 1.7 }}>다음 질문: 범위를 정했다면 실제 진술문은 어디에서 수집할까요? <Link href="/lessons/6-2" className="underline underline-offset-2" style={{ color: "var(--brand-deep)" }}>6-2로 이어가기 →</Link></p></section>
         <section className="mt-16 border-t pt-8" style={{ borderColor: "var(--gray-200)" }} aria-labelledby="references"><h2 id="references" className="text-2xl font-semibold mb-4">참고문헌</h2><ul className="space-y-5" style={{ fontSize: "14px", lineHeight: 1.7, color: "var(--gray-700)", overflowWrap: "anywhere" }}>{references.map((ref) => <li key={ref.id} id={ref.id} className="scroll-mt-24">{ref.text}</li>)}</ul></section>
         <nav aria-label="강의 이동" className="pt-8 mt-12 flex flex-wrap items-center justify-between gap-4 border-t" style={{ borderColor: "var(--gray-200)" }}><Link href="/lessons/5-8" className="text-sm" style={{ color: "var(--brand-deep)" }}>← 5-8. Q 연구를 논문으로 옮기는 흐름</Link><Link href="/lessons/6-2" className="text-sm" style={{ color: "var(--brand-deep)" }}>6-2. Concourse 수집원과 출처 기록 →</Link></nav>
       </div>
