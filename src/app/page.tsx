@@ -142,7 +142,7 @@ export default function HomePage() {
                 부산소방재난본부 현직 소방공무원 (경력 20년)
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
-                {["Q방법론", "재난관리정책", "단절적 균형이론 (PET)", "소방예산 분석"].map((tag) => (
+                {["Q방법론", "주관성 연구", "재무행정", "재난관리 관련 예산정책", "소방예산 분석"].map((tag) => (
                   <span key={tag} className="rounded-full border bg-white px-3.5 py-1 text-[13px]" style={{ borderColor: "var(--gray-200)" }}>{tag}</span>
                 ))}
               </div>
