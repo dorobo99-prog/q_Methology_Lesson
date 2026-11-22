@@ -265,7 +265,7 @@ export default function LessonSixFourPage() {
         </section>
         <nav aria-label="강의 이동" className="mt-12 pt-8 border-t flex flex-wrap justify-between gap-4 text-sm">
           <Link href="/lessons/6-3">← 6-3. 구조화·비구조화 Q표본과 표집틀 설계</Link>
-          <span className="text-gray-500">6-5. Q표본 검토와 파일럿 · 예정</span>
+          <Link href="/lessons/6-5">6-5. Q표본 검토와 파일럿: 수정 근거 남기기 →</Link>
         </nav>
       </div>
     </div>
