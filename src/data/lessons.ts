@@ -334,7 +334,14 @@ export const CURRICULUM: Part[] = [
             image: "/images/6-5-hero-pilot-review.webp",
             publishedAt: "2026-11-22",
           },
-          { id: "6-6", order: 606, status: "locked", title: "Q표본 개발 과정 기록과 방법 문단 작성" },
+          {
+            id: "6-6", order: 606, status: "open",
+            title: "Q표본 개발 과정 기록과 방법 문단 작성",
+            href: "/lessons/6-6",
+            description: "류승훈의 두 수집 경로를 흐름도와 방법 문단으로 읽고, 앞선 다섯 회차의 기록으로 자기 연구의 Q표본 개발 과정을 씁니다.",
+            image: "/images/6-6-hero-q-set-flow.webp",
+            publishedAt: "2026-11-22",
+          },
         ],
       },
       {
