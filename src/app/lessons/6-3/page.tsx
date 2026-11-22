@@ -278,7 +278,7 @@ export default function LessonSixThreePage() {
         </section>
         <nav aria-label="강의 이동" className="mt-12 pt-8 border-t flex flex-wrap justify-between gap-4 text-sm">
           <Link href="/lessons/6-2">← 6-2. Concourse 수집원과 출처 기록</Link>
-          <span className="text-gray-500">6-4. 좋은 진술문과 나쁜 진술문 · 예정</span>
+          <Link href="/lessons/6-4">6-4. 좋은 진술문과 나쁜 진술문: 선별·수정 실습 →</Link>
         </nav>
       </div>
     </div>
